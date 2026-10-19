@@ -1,0 +1,230 @@
+{
+  "alert": {
+    "active": true,
+    "data_fresh": true,
+    "median": 24.12,
+    "name": "HIGH_TEMP",
+    "off_c": 23.5,
+    "on_c": 24.0,
+    "since": "2026-10-18T23:07:46.741"
+  },
+  "current": {
+    "age_s": 0.3,
+    "is_current": true,
+    "timestamp": "2026-10-18T23:07:48.757",
+    "value": 24.35
+  },
+  "events": [
+    {
+      "event": "DASHBOARD_HEALTH",
+      "id": 12,
+      "level": "INFO",
+      "message": "STARTING -> HEALTHY: data fresh: last reading 0.0 s ago",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:07:46.950"
+    },
+    {
+      "event": "HEALTH_CHANGE",
+      "id": 11,
+      "level": "INFO",
+      "message": "STARTING -> HEALTHY: data fresh: last reading 0.0 s ago",
+      "source": "collector",
+      "ts": "2026-10-18T23:07:46.741"
+    },
+    {
+      "event": "STARTED",
+      "id": 10,
+      "level": "INFO",
+      "message": "5 fresh accepted readings received: normal operation",
+      "source": "collector",
+      "ts": "2026-10-18T23:07:46.743"
+    },
+    {
+      "event": "ALERT_ACTIVE",
+      "id": 9,
+      "level": "WARNING",
+      "message": "HIGH_TEMP active: median of last 5 accepted readings 24.12 C >= 24 C (latest 23.85 C)",
+      "source": "collector",
+      "ts": "2026-10-18T23:07:46.741"
+    },
+    {
+      "event": "DASHBOARD_HEALTH",
+      "id": 8,
+      "level": "INFO",
+      "message": "(start) -> STARTING: 1 of 5 fresh accepted readings since start",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:07:43.106"
+    },
+    {
+      "event": "STARTUP",
+      "id": 7,
+      "level": "INFO",
+      "message": "dashboard listening on http://127.0.0.1:5001",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:07:42.846"
+    },
+    {
+      "event": "HEALTH_CHANGE",
+      "id": 6,
+      "level": "INFO",
+      "message": "(none) -> STARTING: 1 of 5 fresh accepted readings since start",
+      "source": "collector",
+      "ts": "2026-10-18T23:07:42.721"
+    },
+    {
+      "event": "REPLAY_STARTED",
+      "id": 5,
+      "level": "INFO",
+      "message": "replay starts at source sample 370 (2026-10-01T14:09:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:07:42.719"
+    },
+    {
+      "event": "STARTUP",
+      "id": 4,
+      "level": "INFO",
+      "message": "collector starting: source practice_malformed/temperature at 60x, expected interval 1 s, stale after 3 s, failed after 15 s",
+      "source": "collector",
+      "ts": "2026-10-18T23:07:42.698"
+    },
+    {
+      "event": "CHILD_START",
+      "id": 3,
+      "level": "INFO",
+      "message": "started web (pid 641)",
+      "source": "supervisor",
+      "ts": "2026-10-18T23:07:42.612"
+    },
+    {
+      "event": "CHILD_START",
+      "id": 2,
+      "level": "INFO",
+      "message": "started worker (pid 640)",
+      "source": "supervisor",
+      "ts": "2026-10-18T23:07:42.604"
+    },
+    {
+      "event": "SUPERVISOR_START",
+      "id": 1,
+      "level": "INFO",
+      "message": "supervisor started (pid 631), python 3.13.16, dashboard http://127.0.0.1:5001",
+      "source": "supervisor",
+      "ts": "2026-10-18T23:07:42.592"
+    }
+  ],
+  "health": {
+    "data_state": "FRESH",
+    "reason": "data fresh: last reading 0.3 s ago",
+    "since": "2026-10-18T23:07:46.741",
+    "state": "HEALTHY"
+  },
+  "heartbeat_age_s": 0.3,
+  "latest_row": {
+    "age_s": 0.3,
+    "raw_display": "24.35",
+    "raw_value": 24.35,
+    "source_ref": "practice_malformed#376 @ 2026-10-01T14:15:00.000",
+    "status": "OK",
+    "status_reason": null,
+    "timestamp": "2026-10-18T23:07:48.757"
+  },
+  "recent": [
+    {
+      "accepted_value": 24.35,
+      "raw_display": "24.35",
+      "raw_value": 24.35,
+      "sample_number": 7,
+      "source_ref": "practice_malformed#376 @ 2026-10-01T14:15:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:07:48.757"
+    },
+    {
+      "accepted_value": 24.12,
+      "raw_display": "24.12",
+      "raw_value": 24.12,
+      "sample_number": 6,
+      "source_ref": "practice_malformed#375 @ 2026-10-01T14:14:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:07:47.750"
+    },
+    {
+      "accepted_value": 23.85,
+      "raw_display": "23.85",
+      "raw_value": 23.85,
+      "sample_number": 5,
+      "source_ref": "practice_malformed#374 @ 2026-10-01T14:13:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:07:46.741"
+    },
+    {
+      "accepted_value": 23.77,
+      "raw_display": "23.77",
+      "raw_value": 23.77,
+      "sample_number": 4,
+      "source_ref": "practice_malformed#373 @ 2026-10-01T14:12:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:07:45.736"
+    },
+    {
+      "accepted_value": 24.17,
+      "raw_display": "24.17",
+      "raw_value": 24.17,
+      "sample_number": 3,
+      "source_ref": "practice_malformed#372 @ 2026-10-01T14:11:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:07:44.730"
+    },
+    {
+      "accepted_value": 24.12,
+      "raw_display": "24.12",
+      "raw_value": 24.12,
+      "sample_number": 2,
+      "source_ref": "practice_malformed#371 @ 2026-10-01T14:10:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:07:43.725"
+    },
+    {
+      "accepted_value": 24.48,
+      "raw_display": "24.48",
+      "raw_value": 24.48,
+      "sample_number": 1,
+      "source_ref": "practice_malformed#370 @ 2026-10-01T14:09:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:07:42.721"
+    }
+  ],
+  "server_time": "2026-10-18T23:07:49.012",
+  "settings": {
+    "alert_off_c": 23.5,
+    "alert_on_c": 24.0,
+    "alert_window": 5,
+    "failed_after_s": 15.0,
+    "heartbeat_timeout_s": 10.0,
+    "interval_s": 1.0,
+    "replay_speed": 60.0,
+    "stale_after_s": 3.0
+  },
+  "status_counts_last_30": {
+    "OK": 7
+  },
+  "window_5min": {
+    "accepted": 7,
+    "completeness_pct": 100.0,
+    "expected": 7,
+    "gap_count": 0,
+    "largest_gap_s": 0.0,
+    "missing": 0,
+    "ongoing_gap_s": null,
+    "received": 7,
+    "status_counts": {
+      "OK": 7
+    }
+  }
+}

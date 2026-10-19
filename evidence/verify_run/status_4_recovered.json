@@ -1,0 +1,308 @@
+{
+  "alert": {
+    "active": true,
+    "data_fresh": true,
+    "median": 23.92,
+    "name": "HIGH_TEMP",
+    "off_c": 23.5,
+    "on_c": 24.0,
+    "since": "2026-10-18T23:07:46.741"
+  },
+  "current": {
+    "age_s": 0.1,
+    "is_current": true,
+    "timestamp": "2026-10-18T23:09:36.760",
+    "value": 24.09
+  },
+  "events": [
+    {
+      "event": "DASHBOARD_HEALTH",
+      "id": 76,
+      "level": "INFO",
+      "message": "DEGRADED -> HEALTHY: data fresh: last reading 0.0 s ago",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:09:36.848"
+    },
+    {
+      "event": "HEALTH_CHANGE",
+      "id": 75,
+      "level": "INFO",
+      "message": "DEGRADED -> HEALTHY: data fresh: last reading 0.0 s ago",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:36.760"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 74,
+      "level": "WARNING",
+      "message": "sample=90 raw='ERR' status=FAULT: malformed value 'ERR': not a number (source practice_malformed#459 @ 2026-10-01T15:38:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:11.860"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 73,
+      "level": "WARNING",
+      "message": "sample=89 raw='ERR' status=FAULT: malformed value 'ERR': not a number (source practice_malformed#458 @ 2026-10-01T15:37:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:10.854"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 72,
+      "level": "WARNING",
+      "message": "sample=88 raw='nan' status=MISSING: sensor sent no measurement ('nan') (source practice_malformed#457 @ 2026-10-01T15:36:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:09.849"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 71,
+      "level": "WARNING",
+      "message": "sample=87 raw='ERR' status=FAULT: malformed value 'ERR': not a number (source practice_malformed#456 @ 2026-10-01T15:35:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:08.845"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 70,
+      "level": "WARNING",
+      "message": "sample=86 raw='23.9C' status=FAULT: malformed value '23.9C': not a number (source practice_malformed#455 @ 2026-10-01T15:34:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:07.841"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 69,
+      "level": "WARNING",
+      "message": "sample=85 raw='ERR' status=FAULT: malformed value 'ERR': not a number (source practice_malformed#454 @ 2026-10-01T15:33:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:06.836"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 68,
+      "level": "WARNING",
+      "message": "sample=84 raw='' status=MISSING: sensor sent no measurement ('') (source practice_malformed#453 @ 2026-10-01T15:32:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:05.832"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 67,
+      "level": "WARNING",
+      "message": "sample=83 raw='ERR' status=FAULT: malformed value 'ERR': not a number (source practice_malformed#452 @ 2026-10-01T15:31:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:04.828"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 66,
+      "level": "WARNING",
+      "message": "sample=82 raw='ERR' status=FAULT: malformed value 'ERR': not a number (source practice_malformed#451 @ 2026-10-01T15:30:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:03.823"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 65,
+      "level": "WARNING",
+      "message": "sample=81 raw='ERR' status=FAULT: malformed value 'ERR': not a number (source practice_malformed#450 @ 2026-10-01T15:29:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:02.818"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 64,
+      "level": "WARNING",
+      "message": "sample=80 raw='ERR' status=FAULT: malformed value 'ERR': not a number (source practice_malformed#449 @ 2026-10-01T15:28:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:01.812"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 63,
+      "level": "WARNING",
+      "message": "sample=79 raw='ERR' status=FAULT: malformed value 'ERR': not a number (source practice_malformed#448 @ 2026-10-01T15:27:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:09:00.801"
+    },
+    {
+      "event": "READING_REJECTED",
+      "id": 62,
+      "level": "WARNING",
+      "message": "sample=78 raw='nan' status=MISSING: sensor sent no measurement ('nan') (source practice_malformed#447 @ 2026-10-01T15:26:00.000)",
+      "source": "collector",
+      "ts": "2026-10-18T23:08:59.794"
+    }
+  ],
+  "health": {
+    "data_state": "FRESH",
+    "reason": "data fresh: last reading 0.0 s ago",
+    "since": "2026-10-18T23:09:36.760",
+    "state": "HEALTHY"
+  },
+  "heartbeat_age_s": 0.3,
+  "latest_row": {
+    "age_s": 0.1,
+    "raw_display": "24.09",
+    "raw_value": 24.09,
+    "source_ref": "practice_malformed#484 @ 2026-10-01T16:03:00.000",
+    "status": "OK",
+    "status_reason": null,
+    "timestamp": "2026-10-18T23:09:36.760"
+  },
+  "recent": [
+    {
+      "accepted_value": 24.09,
+      "raw_display": "24.09",
+      "raw_value": 24.09,
+      "sample_number": 115,
+      "source_ref": "practice_malformed#484 @ 2026-10-01T16:03:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:36.760"
+    },
+    {
+      "accepted_value": 24.04,
+      "raw_display": "24.04",
+      "raw_value": 24.04,
+      "sample_number": 114,
+      "source_ref": "practice_malformed#483 @ 2026-10-01T16:02:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:35.753"
+    },
+    {
+      "accepted_value": 23.92,
+      "raw_display": "23.92",
+      "raw_value": 23.92,
+      "sample_number": 113,
+      "source_ref": "practice_malformed#482 @ 2026-10-01T16:01:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:34.747"
+    },
+    {
+      "accepted_value": 23.9,
+      "raw_display": "23.90",
+      "raw_value": 23.9,
+      "sample_number": 112,
+      "source_ref": "practice_malformed#481 @ 2026-10-01T16:00:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:33.742"
+    },
+    {
+      "accepted_value": 23.75,
+      "raw_display": "23.75",
+      "raw_value": 23.75,
+      "sample_number": 111,
+      "source_ref": "practice_malformed#480 @ 2026-10-01T15:59:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:32.737"
+    },
+    {
+      "accepted_value": 24.34,
+      "raw_display": "24.34",
+      "raw_value": 24.34,
+      "sample_number": 110,
+      "source_ref": "practice_malformed#479 @ 2026-10-01T15:58:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:31.733"
+    },
+    {
+      "accepted_value": 24.0,
+      "raw_display": "24.00",
+      "raw_value": 24.0,
+      "sample_number": 109,
+      "source_ref": "practice_malformed#478 @ 2026-10-01T15:57:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:30.724"
+    },
+    {
+      "accepted_value": 23.9,
+      "raw_display": "23.90",
+      "raw_value": 23.9,
+      "sample_number": 108,
+      "source_ref": "practice_malformed#477 @ 2026-10-01T15:56:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:29.720"
+    },
+    {
+      "accepted_value": 23.98,
+      "raw_display": "23.98",
+      "raw_value": 23.98,
+      "sample_number": 107,
+      "source_ref": "practice_malformed#476 @ 2026-10-01T15:55:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:28.716"
+    },
+    {
+      "accepted_value": 23.74,
+      "raw_display": "23.74",
+      "raw_value": 23.74,
+      "sample_number": 106,
+      "source_ref": "practice_malformed#475 @ 2026-10-01T15:54:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:27.712"
+    },
+    {
+      "accepted_value": 23.96,
+      "raw_display": "23.96",
+      "raw_value": 23.96,
+      "sample_number": 105,
+      "source_ref": "practice_malformed#474 @ 2026-10-01T15:53:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:26.706"
+    },
+    {
+      "accepted_value": 24.12,
+      "raw_display": "24.12",
+      "raw_value": 24.12,
+      "sample_number": 104,
+      "source_ref": "practice_malformed#473 @ 2026-10-01T15:52:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:09:25.702"
+    }
+  ],
+  "server_time": "2026-10-18T23:09:36.854",
+  "settings": {
+    "alert_off_c": 23.5,
+    "alert_on_c": 24.0,
+    "alert_window": 5,
+    "failed_after_s": 15.0,
+    "heartbeat_timeout_s": 10.0,
+    "interval_s": 1.0,
+    "replay_speed": 60.0,
+    "stale_after_s": 3.0
+  },
+  "status_counts_last_30": {
+    "FAULT": 4,
+    "MISSING": 1,
+    "OK": 25
+  },
+  "window_5min": {
+    "accepted": 55,
+    "completeness_pct": 47.8,
+    "expected": 115,
+    "gap_count": 1,
+    "largest_gap_s": 61.1,
+    "missing": 60,
+    "ongoing_gap_s": null,
+    "received": 55,
+    "status_counts": {
+      "FAULT": 48,
+      "MISSING": 12,
+      "OK": 55
+    }
+  }
+}

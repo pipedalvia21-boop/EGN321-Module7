@@ -168,7 +168,8 @@ Every change is logged as `HEALTH_CHANGE old -> new: reason`.
 - **Readings:** `READING ... status=OK`.
 - **Alerts:** `ALERT_ACTIVE`, `ALERT_CLEARED`.
 - **Missing or stale data:** `DATA_STALE`, `DATA_MISSING`, `DATA_LOST`.
-- **Errors:** `APPLICATION_ERROR`, `CHILD_EXIT`, `CRASH_LOOP`.
+- **Errors:** `APPLICATION_ERROR`, `READING_ERROR` (one reading failed unexpectedly; skipped, collector keeps running), `CHILD_EXIT` (with `exit n of 6 allowed in 60 s`), `CRASH_LOOP`.
+- **Dashboard health:** `DASHBOARD_HEALTH` (the dashboard logs every change of the health it shows, e.g. `HEALTHY -> FAILED`).
 - **Recovery and restarts:** `RECOVERY`, `CHILD_RESTART`, `RECOVERED`.
 
 ## Recovery Test (evidence)
@@ -192,6 +193,23 @@ The same two tests also run automatically in `tests/test_supervisor_recovery.py`
 | Restart / recovery | `07_dashboard_unreachable_during_kill.png`, `08_recovering_after_restart.png`, `EVIDENCE.md` |
 | Final healthy state | `09_final_healthy.png` |
 
+## Failure Report (malformed input)
+Full report: **`FAILURE_REPORT.md`**. In short:
+
+- **Failure:** the replay feed sends `'ERR'`, `''`, `'23.9C'`, `'nan'` for samples 400-459.
+- **Original code (git `23b199e`):** the collector crashed on the first `'ERR'` (`ValueError` formatting a string with `.2f`), the same reading was re-delivered after every restart, the supervisor hit `CRASH_LOOP` after 6 exits and stopped restarting, and the dashboard returned HTTP 500. The dashboard also showed HEALTHY for about 7 s while the collector was down. A manual restart was needed.
+- **Cause 1 (malformed input) confirmed, cause 2 (database) rejected:** `evidence/failure_run/diagnosis_tests.txt`.
+- **Improved code:** the same feed gives no crash, page and chart stay at 200, health goes DEGRADED and then back to HEALTHY by itself. All 15/15 checks pass.
+
+Reproduce:
+```bash
+python -m scripts.make_malformed_feed          # build the malformed feed
+python scripts/failure_run.py verify           # improved code, evidence -> evidence/verify_run/
+SOURCE_DATASET=practice_malformed REPLAY_START_SAMPLE=370 REPLAY_SPEED=60 python supervisor.py   # watch it live
+python -m pytest tests/test_failure_malformed.py -v
+```
+`raw_value` now only ever holds a number; whatever text the sensor sent is stored in the new `raw_text` column (old databases are migrated automatically on start).
+
 ## What the System Recovers From Automatically
 - **Collector or dashboard crash, or kill:** restarted by the supervisor within 1-16 s.
 - **Supervisor crash or kill, reboot, logout/login:** restarted by systemd / launchd / Task Scheduler. Leftover children exit by themselves.
@@ -199,9 +217,10 @@ The same two tests also run automatically in `tests/test_supervisor_recovery.py`
 - **Data gaps (sensor stops sending):** detected as STALE, then FAILED. When data returns: RECOVERING, then HEALTHY. The gap stays visible and is never filled.
 - **Short database lock or error:** the collector retries up to 10 times, then exits and is restarted.
 - **Bad readings:** stored with a reason and excluded from the alert and from "current value".
+- **Malformed input** (`'ERR'`, `'23.9C'`, `''`, `'nan'`): classified as `FAULT` / `MISSING`, the exact text kept in `raw_text`, health DEGRADED while it lasts, HEALTHY again by itself when numbers return. See `FAILURE_REPORT.md`.
 
 ## What Still Requires Human Intervention
-- **Crash loop.** If a component fails more than 5 times in 60 s (`CRASH_LOOP` in `logs/supervisor.log`), it is not restarted again. A person must read `logs/<name>.stderr.log`, fix the cause and restart the supervisor.
+- **Crash loop.** If a component fails more than 5 times in 60 s (`CRASH_LOOP` in `logs/supervisor.log`), it is not restarted again. The dashboard then shows FAILED "collector stopped by the crash-loop guard … human intervention required". A person must read `logs/<name>.stderr.log`, fix the cause and restart the supervisor.
 - **A sensor that stays down.** The system reports FAILED but cannot fix the sensor.
 - **Readings lost during an outage.** They are not recovered (by design).
 - **Responding to an alert.** The system raises and logs it, but nobody is notified outside the dashboard; there is no email or SMS.
@@ -225,8 +244,11 @@ monitor/                 collector (worker.py), dashboard (web.py, templates/), 
 deploy/                  systemd unit + Linux, macOS (launchd) and Windows (Task Scheduler) installers
 data/                    module6_sensor_history.db (input); monitor.db is generated
 scripts/evidence_run.py  automated evidence + recovery test
+scripts/make_malformed_feed.py  builds the 'practice_malformed' replay feed (samples 400-459 malformed)
+scripts/failure_run.py   failure experiment: `failure` (original code) and `verify` (improved code)
+FAILURE_REPORT.md        failure report: malformed input (also .docx)
 evidence/                screenshots, EVIDENCE.md, logs, timeline.csv, database snapshot
-tests/                   50 tests
+tests/                   67 tests (tests/test_failure_malformed.py = failure-report verification)
 ```
 
 ## AI Use

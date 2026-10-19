@@ -1,0 +1,332 @@
+time,health,reason,alert_active,latest_source_ref,latest_raw,latest_status,page_http,chart_http,worker_pid
+23:07:42.593,UNREACHABLE,,,,None,,,,
+23:07:43.157,STARTING,1 of 5 fresh accepted readings since start,False,practice_malformed#370 @ 2026-10-01T14:09:00.000,24.48,OK,200,200,640
+23:07:43.667,STARTING,1 of 5 fresh accepted readings since start,False,practice_malformed#370 @ 2026-10-01T14:09:00.000,24.48,OK,200,200,640
+23:07:44.175,STARTING,2 of 5 fresh accepted readings since start,False,practice_malformed#371 @ 2026-10-01T14:10:00.000,24.12,OK,200,200,640
+23:07:44.685,STARTING,2 of 5 fresh accepted readings since start,False,practice_malformed#371 @ 2026-10-01T14:10:00.000,24.12,OK,200,200,640
+23:07:45.194,STARTING,3 of 5 fresh accepted readings since start,False,practice_malformed#372 @ 2026-10-01T14:11:00.000,24.17,OK,200,200,640
+23:07:45.702,STARTING,3 of 5 fresh accepted readings since start,False,practice_malformed#372 @ 2026-10-01T14:11:00.000,24.17,OK,200,200,640
+23:07:46.212,STARTING,4 of 5 fresh accepted readings since start,False,practice_malformed#373 @ 2026-10-01T14:12:00.000,23.77,OK,200,200,640
+23:07:46.722,STARTING,4 of 5 fresh accepted readings since start,False,practice_malformed#373 @ 2026-10-01T14:12:00.000,23.77,OK,200,200,640
+23:07:47.234,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#374 @ 2026-10-01T14:13:00.000,23.85,OK,200,200,640
+23:07:47.744,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#374 @ 2026-10-01T14:13:00.000,23.85,OK,200,200,640
+23:07:48.253,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#375 @ 2026-10-01T14:14:00.000,24.12,OK,200,200,640
+23:07:48.764,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#376 @ 2026-10-01T14:15:00.000,24.35,OK,200,200,640
+23:07:49.273,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#376 @ 2026-10-01T14:15:00.000,24.35,OK,200,200,640
+23:07:49.785,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#377 @ 2026-10-01T14:16:00.000,24.35,OK,200,200,640
+23:07:50.301,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#377 @ 2026-10-01T14:16:00.000,24.35,OK,200,200,640
+23:07:50.810,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#378 @ 2026-10-01T14:17:00.000,24.02,OK,200,200,640
+23:07:51.325,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#378 @ 2026-10-01T14:17:00.000,24.02,OK,200,200,640
+23:07:51.834,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#379 @ 2026-10-01T14:18:00.000,24.51,OK,200,200,640
+23:07:52.348,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#379 @ 2026-10-01T14:18:00.000,24.51,OK,200,200,640
+23:07:52.861,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#380 @ 2026-10-01T14:19:00.000,24.5,OK,200,200,640
+23:07:53.372,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#380 @ 2026-10-01T14:19:00.000,24.5,OK,200,200,640
+23:07:53.883,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#381 @ 2026-10-01T14:20:00.000,24.07,OK,200,200,640
+23:07:54.393,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#381 @ 2026-10-01T14:20:00.000,24.07,OK,200,200,640
+23:07:54.903,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#382 @ 2026-10-01T14:21:00.000,24.17,OK,200,200,640
+23:07:55.414,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#382 @ 2026-10-01T14:21:00.000,24.17,OK,200,200,640
+23:07:55.926,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#383 @ 2026-10-01T14:22:00.000,24.16,OK,200,200,640
+23:07:56.438,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#383 @ 2026-10-01T14:22:00.000,24.16,OK,200,200,640
+23:07:56.947,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#384 @ 2026-10-01T14:23:00.000,24.13,OK,200,200,640
+23:07:57.457,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#384 @ 2026-10-01T14:23:00.000,24.13,OK,200,200,640
+23:07:57.969,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#385 @ 2026-10-01T14:24:00.000,24.02,OK,200,200,640
+23:07:58.483,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#385 @ 2026-10-01T14:24:00.000,24.02,OK,200,200,640
+23:07:59.004,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#386 @ 2026-10-01T14:25:00.000,24.13,OK,200,200,640
+23:07:59.520,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#386 @ 2026-10-01T14:25:00.000,24.13,OK,200,200,640
+23:08:00.034,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#387 @ 2026-10-01T14:26:00.000,24.08,OK,200,200,640
+23:08:00.546,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#387 @ 2026-10-01T14:26:00.000,24.08,OK,200,200,640
+23:08:01.063,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#388 @ 2026-10-01T14:27:00.000,24.15,OK,200,200,640
+23:08:01.581,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#388 @ 2026-10-01T14:27:00.000,24.15,OK,200,200,640
+23:08:02.097,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#389 @ 2026-10-01T14:28:00.000,23.95,OK,200,200,640
+23:08:02.608,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#389 @ 2026-10-01T14:28:00.000,23.95,OK,200,200,640
+23:08:03.120,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#390 @ 2026-10-01T14:29:00.000,24.22,OK,200,200,640
+23:08:03.631,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#390 @ 2026-10-01T14:29:00.000,24.22,OK,200,200,640
+23:08:04.143,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#391 @ 2026-10-01T14:30:00.000,24.31,OK,200,200,640
+23:08:04.656,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#391 @ 2026-10-01T14:30:00.000,24.31,OK,200,200,640
+23:08:05.172,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#392 @ 2026-10-01T14:31:00.000,24.39,OK,200,200,640
+23:08:05.685,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#392 @ 2026-10-01T14:31:00.000,24.39,OK,200,200,640
+23:08:06.198,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#393 @ 2026-10-01T14:32:00.000,24.05,OK,200,200,640
+23:08:06.717,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#393 @ 2026-10-01T14:32:00.000,24.05,OK,200,200,640
+23:08:07.231,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#394 @ 2026-10-01T14:33:00.000,24.11,OK,200,200,640
+23:08:07.746,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#395 @ 2026-10-01T14:34:00.000,24.22,OK,200,200,640
+23:08:08.263,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#395 @ 2026-10-01T14:34:00.000,24.22,OK,200,200,640
+23:08:08.774,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#396 @ 2026-10-01T14:35:00.000,23.99,OK,200,200,640
+23:08:09.290,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#396 @ 2026-10-01T14:35:00.000,23.99,OK,200,200,640
+23:08:09.804,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#397 @ 2026-10-01T14:36:00.000,24.41,OK,200,200,640
+23:08:10.316,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#397 @ 2026-10-01T14:36:00.000,24.41,OK,200,200,640
+23:08:10.833,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#398 @ 2026-10-01T14:37:00.000,24.12,OK,200,200,640
+23:08:11.346,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#398 @ 2026-10-01T14:37:00.000,24.12,OK,200,200,640
+23:08:11.858,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#399 @ 2026-10-01T14:38:00.000,23.83,OK,200,200,640
+23:08:12.373,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#399 @ 2026-10-01T14:38:00.000,23.83,OK,200,200,640
+23:08:12.886,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#400 @ 2026-10-01T14:39:00.000,None,FAULT,200,200,640
+23:08:13.399,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#400 @ 2026-10-01T14:39:00.000,None,FAULT,200,200,640
+23:08:13.911,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#401 @ 2026-10-01T14:40:00.000,None,FAULT,200,200,640
+23:08:14.424,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#401 @ 2026-10-01T14:40:00.000,None,FAULT,200,200,640
+23:08:14.943,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#402 @ 2026-10-01T14:41:00.000,None,FAULT,200,200,640
+23:08:15.459,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#402 @ 2026-10-01T14:41:00.000,None,FAULT,200,200,640
+23:08:15.977,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#403 @ 2026-10-01T14:42:00.000,None,MISSING,200,200,640
+23:08:16.491,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#403 @ 2026-10-01T14:42:00.000,None,MISSING,200,200,640
+23:08:17.009,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#404 @ 2026-10-01T14:43:00.000,None,FAULT,200,200,640
+23:08:17.528,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#404 @ 2026-10-01T14:43:00.000,None,FAULT,200,200,640
+23:08:18.049,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#405 @ 2026-10-01T14:44:00.000,None,FAULT,200,200,640
+23:08:18.566,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#405 @ 2026-10-01T14:44:00.000,None,FAULT,200,200,640
+23:08:19.079,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#406 @ 2026-10-01T14:45:00.000,None,FAULT,200,200,640
+23:08:19.595,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#406 @ 2026-10-01T14:45:00.000,None,FAULT,200,200,640
+23:08:20.113,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#407 @ 2026-10-01T14:46:00.000,None,MISSING,200,200,640
+23:08:20.631,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#407 @ 2026-10-01T14:46:00.000,None,MISSING,200,200,640
+23:08:21.146,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#408 @ 2026-10-01T14:47:00.000,None,FAULT,200,200,640
+23:08:21.663,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#408 @ 2026-10-01T14:47:00.000,None,FAULT,200,200,640
+23:08:22.177,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#409 @ 2026-10-01T14:48:00.000,None,FAULT,200,200,640
+23:08:22.689,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#409 @ 2026-10-01T14:48:00.000,None,FAULT,200,200,640
+23:08:23.204,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#410 @ 2026-10-01T14:49:00.000,None,FAULT,200,200,640
+23:08:23.719,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#410 @ 2026-10-01T14:49:00.000,None,FAULT,200,200,640
+23:08:24.236,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#411 @ 2026-10-01T14:50:00.000,None,FAULT,200,200,640
+23:08:24.759,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#411 @ 2026-10-01T14:50:00.000,None,FAULT,200,200,640
+23:08:25.272,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#412 @ 2026-10-01T14:51:00.000,None,FAULT,200,200,640
+23:08:25.784,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#412 @ 2026-10-01T14:51:00.000,None,FAULT,200,200,640
+23:08:26.298,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#413 @ 2026-10-01T14:52:00.000,None,MISSING,200,200,640
+23:08:26.810,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#413 @ 2026-10-01T14:52:00.000,None,MISSING,200,200,640
+23:08:27.321,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#414 @ 2026-10-01T14:53:00.000,None,FAULT,200,200,640
+23:08:27.836,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#414 @ 2026-10-01T14:53:00.000,None,FAULT,200,200,640
+23:08:28.351,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#415 @ 2026-10-01T14:54:00.000,None,FAULT,200,200,640
+23:08:28.868,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#416 @ 2026-10-01T14:55:00.000,None,FAULT,200,200,640
+23:08:29.383,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#416 @ 2026-10-01T14:55:00.000,None,FAULT,200,200,640
+23:08:29.900,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#417 @ 2026-10-01T14:56:00.000,None,MISSING,200,200,640
+23:08:30.416,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#417 @ 2026-10-01T14:56:00.000,None,MISSING,200,200,640
+23:08:30.934,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#418 @ 2026-10-01T14:57:00.000,None,FAULT,200,200,640
+23:08:31.450,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#418 @ 2026-10-01T14:57:00.000,None,FAULT,200,200,640
+23:08:31.964,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#419 @ 2026-10-01T14:58:00.000,None,FAULT,200,200,640
+23:08:32.475,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#419 @ 2026-10-01T14:58:00.000,None,FAULT,200,200,640
+23:08:33.003,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#420 @ 2026-10-01T14:59:00.000,None,FAULT,200,200,640
+23:08:33.516,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#420 @ 2026-10-01T14:59:00.000,None,FAULT,200,200,640
+23:08:34.028,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#421 @ 2026-10-01T15:00:00.000,None,FAULT,200,200,640
+23:08:34.546,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#421 @ 2026-10-01T15:00:00.000,None,FAULT,200,200,640
+23:08:35.059,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#422 @ 2026-10-01T15:01:00.000,None,FAULT,200,200,640
+23:08:35.576,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#422 @ 2026-10-01T15:01:00.000,None,FAULT,200,200,640
+23:08:36.092,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#423 @ 2026-10-01T15:02:00.000,None,MISSING,200,200,640
+23:08:36.604,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#423 @ 2026-10-01T15:02:00.000,None,MISSING,200,200,640
+23:08:37.121,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#424 @ 2026-10-01T15:03:00.000,None,FAULT,200,200,640
+23:08:37.635,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#424 @ 2026-10-01T15:03:00.000,None,FAULT,200,200,640
+23:08:38.150,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#425 @ 2026-10-01T15:04:00.000,None,FAULT,200,200,640
+23:08:38.666,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#425 @ 2026-10-01T15:04:00.000,None,FAULT,200,200,640
+23:08:39.182,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#426 @ 2026-10-01T15:05:00.000,None,FAULT,200,200,640
+23:08:39.701,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#426 @ 2026-10-01T15:05:00.000,None,FAULT,200,200,640
+23:08:40.213,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#427 @ 2026-10-01T15:06:00.000,None,MISSING,200,200,640
+23:08:40.729,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#427 @ 2026-10-01T15:06:00.000,None,MISSING,200,200,640
+23:08:41.242,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#428 @ 2026-10-01T15:07:00.000,None,FAULT,200,200,640
+23:08:41.754,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#428 @ 2026-10-01T15:07:00.000,None,FAULT,200,200,640
+23:08:42.267,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#429 @ 2026-10-01T15:08:00.000,None,FAULT,200,200,640
+23:08:42.783,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#429 @ 2026-10-01T15:08:00.000,None,FAULT,200,200,640
+23:08:43.300,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#430 @ 2026-10-01T15:09:00.000,None,FAULT,200,200,640
+23:08:43.812,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#430 @ 2026-10-01T15:09:00.000,None,FAULT,200,200,640
+23:08:44.325,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#431 @ 2026-10-01T15:10:00.000,None,FAULT,200,200,640
+23:08:44.838,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#431 @ 2026-10-01T15:10:00.000,None,FAULT,200,200,640
+23:08:45.353,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#432 @ 2026-10-01T15:11:00.000,None,FAULT,200,200,640
+23:08:45.867,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#433 @ 2026-10-01T15:12:00.000,None,MISSING,200,200,640
+23:08:46.379,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#433 @ 2026-10-01T15:12:00.000,None,MISSING,200,200,640
+23:08:46.894,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#434 @ 2026-10-01T15:13:00.000,None,FAULT,200,200,640
+23:08:47.408,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#434 @ 2026-10-01T15:13:00.000,None,FAULT,200,200,640
+23:08:47.926,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#435 @ 2026-10-01T15:14:00.000,None,FAULT,200,200,640
+23:08:48.443,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#435 @ 2026-10-01T15:14:00.000,None,FAULT,200,200,640
+23:08:48.955,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#436 @ 2026-10-01T15:15:00.000,None,FAULT,200,200,640
+23:08:49.467,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#436 @ 2026-10-01T15:15:00.000,None,FAULT,200,200,640
+23:08:49.983,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#437 @ 2026-10-01T15:16:00.000,None,MISSING,200,200,640
+23:08:50.497,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#437 @ 2026-10-01T15:16:00.000,None,MISSING,200,200,640
+23:08:51.011,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#438 @ 2026-10-01T15:17:00.000,None,FAULT,200,200,640
+23:08:51.529,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#438 @ 2026-10-01T15:17:00.000,None,FAULT,200,200,640
+23:08:52.041,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#439 @ 2026-10-01T15:18:00.000,None,FAULT,200,200,640
+23:08:52.557,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#439 @ 2026-10-01T15:18:00.000,None,FAULT,200,200,640
+23:08:53.073,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#440 @ 2026-10-01T15:19:00.000,None,FAULT,200,200,640
+23:08:53.591,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#440 @ 2026-10-01T15:19:00.000,None,FAULT,200,200,640
+23:08:54.104,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#441 @ 2026-10-01T15:20:00.000,None,FAULT,200,200,640
+23:08:54.617,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#441 @ 2026-10-01T15:20:00.000,None,FAULT,200,200,640
+23:08:55.129,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#442 @ 2026-10-01T15:21:00.000,None,FAULT,200,200,640
+23:08:55.643,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#442 @ 2026-10-01T15:21:00.000,None,FAULT,200,200,640
+23:08:56.161,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#443 @ 2026-10-01T15:22:00.000,None,MISSING,200,200,640
+23:08:56.677,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#443 @ 2026-10-01T15:22:00.000,None,MISSING,200,200,640
+23:08:57.194,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#444 @ 2026-10-01T15:23:00.000,None,FAULT,200,200,640
+23:08:57.710,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#444 @ 2026-10-01T15:23:00.000,None,FAULT,200,200,640
+23:08:58.225,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#445 @ 2026-10-01T15:24:00.000,None,FAULT,200,200,640
+23:08:58.744,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#445 @ 2026-10-01T15:24:00.000,None,FAULT,200,200,640
+23:08:59.260,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#446 @ 2026-10-01T15:25:00.000,None,FAULT,200,200,640
+23:08:59.776,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#446 @ 2026-10-01T15:25:00.000,None,FAULT,200,200,640
+23:09:00.291,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#447 @ 2026-10-01T15:26:00.000,None,MISSING,200,200,640
+23:09:00.809,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#447 @ 2026-10-01T15:26:00.000,None,MISSING,200,200,640
+23:09:01.324,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#448 @ 2026-10-01T15:27:00.000,None,FAULT,200,200,640
+23:09:01.837,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#449 @ 2026-10-01T15:28:00.000,None,FAULT,200,200,640
+23:09:02.352,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#449 @ 2026-10-01T15:28:00.000,None,FAULT,200,200,640
+23:09:02.870,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#450 @ 2026-10-01T15:29:00.000,None,FAULT,200,200,640
+23:09:03.383,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#450 @ 2026-10-01T15:29:00.000,None,FAULT,200,200,640
+23:09:03.896,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#451 @ 2026-10-01T15:30:00.000,None,FAULT,200,200,640
+23:09:04.427,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#451 @ 2026-10-01T15:30:00.000,None,FAULT,200,200,640
+23:09:04.943,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#452 @ 2026-10-01T15:31:00.000,None,FAULT,200,200,640
+23:09:05.466,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#452 @ 2026-10-01T15:31:00.000,None,FAULT,200,200,640
+23:09:05.991,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#453 @ 2026-10-01T15:32:00.000,None,MISSING,200,200,640
+23:09:06.509,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#453 @ 2026-10-01T15:32:00.000,None,MISSING,200,200,640
+23:09:07.022,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#454 @ 2026-10-01T15:33:00.000,None,FAULT,200,200,640
+23:09:07.535,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#454 @ 2026-10-01T15:33:00.000,None,FAULT,200,200,640
+23:09:08.050,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#455 @ 2026-10-01T15:34:00.000,None,FAULT,200,200,640
+23:09:08.565,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#455 @ 2026-10-01T15:34:00.000,None,FAULT,200,200,640
+23:09:09.077,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#456 @ 2026-10-01T15:35:00.000,None,FAULT,200,200,640
+23:09:09.592,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#456 @ 2026-10-01T15:35:00.000,None,FAULT,200,200,640
+23:09:10.105,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#457 @ 2026-10-01T15:36:00.000,None,MISSING,200,200,640
+23:09:10.618,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#457 @ 2026-10-01T15:36:00.000,None,MISSING,200,200,640
+23:09:11.135,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#458 @ 2026-10-01T15:37:00.000,None,FAULT,200,200,640
+23:09:11.650,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#458 @ 2026-10-01T15:37:00.000,None,FAULT,200,200,640
+23:09:12.167,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#459 @ 2026-10-01T15:38:00.000,None,FAULT,200,200,640
+23:09:12.685,DEGRADED,readings arrive but none was accepted recently,True,practice_malformed#459 @ 2026-10-01T15:38:00.000,None,FAULT,200,200,640
+23:09:13.205,DEGRADED,29 of the last 30 readings were rejected or missing,True,practice_malformed#460 @ 2026-10-01T15:39:00.000,23.9,OK,200,200,640
+23:09:13.731,DEGRADED,29 of the last 30 readings were rejected or missing,True,practice_malformed#460 @ 2026-10-01T15:39:00.000,23.9,OK,200,200,640
+23:09:14.249,DEGRADED,28 of the last 30 readings were rejected or missing,True,practice_malformed#461 @ 2026-10-01T15:40:00.000,24.24,OK,200,200,640
+23:09:14.770,DEGRADED,28 of the last 30 readings were rejected or missing,True,practice_malformed#461 @ 2026-10-01T15:40:00.000,24.24,OK,200,200,640
+23:09:15.290,DEGRADED,27 of the last 30 readings were rejected or missing,True,practice_malformed#462 @ 2026-10-01T15:41:00.000,24.18,OK,200,200,640
+23:09:15.805,DEGRADED,27 of the last 30 readings were rejected or missing,True,practice_malformed#462 @ 2026-10-01T15:41:00.000,24.18,OK,200,200,640
+23:09:16.323,DEGRADED,26 of the last 30 readings were rejected or missing,True,practice_malformed#463 @ 2026-10-01T15:42:00.000,24.04,OK,200,200,640
+23:09:16.840,DEGRADED,26 of the last 30 readings were rejected or missing,True,practice_malformed#463 @ 2026-10-01T15:42:00.000,24.04,OK,200,200,640
+23:09:17.357,DEGRADED,25 of the last 30 readings were rejected or missing,True,practice_malformed#464 @ 2026-10-01T15:43:00.000,23.92,OK,200,200,640
+23:09:17.872,DEGRADED,25 of the last 30 readings were rejected or missing,True,practice_malformed#464 @ 2026-10-01T15:43:00.000,23.92,OK,200,200,640
+23:09:18.387,DEGRADED,24 of the last 30 readings were rejected or missing,True,practice_malformed#465 @ 2026-10-01T15:44:00.000,23.99,OK,200,200,640
+23:09:18.903,DEGRADED,24 of the last 30 readings were rejected or missing,True,practice_malformed#465 @ 2026-10-01T15:44:00.000,23.99,OK,200,200,640
+23:09:19.420,DEGRADED,23 of the last 30 readings were rejected or missing,True,practice_malformed#466 @ 2026-10-01T15:45:00.000,23.86,OK,200,200,640
+23:09:19.936,DEGRADED,22 of the last 30 readings were rejected or missing,True,practice_malformed#467 @ 2026-10-01T15:46:00.000,24.15,OK,200,200,640
+23:09:20.454,DEGRADED,22 of the last 30 readings were rejected or missing,True,practice_malformed#467 @ 2026-10-01T15:46:00.000,24.15,OK,200,200,640
+23:09:20.969,DEGRADED,21 of the last 30 readings were rejected or missing,True,practice_malformed#468 @ 2026-10-01T15:47:00.000,23.74,OK,200,200,640
+23:09:21.486,DEGRADED,21 of the last 30 readings were rejected or missing,True,practice_malformed#468 @ 2026-10-01T15:47:00.000,23.74,OK,200,200,640
+23:09:22.008,DEGRADED,20 of the last 30 readings were rejected or missing,True,practice_malformed#469 @ 2026-10-01T15:48:00.000,23.99,OK,200,200,640
+23:09:22.528,DEGRADED,20 of the last 30 readings were rejected or missing,True,practice_malformed#469 @ 2026-10-01T15:48:00.000,23.99,OK,200,200,640
+23:09:23.043,DEGRADED,19 of the last 30 readings were rejected or missing,True,practice_malformed#470 @ 2026-10-01T15:49:00.000,23.58,OK,200,200,640
+23:09:23.563,DEGRADED,19 of the last 30 readings were rejected or missing,True,practice_malformed#470 @ 2026-10-01T15:49:00.000,23.58,OK,200,200,640
+23:09:24.077,DEGRADED,18 of the last 30 readings were rejected or missing,True,practice_malformed#471 @ 2026-10-01T15:50:00.000,23.9,OK,200,200,640
+23:09:24.599,DEGRADED,18 of the last 30 readings were rejected or missing,True,practice_malformed#471 @ 2026-10-01T15:50:00.000,23.9,OK,200,200,640
+23:09:25.111,DEGRADED,17 of the last 30 readings were rejected or missing,True,practice_malformed#472 @ 2026-10-01T15:51:00.000,23.84,OK,200,200,640
+23:09:25.624,DEGRADED,17 of the last 30 readings were rejected or missing,True,practice_malformed#472 @ 2026-10-01T15:51:00.000,23.84,OK,200,200,640
+23:09:26.142,DEGRADED,16 of the last 30 readings were rejected or missing,True,practice_malformed#473 @ 2026-10-01T15:52:00.000,24.12,OK,200,200,640
+23:09:26.665,DEGRADED,16 of the last 30 readings were rejected or missing,True,practice_malformed#473 @ 2026-10-01T15:52:00.000,24.12,OK,200,200,640
+23:09:27.179,DEGRADED,15 of the last 30 readings were rejected or missing,True,practice_malformed#474 @ 2026-10-01T15:53:00.000,23.96,OK,200,200,640
+23:09:27.692,DEGRADED,15 of the last 30 readings were rejected or missing,True,practice_malformed#474 @ 2026-10-01T15:53:00.000,23.96,OK,200,200,640
+23:09:28.210,DEGRADED,14 of the last 30 readings were rejected or missing,True,practice_malformed#475 @ 2026-10-01T15:54:00.000,23.74,OK,200,200,640
+23:09:28.728,DEGRADED,14 of the last 30 readings were rejected or missing,True,practice_malformed#476 @ 2026-10-01T15:55:00.000,23.98,OK,200,200,640
+23:09:29.242,DEGRADED,13 of the last 30 readings were rejected or missing,True,practice_malformed#476 @ 2026-10-01T15:55:00.000,23.98,OK,200,200,640
+23:09:29.755,DEGRADED,12 of the last 30 readings were rejected or missing,True,practice_malformed#477 @ 2026-10-01T15:56:00.000,23.9,OK,200,200,640
+23:09:30.269,DEGRADED,12 of the last 30 readings were rejected or missing,True,practice_malformed#477 @ 2026-10-01T15:56:00.000,23.9,OK,200,200,640
+23:09:30.783,DEGRADED,11 of the last 30 readings were rejected or missing,True,practice_malformed#478 @ 2026-10-01T15:57:00.000,24.0,OK,200,200,640
+23:09:31.301,DEGRADED,11 of the last 30 readings were rejected or missing,True,practice_malformed#478 @ 2026-10-01T15:57:00.000,24.0,OK,200,200,640
+23:09:31.821,DEGRADED,10 of the last 30 readings were rejected or missing,True,practice_malformed#479 @ 2026-10-01T15:58:00.000,24.34,OK,200,200,640
+23:09:32.338,DEGRADED,10 of the last 30 readings were rejected or missing,True,practice_malformed#479 @ 2026-10-01T15:58:00.000,24.34,OK,200,200,640
+23:09:32.855,DEGRADED,9 of the last 30 readings were rejected or missing,True,practice_malformed#480 @ 2026-10-01T15:59:00.000,23.75,OK,200,200,640
+23:09:33.370,DEGRADED,9 of the last 30 readings were rejected or missing,True,practice_malformed#480 @ 2026-10-01T15:59:00.000,23.75,OK,200,200,640
+23:09:33.889,DEGRADED,8 of the last 30 readings were rejected or missing,True,practice_malformed#481 @ 2026-10-01T16:00:00.000,23.9,OK,200,200,640
+23:09:34.403,DEGRADED,8 of the last 30 readings were rejected or missing,True,practice_malformed#481 @ 2026-10-01T16:00:00.000,23.9,OK,200,200,640
+23:09:34.924,DEGRADED,7 of the last 30 readings were rejected or missing,True,practice_malformed#482 @ 2026-10-01T16:01:00.000,23.92,OK,200,200,640
+23:09:35.440,DEGRADED,7 of the last 30 readings were rejected or missing,True,practice_malformed#482 @ 2026-10-01T16:01:00.000,23.92,OK,200,200,640
+23:09:35.959,DEGRADED,6 of the last 30 readings were rejected or missing,True,practice_malformed#483 @ 2026-10-01T16:02:00.000,24.04,OK,200,200,640
+23:09:36.479,DEGRADED,6 of the last 30 readings were rejected or missing,True,practice_malformed#483 @ 2026-10-01T16:02:00.000,24.04,OK,200,200,640
+23:09:37.003,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#484 @ 2026-10-01T16:03:00.000,24.09,OK,200,200,640
+23:09:37.517,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#484 @ 2026-10-01T16:03:00.000,24.09,OK,200,200,640
+23:09:38.033,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#485 @ 2026-10-01T16:04:00.000,24.13,OK,200,200,640
+23:09:38.549,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#485 @ 2026-10-01T16:04:00.000,24.13,OK,200,200,640
+23:09:39.066,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#486 @ 2026-10-01T16:05:00.000,23.87,OK,200,200,640
+23:09:39.580,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#486 @ 2026-10-01T16:05:00.000,23.87,OK,200,200,640
+23:09:40.094,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#487 @ 2026-10-01T16:06:00.000,24.01,OK,200,200,640
+23:09:40.610,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#487 @ 2026-10-01T16:06:00.000,24.01,OK,200,200,640
+23:09:41.127,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#488 @ 2026-10-01T16:07:00.000,23.47,OK,200,200,640
+23:09:41.641,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#488 @ 2026-10-01T16:07:00.000,23.47,OK,200,200,640
+23:09:42.161,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#489 @ 2026-10-01T16:08:00.000,23.84,OK,200,200,640
+23:09:42.678,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#489 @ 2026-10-01T16:08:00.000,23.84,OK,200,200,640
+23:09:43.197,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#490 @ 2026-10-01T16:09:00.000,24.0,OK,200,200,640
+23:09:43.713,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#490 @ 2026-10-01T16:09:00.000,24.0,OK,200,200,640
+23:09:44.234,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#491 @ 2026-10-01T16:10:00.000,23.79,OK,200,200,640
+23:09:44.753,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#491 @ 2026-10-01T16:10:00.000,23.79,OK,200,200,640
+23:09:45.276,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#492 @ 2026-10-01T16:11:00.000,23.71,OK,200,200,640
+23:09:45.798,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#492 @ 2026-10-01T16:11:00.000,23.71,OK,200,200,640
+23:09:46.316,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#493 @ 2026-10-01T16:12:00.000,23.91,OK,200,200,640
+23:09:46.831,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#494 @ 2026-10-01T16:13:00.000,23.92,OK,200,200,640
+23:09:47.355,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#494 @ 2026-10-01T16:13:00.000,23.92,OK,200,200,640
+23:09:47.875,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#495 @ 2026-10-01T16:14:00.000,23.81,OK,200,200,640
+23:09:48.393,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#495 @ 2026-10-01T16:14:00.000,23.81,OK,200,200,640
+23:09:48.907,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#496 @ 2026-10-01T16:15:00.000,23.93,OK,200,200,640
+23:09:49.423,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#496 @ 2026-10-01T16:15:00.000,23.93,OK,200,200,640
+23:09:49.943,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#497 @ 2026-10-01T16:16:00.000,23.78,OK,200,200,640
+23:09:50.464,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#497 @ 2026-10-01T16:16:00.000,23.78,OK,200,200,640
+23:09:50.988,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#498 @ 2026-10-01T16:17:00.000,23.8,OK,200,200,640
+23:09:51.505,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#498 @ 2026-10-01T16:17:00.000,23.8,OK,200,200,640
+23:09:52.024,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#499 @ 2026-10-01T16:18:00.000,23.84,OK,200,200,640
+23:09:52.548,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#499 @ 2026-10-01T16:18:00.000,23.84,OK,200,200,640
+23:09:53.069,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#500 @ 2026-10-01T16:19:00.000,23.7,OK,200,200,640
+23:09:53.590,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#500 @ 2026-10-01T16:19:00.000,23.7,OK,200,200,640
+23:09:54.115,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#501 @ 2026-10-01T16:20:00.000,24.0,OK,200,200,640
+23:09:54.631,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#501 @ 2026-10-01T16:20:00.000,24.0,OK,200,200,640
+23:09:55.151,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#502 @ 2026-10-01T16:21:00.000,23.84,OK,200,200,640
+23:09:55.668,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#502 @ 2026-10-01T16:21:00.000,23.84,OK,200,200,640
+23:09:56.192,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#503 @ 2026-10-01T16:22:00.000,23.29,OK,200,200,640
+23:09:56.711,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#503 @ 2026-10-01T16:22:00.000,23.29,OK,200,200,640
+23:09:57.227,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#504 @ 2026-10-01T16:23:00.000,24.17,OK,200,200,640
+23:09:57.742,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#504 @ 2026-10-01T16:23:00.000,24.17,OK,200,200,640
+23:09:58.260,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#505 @ 2026-10-01T16:24:00.000,23.61,OK,200,200,640
+23:09:58.777,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#505 @ 2026-10-01T16:24:00.000,23.61,OK,200,200,640
+23:09:59.294,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#506 @ 2026-10-01T16:25:00.000,23.47,OK,200,200,640
+23:09:59.808,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#506 @ 2026-10-01T16:25:00.000,23.47,OK,200,200,640
+23:10:00.325,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#507 @ 2026-10-01T16:26:00.000,24.06,OK,200,200,640
+23:10:00.851,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#507 @ 2026-10-01T16:26:00.000,24.06,OK,200,200,640
+23:10:01.367,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#508 @ 2026-10-01T16:27:00.000,24.15,OK,200,200,640
+23:10:01.890,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#508 @ 2026-10-01T16:27:00.000,24.15,OK,200,200,640
+23:10:02.410,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#509 @ 2026-10-01T16:28:00.000,23.65,OK,200,200,640
+23:10:02.932,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#509 @ 2026-10-01T16:28:00.000,23.65,OK,200,200,640
+23:10:03.453,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#510 @ 2026-10-01T16:29:00.000,23.77,OK,200,200,640
+23:10:03.974,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#511 @ 2026-10-01T16:30:00.000,23.71,OK,200,200,640
+23:10:04.495,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#511 @ 2026-10-01T16:30:00.000,23.71,OK,200,200,640
+23:10:05.021,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#512 @ 2026-10-01T16:31:00.000,23.7,OK,200,200,640
+23:10:05.543,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#512 @ 2026-10-01T16:31:00.000,23.7,OK,200,200,640
+23:10:06.060,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#513 @ 2026-10-01T16:32:00.000,23.8,OK,200,200,640
+23:10:06.576,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#513 @ 2026-10-01T16:32:00.000,23.8,OK,200,200,640
+23:10:07.103,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#514 @ 2026-10-01T16:33:00.000,23.9,OK,200,200,640
+23:10:07.620,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#514 @ 2026-10-01T16:33:00.000,23.9,OK,200,200,640
+23:10:08.136,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#515 @ 2026-10-01T16:34:00.000,23.81,OK,200,200,640
+23:10:08.655,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#515 @ 2026-10-01T16:34:00.000,23.81,OK,200,200,640
+23:10:09.173,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#516 @ 2026-10-01T16:35:00.000,23.53,OK,200,200,640
+23:10:09.691,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#516 @ 2026-10-01T16:35:00.000,23.53,OK,200,200,640
+23:10:10.207,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#517 @ 2026-10-01T16:36:00.000,23.93,OK,200,200,640
+23:10:10.730,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#517 @ 2026-10-01T16:36:00.000,23.93,OK,200,200,640
+23:10:11.253,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#518 @ 2026-10-01T16:37:00.000,23.77,OK,200,200,640
+23:10:11.769,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#518 @ 2026-10-01T16:37:00.000,23.77,OK,200,200,640
+23:10:12.284,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#519 @ 2026-10-01T16:38:00.000,23.66,OK,200,200,640
+23:10:12.802,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#520 @ 2026-10-01T16:39:00.000,23.96,OK,200,200,640
+23:10:13.323,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#520 @ 2026-10-01T16:39:00.000,23.96,OK,200,200,640
+23:10:13.840,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#521 @ 2026-10-01T16:40:00.000,23.68,OK,200,200,640
+23:10:14.360,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#521 @ 2026-10-01T16:40:00.000,23.68,OK,200,200,640
+23:10:14.876,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#522 @ 2026-10-01T16:41:00.000,23.73,OK,200,200,640
+23:10:15.394,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#522 @ 2026-10-01T16:41:00.000,23.73,OK,200,200,640
+23:10:15.912,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#523 @ 2026-10-01T16:42:00.000,23.7,OK,200,200,640
+23:10:16.432,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#523 @ 2026-10-01T16:42:00.000,23.7,OK,200,200,640
+23:10:16.949,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#524 @ 2026-10-01T16:43:00.000,23.56,OK,200,200,640
+23:10:17.476,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#524 @ 2026-10-01T16:43:00.000,23.56,OK,200,200,640
+23:10:18.001,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#525 @ 2026-10-01T16:44:00.000,23.67,OK,200,200,640
+23:10:18.519,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#525 @ 2026-10-01T16:44:00.000,23.67,OK,200,200,640
+23:10:19.037,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#526 @ 2026-10-01T16:45:00.000,23.87,OK,200,200,640
+23:10:19.555,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#526 @ 2026-10-01T16:45:00.000,23.87,OK,200,200,640
+23:10:20.075,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#527 @ 2026-10-01T16:46:00.000,23.58,OK,200,200,640
+23:10:20.597,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#527 @ 2026-10-01T16:46:00.000,23.58,OK,200,200,640
+23:10:21.120,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#528 @ 2026-10-01T16:47:00.000,23.49,OK,200,200,640
+23:10:21.638,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#528 @ 2026-10-01T16:47:00.000,23.49,OK,200,200,640
+23:10:22.153,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#529 @ 2026-10-01T16:48:00.000,23.57,OK,200,200,640
+23:10:22.672,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#529 @ 2026-10-01T16:48:00.000,23.57,OK,200,200,640
+23:10:23.194,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#530 @ 2026-10-01T16:49:00.000,23.89,OK,200,200,640
+23:10:23.721,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#530 @ 2026-10-01T16:49:00.000,23.89,OK,200,200,640
+23:10:24.238,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#531 @ 2026-10-01T16:50:00.000,23.79,OK,200,200,640
+23:10:24.758,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#531 @ 2026-10-01T16:50:00.000,23.79,OK,200,200,640
+23:10:25.279,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#532 @ 2026-10-01T16:51:00.000,23.63,OK,200,200,640
+23:10:25.798,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#532 @ 2026-10-01T16:51:00.000,23.63,OK,200,200,640
+23:10:26.320,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#533 @ 2026-10-01T16:52:00.000,23.3,OK,200,200,640
+23:10:26.837,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#533 @ 2026-10-01T16:52:00.000,23.3,OK,200,200,640
+23:10:27.362,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#534 @ 2026-10-01T16:53:00.000,23.72,OK,200,200,640
+23:10:27.882,HEALTHY,data fresh: last reading 0.8 s ago,True,practice_malformed#534 @ 2026-10-01T16:53:00.000,23.72,OK,200,200,640
+23:10:28.404,HEALTHY,data fresh: last reading 0.3 s ago,True,practice_malformed#535 @ 2026-10-01T16:54:00.000,23.48,OK,200,200,640
+23:10:28.924,HEALTHY,data fresh: last reading 0.0 s ago,True,practice_malformed#536 @ 2026-10-01T16:55:00.000,23.56,OK,200,200,640
+23:10:29.448,HEALTHY,data fresh: last reading 0.5 s ago,True,practice_malformed#536 @ 2026-10-01T16:55:00.000,23.56,OK,200,200,640
+23:10:29.971,HEALTHY,data fresh: last reading 0.0 s ago,False,practice_malformed#537 @ 2026-10-01T16:56:00.000,23.49,OK,200,200,640
+23:10:30.489,HEALTHY,data fresh: last reading 0.5 s ago,False,practice_malformed#537 @ 2026-10-01T16:56:00.000,23.49,OK,200,200,640
+23:10:31.006,HEALTHY,data fresh: last reading 0.0 s ago,False,practice_malformed#538 @ 2026-10-01T16:57:00.000,23.83,OK,200,200,640
+23:10:31.536,HEALTHY,data fresh: last reading 0.5 s ago,False,practice_malformed#538 @ 2026-10-01T16:57:00.000,23.83,OK,200,200,640
+23:10:32.064,HEALTHY,data fresh: last reading 0.0 s ago,False,practice_malformed#539 @ 2026-10-01T16:58:00.000,23.23,OK,200,200,640
+23:10:32.587,HEALTHY,data fresh: last reading 0.5 s ago,False,practice_malformed#539 @ 2026-10-01T16:58:00.000,23.23,OK,200,200,640
+23:10:33.112,HEALTHY,data fresh: last reading 0.0 s ago,False,practice_malformed#540 @ 2026-10-01T16:59:00.000,23.15,OK,200,200,640
