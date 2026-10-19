@@ -93,6 +93,7 @@ def load_settings(env=None) -> Settings:
         module6_db=Path(env.get("MODULE6_DB", home / "data" / "module6_sensor_history.db")),
         log_dir=Path(env.get("MONITOR_LOG_DIR", home / "logs")),
         run_dir=Path(env.get("MONITOR_RUN_DIR", home / "run")),
+        source_dataset=env.get("SOURCE_DATASET", "practice"),
         replay_speed=float(env.get("REPLAY_SPEED", 30)),
         replay_start_sample=int(env.get("REPLAY_START_SAMPLE", 1)),
         recovery_readings=int(env.get("RECOVERY_READINGS", 5)),

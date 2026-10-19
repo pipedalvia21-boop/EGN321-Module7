@@ -1,0 +1,293 @@
+{
+  "alert": {
+    "active": true,
+    "data_fresh": false,
+    "median": 24.12,
+    "name": "HIGH_TEMP",
+    "off_c": 23.5,
+    "on_c": 24.0,
+    "since": "2026-10-18T22:58:16.337"
+  },
+  "current": {
+    "age_s": 35.0,
+    "is_current": false,
+    "timestamp": "2026-10-18T22:58:41.454",
+    "value": 23.83
+  },
+  "events": [
+    {
+      "event": "CRASH_LOOP",
+      "id": 201,
+      "level": "CRITICAL",
+      "message": "worker stopped 6 times in 60 s; automatic restart disabled - human intervention required (see logs/worker.stderr.log)",
+      "source": "supervisor",
+      "ts": "2026-10-18T22:59:16.246"
+    },
+    {
+      "event": "CHILD_EXIT",
+      "id": 200,
+      "level": "ERROR",
+      "message": "worker (pid 309) stopped unexpectedly: exit code 1",
+      "source": "supervisor",
+      "ts": "2026-10-18T22:59:16.245"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 199,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:59:15.969"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 198,
+      "level": "ERROR",
+      "message": "/: TypeError: must be real number, not str",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:59:15.965"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 197,
+      "level": "ERROR",
+      "message": "collector crashed (see worker.log)",
+      "source": "collector",
+      "ts": "2026-10-18T22:59:15.845"
+    },
+    {
+      "event": "DATA_LOST",
+      "id": 196,
+      "level": "WARNING",
+      "message": "32 readings fell due while the collector was not running; they were not recorded and the gap stays in the history (no backfill)",
+      "source": "collector",
+      "ts": "2026-10-18T22:59:15.843"
+    },
+    {
+      "event": "REPLAY_RESUMED",
+      "id": 195,
+      "level": "INFO",
+      "message": "replay resumed at source sample 400 (cycle 0)",
+      "source": "collector",
+      "ts": "2026-10-18T22:59:15.842"
+    },
+    {
+      "event": "ALERT_RESTORED",
+      "id": 194,
+      "level": "INFO",
+      "message": "HIGH_TEMP state restored from SQLite: ACTIVE since 2026-10-18T22:58:16.337",
+      "source": "collector",
+      "ts": "2026-10-18T22:59:15.823"
+    },
+    {
+      "event": "RECOVERY",
+      "id": 193,
+      "level": "WARNING",
+      "message": "previous collector run ended unexpectedly (last heartbeat 2026-10-18T22:58:41.708; down about 34 s); resuming from SQLite state",
+      "source": "collector",
+      "ts": "2026-10-18T22:59:15.817"
+    },
+    {
+      "event": "STARTUP",
+      "id": 192,
+      "level": "INFO",
+      "message": "collector starting: source practice_malformed/temperature at 60x, expected interval 1 s, stale after 3 s, failed after 15 s",
+      "source": "collector",
+      "ts": "2026-10-18T22:59:15.816"
+    },
+    {
+      "event": "CHILD_RESTART",
+      "id": 191,
+      "level": "WARNING",
+      "message": "restarted worker (pid 309, restart #5)",
+      "source": "supervisor",
+      "ts": "2026-10-18T22:59:15.744"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 190,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:59:15.450"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 189,
+      "level": "ERROR",
+      "message": "/: TypeError: must be real number, not str",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:59:15.445"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 188,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:59:14.932"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 187,
+      "level": "ERROR",
+      "message": "/: TypeError: must be real number, not str",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:59:14.926"
+    }
+  ],
+  "health": {
+    "data_state": "LOST",
+    "reason": "collector process not responding: last heartbeat 35 s ago",
+    "since": null,
+    "state": "FAILED"
+  },
+  "heartbeat_age_s": 34.7,
+  "latest_row": {
+    "age_s": 0.6,
+    "raw_value": "ERR",
+    "source_ref": "practice_malformed#432 @ 2026-10-01T15:11:00.000",
+    "status": "MISSING",
+    "status_reason": "no sensor value received",
+    "timestamp": "2026-10-18T22:59:15.843"
+  },
+  "recent": [
+    {
+      "accepted_value": null,
+      "raw_value": "ERR",
+      "sample_number": 36,
+      "source_ref": "practice_malformed#432 @ 2026-10-01T15:11:00.000",
+      "status": "MISSING",
+      "status_reason": "no sensor value received",
+      "timestamp": "2026-10-18T22:59:15.843"
+    },
+    {
+      "accepted_value": null,
+      "raw_value": "ERR",
+      "sample_number": 35,
+      "source_ref": "practice_malformed#416 @ 2026-10-01T14:55:00.000",
+      "status": "MISSING",
+      "status_reason": "no sensor value received",
+      "timestamp": "2026-10-18T22:58:59.352"
+    },
+    {
+      "accepted_value": null,
+      "raw_value": "nan",
+      "sample_number": 34,
+      "source_ref": "practice_malformed#407 @ 2026-10-01T14:46:00.000",
+      "status": "MISSING",
+      "status_reason": "no sensor value received",
+      "timestamp": "2026-10-18T22:58:50.814"
+    },
+    {
+      "accepted_value": null,
+      "raw_value": "",
+      "sample_number": 33,
+      "source_ref": "practice_malformed#403 @ 2026-10-01T14:42:00.000",
+      "status": "MISSING",
+      "status_reason": "no sensor value received",
+      "timestamp": "2026-10-18T22:58:46.303"
+    },
+    {
+      "accepted_value": null,
+      "raw_value": "ERR",
+      "sample_number": 32,
+      "source_ref": "practice_malformed#400 @ 2026-10-01T14:39:00.000",
+      "status": "MISSING",
+      "status_reason": "no sensor value received",
+      "timestamp": "2026-10-18T22:58:43.793"
+    },
+    {
+      "accepted_value": null,
+      "raw_value": "ERR",
+      "sample_number": 31,
+      "source_ref": "practice_malformed#400 @ 2026-10-01T14:39:00.000",
+      "status": "MISSING",
+      "status_reason": "no sensor value received",
+      "timestamp": "2026-10-18T22:58:42.462"
+    },
+    {
+      "accepted_value": 23.83,
+      "raw_value": 23.83,
+      "sample_number": 30,
+      "source_ref": "practice_malformed#399 @ 2026-10-01T14:38:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:41.454"
+    },
+    {
+      "accepted_value": 24.12,
+      "raw_value": 24.12,
+      "sample_number": 29,
+      "source_ref": "practice_malformed#398 @ 2026-10-01T14:37:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:40.444"
+    },
+    {
+      "accepted_value": 24.41,
+      "raw_value": 24.41,
+      "sample_number": 28,
+      "source_ref": "practice_malformed#397 @ 2026-10-01T14:36:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:39.434"
+    },
+    {
+      "accepted_value": 23.99,
+      "raw_value": 23.99,
+      "sample_number": 27,
+      "source_ref": "practice_malformed#396 @ 2026-10-01T14:35:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:38.421"
+    },
+    {
+      "accepted_value": 24.22,
+      "raw_value": 24.22,
+      "sample_number": 26,
+      "source_ref": "practice_malformed#395 @ 2026-10-01T14:34:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:37.413"
+    },
+    {
+      "accepted_value": 24.11,
+      "raw_value": 24.11,
+      "sample_number": 25,
+      "source_ref": "practice_malformed#394 @ 2026-10-01T14:33:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:36.404"
+    }
+  ],
+  "server_time": "2026-10-18T22:59:16.406",
+  "settings": {
+    "alert_off_c": 23.5,
+    "alert_on_c": 24.0,
+    "alert_window": 5,
+    "failed_after_s": 15.0,
+    "heartbeat_timeout_s": 10.0,
+    "interval_s": 1.0,
+    "replay_speed": 60.0,
+    "stale_after_s": 3.0
+  },
+  "status_counts_last_30": {
+    "MISSING": 6,
+    "OK": 24
+  },
+  "window_5min": {
+    "accepted": 30,
+    "completeness_pct": 55.4,
+    "expected": 65,
+    "gap_count": 4,
+    "largest_gap_s": 16.5,
+    "missing": 29,
+    "ongoing_gap_s": null,
+    "received": 36,
+    "status_counts": {
+      "MISSING": 6,
+      "OK": 30
+    }
+  }
+}

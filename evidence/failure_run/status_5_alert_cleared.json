@@ -1,0 +1,292 @@
+{
+  "alert": {
+    "active": false,
+    "data_fresh": true,
+    "median": 23.49,
+    "name": "HIGH_TEMP",
+    "off_c": 23.5,
+    "on_c": 24.0,
+    "since": "2026-10-18T23:00:59.530"
+  },
+  "current": {
+    "age_s": 0.2,
+    "is_current": true,
+    "timestamp": "2026-10-18T23:00:59.530",
+    "value": 23.49
+  },
+  "events": [
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 581,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:59.624"
+    },
+    {
+      "event": "ALERT_CLEARED",
+      "id": 580,
+      "level": "INFO",
+      "message": "HIGH_TEMP cleared: median of last 5 accepted readings 23.49 C <= 23.5 C (latest 23.49 C)",
+      "source": "collector",
+      "ts": "2026-10-18T23:00:59.530"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 579,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:59.493"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 578,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:58.968"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 577,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:58.440"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 576,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:57.918"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 575,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:57.395"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 574,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:56.873"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 573,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:56.623"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 572,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:56.355"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 571,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:55.838"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 570,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:55.318"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 569,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:54.798"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 568,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:54.280"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 567,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T23:00:53.762"
+    }
+  ],
+  "health": {
+    "data_state": "FRESH",
+    "reason": "data fresh: last reading 0.0 s ago",
+    "since": "2026-10-18T23:00:07.387",
+    "state": "HEALTHY"
+  },
+  "heartbeat_age_s": 0.2,
+  "latest_row": {
+    "age_s": 0.2,
+    "raw_value": 23.49,
+    "source_ref": "practice_malformed#537 @ 2026-10-01T16:56:00.000",
+    "status": "OK",
+    "status_reason": null,
+    "timestamp": "2026-10-18T23:00:59.530"
+  },
+  "recent": [
+    {
+      "accepted_value": 23.49,
+      "raw_value": 23.49,
+      "sample_number": 113,
+      "source_ref": "practice_malformed#537 @ 2026-10-01T16:56:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:59.530"
+    },
+    {
+      "accepted_value": 23.56,
+      "raw_value": 23.56,
+      "sample_number": 112,
+      "source_ref": "practice_malformed#536 @ 2026-10-01T16:55:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:58.520"
+    },
+    {
+      "accepted_value": 23.48,
+      "raw_value": 23.48,
+      "sample_number": 111,
+      "source_ref": "practice_malformed#535 @ 2026-10-01T16:54:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:57.515"
+    },
+    {
+      "accepted_value": 23.72,
+      "raw_value": 23.72,
+      "sample_number": 110,
+      "source_ref": "practice_malformed#534 @ 2026-10-01T16:53:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:56.510"
+    },
+    {
+      "accepted_value": 23.3,
+      "raw_value": 23.3,
+      "sample_number": 109,
+      "source_ref": "practice_malformed#533 @ 2026-10-01T16:52:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:55.504"
+    },
+    {
+      "accepted_value": 23.63,
+      "raw_value": 23.63,
+      "sample_number": 108,
+      "source_ref": "practice_malformed#532 @ 2026-10-01T16:51:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:54.499"
+    },
+    {
+      "accepted_value": 23.79,
+      "raw_value": 23.79,
+      "sample_number": 107,
+      "source_ref": "practice_malformed#531 @ 2026-10-01T16:50:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:53.492"
+    },
+    {
+      "accepted_value": 23.89,
+      "raw_value": 23.89,
+      "sample_number": 106,
+      "source_ref": "practice_malformed#530 @ 2026-10-01T16:49:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:52.485"
+    },
+    {
+      "accepted_value": 23.57,
+      "raw_value": 23.57,
+      "sample_number": 105,
+      "source_ref": "practice_malformed#529 @ 2026-10-01T16:48:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:51.477"
+    },
+    {
+      "accepted_value": 23.49,
+      "raw_value": 23.49,
+      "sample_number": 104,
+      "source_ref": "practice_malformed#528 @ 2026-10-01T16:47:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:50.470"
+    },
+    {
+      "accepted_value": 23.58,
+      "raw_value": 23.58,
+      "sample_number": 103,
+      "source_ref": "practice_malformed#527 @ 2026-10-01T16:46:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:49.463"
+    },
+    {
+      "accepted_value": 23.87,
+      "raw_value": 23.87,
+      "sample_number": 102,
+      "source_ref": "practice_malformed#526 @ 2026-10-01T16:45:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T23:00:48.455"
+    }
+  ],
+  "server_time": "2026-10-18T23:00:59.741",
+  "settings": {
+    "alert_off_c": 23.5,
+    "alert_on_c": 24.0,
+    "alert_window": 5,
+    "failed_after_s": 15.0,
+    "heartbeat_timeout_s": 10.0,
+    "interval_s": 1.0,
+    "replay_speed": 60.0,
+    "stale_after_s": 3.0
+  },
+  "status_counts_last_30": {
+    "OK": 30
+  },
+  "window_5min": {
+    "accepted": 107,
+    "completeness_pct": 67.3,
+    "expected": 168,
+    "gap_count": 5,
+    "largest_gap_s": 29.1,
+    "missing": 55,
+    "ongoing_gap_s": null,
+    "received": 113,
+    "status_counts": {
+      "MISSING": 6,
+      "OK": 107
+    }
+  }
+}

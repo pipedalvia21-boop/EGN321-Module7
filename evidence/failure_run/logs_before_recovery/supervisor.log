@@ -1,0 +1,20 @@
+2026-10-18 22:58:12,150 INFO     supervisor SUPERVISOR_START supervisor started (pid 219), python 3.13.16, dashboard http://127.0.0.1:5000
+2026-10-18 22:58:12,154 INFO     supervisor CHILD_START started worker (pid 222)
+2026-10-18 22:58:12,155 INFO     supervisor CHILD_START started web (pid 223)
+2026-10-18 22:58:42,692 ERROR    supervisor CHILD_EXIT worker (pid 222) stopped unexpectedly: exit code 1
+2026-10-18 22:58:42,693 INFO     supervisor RESTART_SCHEDULED worker will restart in 1 s
+2026-10-18 22:58:43,696 WARNING  supervisor CHILD_RESTART restarted worker (pid 294, restart #1)
+2026-10-18 22:58:44,199 ERROR    supervisor CHILD_EXIT worker (pid 294) stopped unexpectedly: exit code 1
+2026-10-18 22:58:44,201 INFO     supervisor RESTART_SCHEDULED worker will restart in 2 s
+2026-10-18 22:58:46,204 WARNING  supervisor CHILD_RESTART restarted worker (pid 296, restart #2)
+2026-10-18 22:58:46,707 ERROR    supervisor CHILD_EXIT worker (pid 296) stopped unexpectedly: exit code 1
+2026-10-18 22:58:46,708 INFO     supervisor RESTART_SCHEDULED worker will restart in 4 s
+2026-10-18 22:58:50,712 WARNING  supervisor CHILD_RESTART restarted worker (pid 305, restart #3)
+2026-10-18 22:58:51,214 ERROR    supervisor CHILD_EXIT worker (pid 305) stopped unexpectedly: exit code 1
+2026-10-18 22:58:51,224 INFO     supervisor RESTART_SCHEDULED worker will restart in 8 s
+2026-10-18 22:58:59,231 WARNING  supervisor CHILD_RESTART restarted worker (pid 307, restart #4)
+2026-10-18 22:58:59,733 ERROR    supervisor CHILD_EXIT worker (pid 307) stopped unexpectedly: exit code 1
+2026-10-18 22:58:59,734 INFO     supervisor RESTART_SCHEDULED worker will restart in 16 s
+2026-10-18 22:59:15,744 WARNING  supervisor CHILD_RESTART restarted worker (pid 309, restart #5)
+2026-10-18 22:59:16,246 ERROR    supervisor CHILD_EXIT worker (pid 309) stopped unexpectedly: exit code 1
+2026-10-18 22:59:16,247 CRITICAL supervisor CRASH_LOOP worker stopped 6 times in 60 s; automatic restart disabled - human intervention required (see logs/worker.stderr.log)

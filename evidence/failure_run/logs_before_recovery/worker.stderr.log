@@ -1,0 +1,138 @@
+2026-10-18 22:58:12,289 INFO     worker     STARTUP collector starting: source practice_malformed/temperature at 60x, expected interval 1 s, stale after 3 s, failed after 15 s
+2026-10-18 22:58:12,316 INFO     worker     REPLAY_STARTED replay starts at source sample 370 (2026-10-01T14:09:00.000)
+2026-10-18 22:58:12,319 INFO     worker     READING sample=1 raw=24.48 status=OK accepted=24.48 source=practice_malformed#370
+2026-10-18 22:58:12,320 INFO     worker     HEALTH_CHANGE (none) -> STARTING: 1 of 5 fresh accepted readings since start
+2026-10-18 22:58:13,323 INFO     worker     READING sample=2 raw=24.12 status=OK accepted=24.12 source=practice_malformed#371
+2026-10-18 22:58:14,327 INFO     worker     READING sample=3 raw=24.17 status=OK accepted=24.17 source=practice_malformed#372
+2026-10-18 22:58:15,333 INFO     worker     READING sample=4 raw=23.77 status=OK accepted=23.77 source=practice_malformed#373
+2026-10-18 22:58:16,338 INFO     worker     READING sample=5 raw=23.85 status=OK accepted=23.85 source=practice_malformed#374
+2026-10-18 22:58:16,338 WARNING  worker     ALERT_ACTIVE HIGH_TEMP active: median of last 5 accepted readings 24.12 C >= 24 C (latest 23.85 C)
+2026-10-18 22:58:16,339 INFO     worker     STARTED 5 fresh accepted readings received: normal operation
+2026-10-18 22:58:16,340 INFO     worker     HEALTH_CHANGE STARTING -> HEALTHY: data fresh: last reading 0.0 s ago
+2026-10-18 22:58:17,347 INFO     worker     READING sample=6 raw=24.12 status=OK accepted=24.12 source=practice_malformed#375
+2026-10-18 22:58:18,354 INFO     worker     READING sample=7 raw=24.35 status=OK accepted=24.35 source=practice_malformed#376
+2026-10-18 22:58:19,362 INFO     worker     READING sample=8 raw=24.35 status=OK accepted=24.35 source=practice_malformed#377
+2026-10-18 22:58:20,369 INFO     worker     READING sample=9 raw=24.02 status=OK accepted=24.02 source=practice_malformed#378
+2026-10-18 22:58:21,379 INFO     worker     READING sample=10 raw=24.51 status=OK accepted=24.51 source=practice_malformed#379
+2026-10-18 22:58:22,391 INFO     worker     READING sample=11 raw=24.50 status=OK accepted=24.50 source=practice_malformed#380
+2026-10-18 22:58:23,399 INFO     worker     READING sample=12 raw=24.07 status=OK accepted=24.07 source=practice_malformed#381
+2026-10-18 22:58:24,408 INFO     worker     READING sample=13 raw=24.17 status=OK accepted=24.17 source=practice_malformed#382
+2026-10-18 22:58:25,424 INFO     worker     READING sample=14 raw=24.16 status=OK accepted=24.16 source=practice_malformed#383
+2026-10-18 22:58:26,434 INFO     worker     READING sample=15 raw=24.13 status=OK accepted=24.13 source=practice_malformed#384
+2026-10-18 22:58:27,443 INFO     worker     READING sample=16 raw=24.02 status=OK accepted=24.02 source=practice_malformed#385
+2026-10-18 22:58:28,451 INFO     worker     READING sample=17 raw=24.13 status=OK accepted=24.13 source=practice_malformed#386
+2026-10-18 22:58:29,462 INFO     worker     READING sample=18 raw=24.08 status=OK accepted=24.08 source=practice_malformed#387
+2026-10-18 22:58:30,475 INFO     worker     READING sample=19 raw=24.15 status=OK accepted=24.15 source=practice_malformed#388
+2026-10-18 22:58:31,584 INFO     worker     READING sample=20 raw=23.95 status=OK accepted=23.95 source=practice_malformed#389
+2026-10-18 22:58:32,371 INFO     worker     READING sample=21 raw=24.22 status=OK accepted=24.22 source=practice_malformed#390
+2026-10-18 22:58:33,381 INFO     worker     READING sample=22 raw=24.31 status=OK accepted=24.31 source=practice_malformed#391
+2026-10-18 22:58:34,389 INFO     worker     READING sample=23 raw=24.39 status=OK accepted=24.39 source=practice_malformed#392
+2026-10-18 22:58:35,398 INFO     worker     READING sample=24 raw=24.05 status=OK accepted=24.05 source=practice_malformed#393
+2026-10-18 22:58:36,405 INFO     worker     READING sample=25 raw=24.11 status=OK accepted=24.11 source=practice_malformed#394
+2026-10-18 22:58:37,414 INFO     worker     READING sample=26 raw=24.22 status=OK accepted=24.22 source=practice_malformed#395
+2026-10-18 22:58:38,423 INFO     worker     READING sample=27 raw=23.99 status=OK accepted=23.99 source=practice_malformed#396
+2026-10-18 22:58:39,435 INFO     worker     READING sample=28 raw=24.41 status=OK accepted=24.41 source=practice_malformed#397
+2026-10-18 22:58:40,446 INFO     worker     READING sample=29 raw=24.12 status=OK accepted=24.12 source=practice_malformed#398
+2026-10-18 22:58:41,455 INFO     worker     READING sample=30 raw=23.83 status=OK accepted=23.83 source=practice_malformed#399
+2026-10-18 22:58:42,463 ERROR    worker     APPLICATION_ERROR collector crashed; the supervisor will restart it
+Traceback (most recent call last):
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 253, in main
+    worker.step()
+    ~~~~~~~~~~~^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 142, in step
+    self.process(row, cycle, now)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 171, in process
+    raw = "none" if row.raw_value is None else f"{row.raw_value:.2f}"
+                                                 ^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+2026-10-18 22:58:42,465 ERROR    worker     APPLICATION_ERROR collector crashed (see worker.log)
+2026-10-18 22:58:43,770 INFO     worker     STARTUP collector starting: source practice_malformed/temperature at 60x, expected interval 1 s, stale after 3 s, failed after 15 s
+2026-10-18 22:58:43,771 WARNING  worker     RECOVERY previous collector run ended unexpectedly (last heartbeat 2026-10-18T22:58:41.708; down about 2 s); resuming from SQLite state
+2026-10-18 22:58:43,776 INFO     worker     ALERT_RESTORED HIGH_TEMP state restored from SQLite: ACTIVE since 2026-10-18T22:58:16.337
+2026-10-18 22:58:43,792 INFO     worker     REPLAY_RESUMED replay resumed at source sample 400 (cycle 0)
+2026-10-18 22:58:43,794 ERROR    worker     APPLICATION_ERROR collector crashed; the supervisor will restart it
+Traceback (most recent call last):
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 253, in main
+    worker.step()
+    ~~~~~~~~~~~^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 142, in step
+    self.process(row, cycle, now)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 171, in process
+    raw = "none" if row.raw_value is None else f"{row.raw_value:.2f}"
+                                                 ^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+2026-10-18 22:58:43,795 ERROR    worker     APPLICATION_ERROR collector crashed (see worker.log)
+2026-10-18 22:58:46,281 INFO     worker     STARTUP collector starting: source practice_malformed/temperature at 60x, expected interval 1 s, stale after 3 s, failed after 15 s
+2026-10-18 22:58:46,282 WARNING  worker     RECOVERY previous collector run ended unexpectedly (last heartbeat 2026-10-18T22:58:41.708; down about 5 s); resuming from SQLite state
+2026-10-18 22:58:46,286 INFO     worker     ALERT_RESTORED HIGH_TEMP state restored from SQLite: ACTIVE since 2026-10-18T22:58:16.337
+2026-10-18 22:58:46,302 INFO     worker     REPLAY_RESUMED replay resumed at source sample 400 (cycle 0)
+2026-10-18 22:58:46,303 WARNING  worker     DATA_LOST 3 readings fell due while the collector was not running; they were not recorded and the gap stays in the history (no backfill)
+2026-10-18 22:58:46,304 ERROR    worker     APPLICATION_ERROR collector crashed; the supervisor will restart it
+Traceback (most recent call last):
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 253, in main
+    worker.step()
+    ~~~~~~~~~~~^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 142, in step
+    self.process(row, cycle, now)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 171, in process
+    raw = "none" if row.raw_value is None else f"{row.raw_value:.2f}"
+                                                 ^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+2026-10-18 22:58:46,305 ERROR    worker     APPLICATION_ERROR collector crashed (see worker.log)
+2026-10-18 22:58:50,792 INFO     worker     STARTUP collector starting: source practice_malformed/temperature at 60x, expected interval 1 s, stale after 3 s, failed after 15 s
+2026-10-18 22:58:50,793 WARNING  worker     RECOVERY previous collector run ended unexpectedly (last heartbeat 2026-10-18T22:58:41.708; down about 9 s); resuming from SQLite state
+2026-10-18 22:58:50,797 INFO     worker     ALERT_RESTORED HIGH_TEMP state restored from SQLite: ACTIVE since 2026-10-18T22:58:16.337
+2026-10-18 22:58:50,814 INFO     worker     REPLAY_RESUMED replay resumed at source sample 400 (cycle 0)
+2026-10-18 22:58:50,815 WARNING  worker     DATA_LOST 7 readings fell due while the collector was not running; they were not recorded and the gap stays in the history (no backfill)
+2026-10-18 22:58:50,816 ERROR    worker     APPLICATION_ERROR collector crashed; the supervisor will restart it
+Traceback (most recent call last):
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 253, in main
+    worker.step()
+    ~~~~~~~~~~~^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 142, in step
+    self.process(row, cycle, now)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 171, in process
+    raw = "none" if row.raw_value is None else f"{row.raw_value:.2f}"
+                                                 ^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+2026-10-18 22:58:50,817 ERROR    worker     APPLICATION_ERROR collector crashed (see worker.log)
+2026-10-18 22:58:59,326 INFO     worker     STARTUP collector starting: source practice_malformed/temperature at 60x, expected interval 1 s, stale after 3 s, failed after 15 s
+2026-10-18 22:58:59,327 WARNING  worker     RECOVERY previous collector run ended unexpectedly (last heartbeat 2026-10-18T22:58:41.708; down about 18 s); resuming from SQLite state
+2026-10-18 22:58:59,332 INFO     worker     ALERT_RESTORED HIGH_TEMP state restored from SQLite: ACTIVE since 2026-10-18T22:58:16.337
+2026-10-18 22:58:59,349 INFO     worker     REPLAY_RESUMED replay resumed at source sample 400 (cycle 0)
+2026-10-18 22:58:59,353 WARNING  worker     DATA_LOST 16 readings fell due while the collector was not running; they were not recorded and the gap stays in the history (no backfill)
+2026-10-18 22:58:59,354 ERROR    worker     APPLICATION_ERROR collector crashed; the supervisor will restart it
+Traceback (most recent call last):
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 253, in main
+    worker.step()
+    ~~~~~~~~~~~^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 142, in step
+    self.process(row, cycle, now)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 171, in process
+    raw = "none" if row.raw_value is None else f"{row.raw_value:.2f}"
+                                                 ^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+2026-10-18 22:58:59,355 ERROR    worker     APPLICATION_ERROR collector crashed (see worker.log)
+2026-10-18 22:59:15,816 INFO     worker     STARTUP collector starting: source practice_malformed/temperature at 60x, expected interval 1 s, stale after 3 s, failed after 15 s
+2026-10-18 22:59:15,817 WARNING  worker     RECOVERY previous collector run ended unexpectedly (last heartbeat 2026-10-18T22:58:41.708; down about 34 s); resuming from SQLite state
+2026-10-18 22:59:15,823 INFO     worker     ALERT_RESTORED HIGH_TEMP state restored from SQLite: ACTIVE since 2026-10-18T22:58:16.337
+2026-10-18 22:59:15,842 INFO     worker     REPLAY_RESUMED replay resumed at source sample 400 (cycle 0)
+2026-10-18 22:59:15,843 WARNING  worker     DATA_LOST 32 readings fell due while the collector was not running; they were not recorded and the gap stays in the history (no backfill)
+2026-10-18 22:59:15,844 ERROR    worker     APPLICATION_ERROR collector crashed; the supervisor will restart it
+Traceback (most recent call last):
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 253, in main
+    worker.step()
+    ~~~~~~~~~~~^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 142, in step
+    self.process(row, cycle, now)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/home/claude/EGN321-Module7/monitor/worker.py", line 171, in process
+    raw = "none" if row.raw_value is None else f"{row.raw_value:.2f}"
+                                                 ^^^^^^^^^^^^^^^^^^^
+ValueError: Unknown format code 'f' for object of type 'str'
+2026-10-18 22:59:15,845 ERROR    worker     APPLICATION_ERROR collector crashed (see worker.log)

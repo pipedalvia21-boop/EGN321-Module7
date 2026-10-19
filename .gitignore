@@ -5,3 +5,4 @@ logs/
 run/
 data/monitor.db
 data/monitor.db-*
+work/

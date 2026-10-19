@@ -1,0 +1,293 @@
+{
+  "alert": {
+    "active": true,
+    "data_fresh": true,
+    "median": 24.12,
+    "name": "HIGH_TEMP",
+    "off_c": 23.5,
+    "on_c": 24.0,
+    "since": "2026-10-18T22:58:16.337"
+  },
+  "current": {
+    "age_s": 5.1,
+    "is_current": false,
+    "timestamp": "2026-10-18T22:58:41.454",
+    "value": 23.83
+  },
+  "events": [
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 45,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:58:46.332"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 44,
+      "level": "ERROR",
+      "message": "/: TypeError: must be real number, not str",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:58:46.327"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 43,
+      "level": "ERROR",
+      "message": "collector crashed (see worker.log)",
+      "source": "collector",
+      "ts": "2026-10-18T22:58:46.305"
+    },
+    {
+      "event": "DATA_LOST",
+      "id": 42,
+      "level": "WARNING",
+      "message": "3 readings fell due while the collector was not running; they were not recorded and the gap stays in the history (no backfill)",
+      "source": "collector",
+      "ts": "2026-10-18T22:58:46.303"
+    },
+    {
+      "event": "REPLAY_RESUMED",
+      "id": 41,
+      "level": "INFO",
+      "message": "replay resumed at source sample 400 (cycle 0)",
+      "source": "collector",
+      "ts": "2026-10-18T22:58:46.302"
+    },
+    {
+      "event": "ALERT_RESTORED",
+      "id": 40,
+      "level": "INFO",
+      "message": "HIGH_TEMP state restored from SQLite: ACTIVE since 2026-10-18T22:58:16.337",
+      "source": "collector",
+      "ts": "2026-10-18T22:58:46.286"
+    },
+    {
+      "event": "RECOVERY",
+      "id": 39,
+      "level": "WARNING",
+      "message": "previous collector run ended unexpectedly (last heartbeat 2026-10-18T22:58:41.708; down about 5 s); resuming from SQLite state",
+      "source": "collector",
+      "ts": "2026-10-18T22:58:46.282"
+    },
+    {
+      "event": "STARTUP",
+      "id": 38,
+      "level": "INFO",
+      "message": "collector starting: source practice_malformed/temperature at 60x, expected interval 1 s, stale after 3 s, failed after 15 s",
+      "source": "collector",
+      "ts": "2026-10-18T22:58:46.281"
+    },
+    {
+      "event": "CHILD_RESTART",
+      "id": 37,
+      "level": "WARNING",
+      "message": "restarted worker (pid 296, restart #2)",
+      "source": "supervisor",
+      "ts": "2026-10-18T22:58:46.204"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 36,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:58:45.815"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 35,
+      "level": "ERROR",
+      "message": "/: TypeError: must be real number, not str",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:58:45.810"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 34,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:58:45.296"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 33,
+      "level": "ERROR",
+      "message": "/: TypeError: must be real number, not str",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:58:45.292"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 32,
+      "level": "ERROR",
+      "message": "/chart/live.svg: TypeError: '>' not supported between instances of 'str' and 'float'",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:58:44.778"
+    },
+    {
+      "event": "APPLICATION_ERROR",
+      "id": 31,
+      "level": "ERROR",
+      "message": "/: TypeError: must be real number, not str",
+      "source": "dashboard",
+      "ts": "2026-10-18T22:58:44.773"
+    }
+  ],
+  "health": {
+    "data_state": "FRESH",
+    "reason": "data fresh: last reading 0.8 s ago",
+    "since": "2026-10-18T22:58:16.337",
+    "state": "HEALTHY"
+  },
+  "heartbeat_age_s": 4.9,
+  "latest_row": {
+    "age_s": 0.3,
+    "raw_value": "",
+    "source_ref": "practice_malformed#403 @ 2026-10-01T14:42:00.000",
+    "status": "MISSING",
+    "status_reason": "no sensor value received",
+    "timestamp": "2026-10-18T22:58:46.303"
+  },
+  "recent": [
+    {
+      "accepted_value": null,
+      "raw_value": "",
+      "sample_number": 33,
+      "source_ref": "practice_malformed#403 @ 2026-10-01T14:42:00.000",
+      "status": "MISSING",
+      "status_reason": "no sensor value received",
+      "timestamp": "2026-10-18T22:58:46.303"
+    },
+    {
+      "accepted_value": null,
+      "raw_value": "ERR",
+      "sample_number": 32,
+      "source_ref": "practice_malformed#400 @ 2026-10-01T14:39:00.000",
+      "status": "MISSING",
+      "status_reason": "no sensor value received",
+      "timestamp": "2026-10-18T22:58:43.793"
+    },
+    {
+      "accepted_value": null,
+      "raw_value": "ERR",
+      "sample_number": 31,
+      "source_ref": "practice_malformed#400 @ 2026-10-01T14:39:00.000",
+      "status": "MISSING",
+      "status_reason": "no sensor value received",
+      "timestamp": "2026-10-18T22:58:42.462"
+    },
+    {
+      "accepted_value": 23.83,
+      "raw_value": 23.83,
+      "sample_number": 30,
+      "source_ref": "practice_malformed#399 @ 2026-10-01T14:38:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:41.454"
+    },
+    {
+      "accepted_value": 24.12,
+      "raw_value": 24.12,
+      "sample_number": 29,
+      "source_ref": "practice_malformed#398 @ 2026-10-01T14:37:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:40.444"
+    },
+    {
+      "accepted_value": 24.41,
+      "raw_value": 24.41,
+      "sample_number": 28,
+      "source_ref": "practice_malformed#397 @ 2026-10-01T14:36:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:39.434"
+    },
+    {
+      "accepted_value": 23.99,
+      "raw_value": 23.99,
+      "sample_number": 27,
+      "source_ref": "practice_malformed#396 @ 2026-10-01T14:35:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:38.421"
+    },
+    {
+      "accepted_value": 24.22,
+      "raw_value": 24.22,
+      "sample_number": 26,
+      "source_ref": "practice_malformed#395 @ 2026-10-01T14:34:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:37.413"
+    },
+    {
+      "accepted_value": 24.11,
+      "raw_value": 24.11,
+      "sample_number": 25,
+      "source_ref": "practice_malformed#394 @ 2026-10-01T14:33:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:36.404"
+    },
+    {
+      "accepted_value": 24.05,
+      "raw_value": 24.05,
+      "sample_number": 24,
+      "source_ref": "practice_malformed#393 @ 2026-10-01T14:32:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:35.396"
+    },
+    {
+      "accepted_value": 24.39,
+      "raw_value": 24.39,
+      "sample_number": 23,
+      "source_ref": "practice_malformed#392 @ 2026-10-01T14:31:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:34.388"
+    },
+    {
+      "accepted_value": 24.31,
+      "raw_value": 24.31,
+      "sample_number": 22,
+      "source_ref": "practice_malformed#391 @ 2026-10-01T14:30:00.000",
+      "status": "OK",
+      "status_reason": null,
+      "timestamp": "2026-10-18T22:58:33.380"
+    }
+  ],
+  "server_time": "2026-10-18T22:58:46.575",
+  "settings": {
+    "alert_off_c": 23.5,
+    "alert_on_c": 24.0,
+    "alert_window": 5,
+    "failed_after_s": 15.0,
+    "heartbeat_timeout_s": 10.0,
+    "interval_s": 1.0,
+    "replay_speed": 60.0,
+    "stale_after_s": 3.0
+  },
+  "status_counts_last_30": {
+    "MISSING": 3,
+    "OK": 27
+  },
+  "window_5min": {
+    "accepted": 30,
+    "completeness_pct": 94.3,
+    "expected": 35,
+    "gap_count": 1,
+    "largest_gap_s": 2.5,
+    "missing": 2,
+    "ongoing_gap_s": null,
+    "received": 33,
+    "status_counts": {
+      "MISSING": 3,
+      "OK": 30
+    }
+  }
+}
