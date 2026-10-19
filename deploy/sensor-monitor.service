@@ -1,0 +1,25 @@
+# systemd unit (Linux / Raspberry Pi). Installed by deploy/install_linux.sh, which fills in the paths.
+# systemd starts the supervisor at boot and restarts it if it ever stops; the supervisor restarts
+# the collector and the dashboard.
+[Unit]
+Description=EGN321 lab temperature monitor (supervisor: collector + Flask dashboard)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=__USER__
+WorkingDirectory=__PROJECT_DIR__
+ExecStart=__PYTHON__ __PROJECT_DIR__/supervisor.py
+Environment=PYTHONUNBUFFERED=1
+# Restart the supervisor whatever the reason it stopped (crash, kill -9, OOM)
+Restart=always
+RestartSec=5
+# SIGTERM goes to the supervisor only; it stops the children cleanly. Leftovers are killed after 20 s.
+KillMode=mixed
+TimeoutStopSec=20
+# Do not give up on repeated failures: keep trying every 5 s
+StartLimitIntervalSec=0
+
+[Install]
+WantedBy=multi-user.target
