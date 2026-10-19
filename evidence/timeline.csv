@@ -1,0 +1,757 @@
+time,health,data_state,alert_active,current_value,value_is_current,latest_status,reason
+22:22:33.888,UNREACHABLE,,,,,,dashboard not responding
+22:22:34.141,UNREACHABLE,,,,,,dashboard not responding
+22:22:34.398,STARTING,FRESH,False,23.88,True,OK,1 of 5 fresh accepted readings since start
+22:22:34.425,STARTING,FRESH,False,23.88,True,OK,1 of 5 fresh accepted readings since start
+22:22:34.652,STARTING,FRESH,False,23.41,True,OK,2 of 5 fresh accepted readings since start
+22:22:34.905,STARTING,FRESH,False,23.41,True,OK,2 of 5 fresh accepted readings since start
+22:22:35.158,STARTING,FRESH,False,23.54,True,OK,3 of 5 fresh accepted readings since start
+22:22:35.411,STARTING,FRESH,False,23.54,True,OK,3 of 5 fresh accepted readings since start
+22:22:35.665,STARTING,FRESH,False,23.43,True,OK,4 of 5 fresh accepted readings since start
+22:22:35.918,STARTING,FRESH,False,23.43,True,OK,4 of 5 fresh accepted readings since start
+22:22:36.172,HEALTHY,FRESH,False,23.68,True,OK,data fresh: last reading 0.0 s ago
+22:22:36.427,HEALTHY,FRESH,False,23.68,True,OK,data fresh: last reading 0.3 s ago
+22:22:36.548,HEALTHY,FRESH,False,23.68,True,OK,data fresh: last reading 0.4 s ago
+22:22:36.680,HEALTHY,FRESH,False,23.66,True,OK,data fresh: last reading 0.0 s ago
+22:22:36.934,HEALTHY,FRESH,False,23.66,True,OK,data fresh: last reading 0.3 s ago
+22:22:37.188,HEALTHY,FRESH,False,23.87,True,OK,data fresh: last reading 0.0 s ago
+22:22:37.441,HEALTHY,FRESH,False,23.87,True,OK,data fresh: last reading 0.3 s ago
+22:22:37.695,HEALTHY,FRESH,False,23.8,True,OK,data fresh: last reading 0.0 s ago
+22:22:37.951,HEALTHY,FRESH,False,23.8,True,OK,data fresh: last reading 0.3 s ago
+22:22:38.205,HEALTHY,FRESH,False,23.74,True,OK,data fresh: last reading 0.0 s ago
+22:22:38.460,HEALTHY,FRESH,False,23.74,True,OK,data fresh: last reading 0.3 s ago
+22:22:38.713,HEALTHY,FRESH,False,23.68,True,OK,data fresh: last reading 0.0 s ago
+22:22:38.968,HEALTHY,FRESH,False,23.68,True,OK,data fresh: last reading 0.3 s ago
+22:22:39.222,HEALTHY,FRESH,False,23.68,True,OUT_OF_RANGE,data fresh: last reading 0.1 s ago
+22:22:39.479,HEALTHY,FRESH,False,23.68,True,OUT_OF_RANGE,data fresh: last reading 0.4 s ago
+22:22:39.733,HEALTHY,FRESH,False,23.79,True,OK,data fresh: last reading 0.1 s ago
+22:22:39.988,HEALTHY,FRESH,False,23.79,True,OK,data fresh: last reading 0.4 s ago
+22:22:40.242,HEALTHY,FRESH,False,23.62,True,OK,data fresh: last reading 0.1 s ago
+22:22:40.498,HEALTHY,FRESH,False,23.62,True,OK,data fresh: last reading 0.4 s ago
+22:22:40.755,HEALTHY,FRESH,False,23.73,True,OK,data fresh: last reading 0.1 s ago
+22:22:41.009,HEALTHY,FRESH,False,23.73,True,OK,data fresh: last reading 0.4 s ago
+22:22:41.263,HEALTHY,FRESH,False,23.88,True,OK,data fresh: last reading 0.1 s ago
+22:22:41.518,HEALTHY,FRESH,False,23.88,True,OK,data fresh: last reading 0.4 s ago
+22:22:41.772,HEALTHY,FRESH,False,23.75,True,OK,data fresh: last reading 0.1 s ago
+22:22:42.027,HEALTHY,FRESH,False,23.75,True,OK,data fresh: last reading 0.4 s ago
+22:22:42.282,HEALTHY,FRESH,False,23.91,True,OK,data fresh: last reading 0.1 s ago
+22:22:42.538,HEALTHY,FRESH,False,23.91,True,OK,data fresh: last reading 0.4 s ago
+22:22:42.792,HEALTHY,FRESH,False,23.9,True,OK,data fresh: last reading 0.1 s ago
+22:22:43.045,HEALTHY,FRESH,False,23.9,True,OK,data fresh: last reading 0.4 s ago
+22:22:43.301,HEALTHY,FRESH,False,23.93,True,OK,data fresh: last reading 0.1 s ago
+22:22:43.554,HEALTHY,FRESH,False,23.93,True,OK,data fresh: last reading 0.4 s ago
+22:22:43.811,HEALTHY,FRESH,False,23.67,True,OK,data fresh: last reading 0.1 s ago
+22:22:44.066,HEALTHY,FRESH,False,23.67,True,OK,data fresh: last reading 0.4 s ago
+22:22:44.325,HEALTHY,FRESH,False,23.97,True,OK,data fresh: last reading 0.1 s ago
+22:22:44.578,HEALTHY,FRESH,False,23.97,True,OK,data fresh: last reading 0.4 s ago
+22:22:44.832,HEALTHY,FRESH,False,23.73,True,OK,data fresh: last reading 0.1 s ago
+22:22:45.086,HEALTHY,FRESH,False,23.73,True,OK,data fresh: last reading 0.4 s ago
+22:22:45.341,HEALTHY,FRESH,False,23.66,True,OK,data fresh: last reading 0.1 s ago
+22:22:45.596,HEALTHY,FRESH,False,23.82,True,OK,data fresh: last reading 0.0 s ago
+22:22:45.850,HEALTHY,FRESH,False,23.82,True,OK,data fresh: last reading 0.3 s ago
+22:22:46.106,HEALTHY,FRESH,False,24.12,True,OK,data fresh: last reading 0.0 s ago
+22:22:46.359,HEALTHY,FRESH,False,24.12,True,OK,data fresh: last reading 0.3 s ago
+22:22:46.613,HEALTHY,FRESH,False,23.82,True,OK,data fresh: last reading 0.0 s ago
+22:22:46.868,HEALTHY,FRESH,False,23.82,True,OK,data fresh: last reading 0.3 s ago
+22:22:47.125,HEALTHY,FRESH,False,24.21,True,OK,data fresh: last reading 0.0 s ago
+22:22:47.381,HEALTHY,FRESH,False,24.21,True,OK,data fresh: last reading 0.3 s ago
+22:22:47.636,HEALTHY,FRESH,False,23.87,True,OK,data fresh: last reading 0.0 s ago
+22:22:47.889,HEALTHY,FRESH,False,23.87,True,OK,data fresh: last reading 0.3 s ago
+22:22:48.144,HEALTHY,FRESH,False,23.83,True,OK,data fresh: last reading 0.0 s ago
+22:22:48.398,HEALTHY,FRESH,False,23.83,True,OK,data fresh: last reading 0.3 s ago
+22:22:48.652,HEALTHY,FRESH,False,23.88,True,OK,data fresh: last reading 0.0 s ago
+22:22:48.906,HEALTHY,FRESH,False,23.88,True,OK,data fresh: last reading 0.3 s ago
+22:22:49.160,HEALTHY,FRESH,False,23.66,True,OK,data fresh: last reading 0.0 s ago
+22:22:49.413,HEALTHY,FRESH,False,23.66,True,OK,data fresh: last reading 0.3 s ago
+22:22:49.667,HEALTHY,FRESH,False,23.97,True,OK,data fresh: last reading 0.0 s ago
+22:22:49.921,HEALTHY,FRESH,False,23.97,True,OK,data fresh: last reading 0.3 s ago
+22:22:50.177,HEALTHY,FRESH,False,23.7,True,OK,data fresh: last reading 0.0 s ago
+22:22:50.432,HEALTHY,FRESH,False,23.7,True,OK,data fresh: last reading 0.3 s ago
+22:22:50.686,HEALTHY,FRESH,False,23.88,True,OK,data fresh: last reading 0.0 s ago
+22:22:50.940,HEALTHY,FRESH,False,23.88,True,OK,data fresh: last reading 0.3 s ago
+22:22:51.195,HEALTHY,FRESH,False,23.76,True,OK,data fresh: last reading 0.0 s ago
+22:22:51.449,HEALTHY,FRESH,False,23.76,True,OK,data fresh: last reading 0.3 s ago
+22:22:51.703,HEALTHY,FRESH,False,23.89,True,OK,data fresh: last reading 0.0 s ago
+22:22:51.957,HEALTHY,FRESH,False,23.89,True,OK,data fresh: last reading 0.3 s ago
+22:22:52.211,HEALTHY,FRESH,False,23.82,True,OK,data fresh: last reading 0.0 s ago
+22:22:52.465,HEALTHY,FRESH,False,23.82,True,OK,data fresh: last reading 0.3 s ago
+22:22:52.722,HEALTHY,FRESH,False,23.87,True,OK,data fresh: last reading 0.1 s ago
+22:22:52.977,HEALTHY,FRESH,False,23.87,True,OK,data fresh: last reading 0.4 s ago
+22:22:53.231,HEALTHY,FRESH,False,23.65,True,OK,data fresh: last reading 0.1 s ago
+22:22:53.496,HEALTHY,FRESH,False,23.65,True,OK,data fresh: last reading 0.4 s ago
+22:22:53.752,HEALTHY,FRESH,False,24.03,True,OK,data fresh: last reading 0.1 s ago
+22:22:54.007,HEALTHY,FRESH,False,24.03,True,OK,data fresh: last reading 0.4 s ago
+22:22:54.261,HEALTHY,FRESH,False,23.81,True,OK,data fresh: last reading 0.1 s ago
+22:22:54.515,HEALTHY,FRESH,False,23.81,True,OK,data fresh: last reading 0.4 s ago
+22:22:54.771,HEALTHY,FRESH,False,23.92,True,OK,data fresh: last reading 0.1 s ago
+22:22:55.026,HEALTHY,FRESH,False,23.92,True,OK,data fresh: last reading 0.4 s ago
+22:22:55.280,HEALTHY,FRESH,False,23.97,True,OK,data fresh: last reading 0.1 s ago
+22:22:55.535,HEALTHY,FRESH,False,23.97,True,OK,data fresh: last reading 0.4 s ago
+22:22:55.790,HEALTHY,FRESH,False,23.73,True,OK,data fresh: last reading 0.1 s ago
+22:22:56.045,HEALTHY,FRESH,False,23.73,True,OK,data fresh: last reading 0.4 s ago
+22:22:56.301,HEALTHY,FRESH,False,23.9,True,OK,data fresh: last reading 0.1 s ago
+22:22:56.555,HEALTHY,FRESH,False,23.9,True,OK,data fresh: last reading 0.4 s ago
+22:22:56.809,HEALTHY,FRESH,False,23.71,True,OK,data fresh: last reading 0.1 s ago
+22:22:57.064,HEALTHY,FRESH,False,23.71,True,OK,data fresh: last reading 0.4 s ago
+22:22:57.319,HEALTHY,FRESH,False,24.09,True,OK,data fresh: last reading 0.1 s ago
+22:22:57.575,HEALTHY,FRESH,False,24.09,True,OK,data fresh: last reading 0.4 s ago
+22:22:57.831,HEALTHY,FRESH,False,23.91,True,OK,data fresh: last reading 0.1 s ago
+22:22:58.085,HEALTHY,FRESH,False,23.91,True,OK,data fresh: last reading 0.4 s ago
+22:22:58.340,HEALTHY,FRESH,False,23.73,True,OK,data fresh: last reading 0.1 s ago
+22:22:58.595,HEALTHY,FRESH,False,23.73,True,OK,data fresh: last reading 0.4 s ago
+22:22:58.850,HEALTHY,FRESH,False,24.02,True,OK,data fresh: last reading 0.1 s ago
+22:22:59.106,HEALTHY,FRESH,False,24.02,True,OK,data fresh: last reading 0.4 s ago
+22:22:59.362,HEALTHY,FRESH,False,23.74,True,OK,data fresh: last reading 0.1 s ago
+22:22:59.617,HEALTHY,FRESH,False,23.74,True,OK,data fresh: last reading 0.4 s ago
+22:22:59.871,HEALTHY,FRESH,False,23.85,True,OK,data fresh: last reading 0.1 s ago
+22:23:00.126,HEALTHY,FRESH,False,23.99,True,OK,data fresh: last reading 0.0 s ago
+22:23:00.382,HEALTHY,FRESH,False,23.99,True,OK,data fresh: last reading 0.3 s ago
+22:23:00.643,HEALTHY,FRESH,False,24.04,True,OK,data fresh: last reading 0.1 s ago
+22:23:00.897,HEALTHY,FRESH,False,24.04,True,OK,data fresh: last reading 0.4 s ago
+22:23:01.152,HEALTHY,FRESH,False,24.02,True,OK,data fresh: last reading 0.1 s ago
+22:23:01.408,HEALTHY,FRESH,False,24.02,True,OK,data fresh: last reading 0.4 s ago
+22:23:01.662,HEALTHY,FRESH,False,23.98,True,OK,data fresh: last reading 0.1 s ago
+22:23:01.916,HEALTHY,FRESH,False,23.98,True,OK,data fresh: last reading 0.4 s ago
+22:23:02.170,HEALTHY,FRESH,True,24.16,True,OK,data fresh: last reading 0.1 s ago
+22:23:02.425,HEALTHY,FRESH,True,24.16,True,OK,data fresh: last reading 0.4 s ago
+22:23:02.553,HEALTHY,FRESH,True,23.73,True,OK,data fresh: last reading 0.0 s ago
+22:23:02.680,HEALTHY,FRESH,True,23.73,True,OK,data fresh: last reading 0.1 s ago
+22:23:02.935,HEALTHY,FRESH,True,23.73,True,OK,data fresh: last reading 0.4 s ago
+22:23:03.189,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.1 s ago
+22:23:03.443,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.4 s ago
+22:23:03.697,HEALTHY,FRESH,True,23.79,True,OK,data fresh: last reading 0.1 s ago
+22:23:03.951,HEALTHY,FRESH,True,23.79,True,OK,data fresh: last reading 0.4 s ago
+22:23:04.205,HEALTHY,FRESH,True,24.21,True,OK,data fresh: last reading 0.1 s ago
+22:23:04.462,HEALTHY,FRESH,True,24.21,True,OK,data fresh: last reading 0.4 s ago
+22:23:04.717,HEALTHY,FRESH,True,23.98,True,OK,data fresh: last reading 0.1 s ago
+22:23:04.970,HEALTHY,FRESH,True,23.98,True,OK,data fresh: last reading 0.4 s ago
+22:23:05.236,HEALTHY,FRESH,True,24.32,True,OK,data fresh: last reading 0.1 s ago
+22:23:05.493,HEALTHY,FRESH,True,24.32,True,OK,data fresh: last reading 0.4 s ago
+22:23:05.748,HEALTHY,FRESH,True,24.34,True,OK,data fresh: last reading 0.1 s ago
+22:23:06.004,HEALTHY,FRESH,True,24.34,True,OK,data fresh: last reading 0.4 s ago
+22:23:06.259,HEALTHY,FRESH,True,24.06,True,OK,data fresh: last reading 0.1 s ago
+22:23:06.515,HEALTHY,FRESH,True,24.06,True,OK,data fresh: last reading 0.4 s ago
+22:23:06.769,HEALTHY,FRESH,True,23.76,True,OK,data fresh: last reading 0.1 s ago
+22:23:07.025,HEALTHY,FRESH,True,23.76,True,OK,data fresh: last reading 0.4 s ago
+22:23:07.280,HEALTHY,FRESH,True,23.69,True,OK,data fresh: last reading 0.1 s ago
+22:23:07.536,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.0 s ago
+22:23:07.791,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.3 s ago
+22:23:08.046,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.0 s ago
+22:23:08.300,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.3 s ago
+22:23:08.555,HEALTHY,FRESH,True,24.07,True,OK,data fresh: last reading 0.0 s ago
+22:23:08.811,HEALTHY,FRESH,True,24.07,True,OK,data fresh: last reading 0.3 s ago
+22:23:09.067,HEALTHY,FRESH,True,24.03,True,OK,data fresh: last reading 0.0 s ago
+22:23:09.322,HEALTHY,FRESH,True,24.03,True,OK,data fresh: last reading 0.3 s ago
+22:23:09.577,HEALTHY,FRESH,True,23.93,True,OK,data fresh: last reading 0.0 s ago
+22:23:09.833,HEALTHY,FRESH,True,23.93,True,OK,data fresh: last reading 0.3 s ago
+22:23:10.089,HEALTHY,FRESH,True,23.68,True,OK,data fresh: last reading 0.0 s ago
+22:23:10.344,HEALTHY,FRESH,True,23.68,True,OK,data fresh: last reading 0.3 s ago
+22:23:10.600,HEALTHY,FRESH,True,24.04,True,OK,data fresh: last reading 0.0 s ago
+22:23:10.856,HEALTHY,FRESH,True,24.04,True,OK,data fresh: last reading 0.3 s ago
+22:23:11.116,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.0 s ago
+22:23:11.370,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.3 s ago
+22:23:11.625,HEALTHY,FRESH,True,23.78,True,OK,data fresh: last reading 0.0 s ago
+22:23:11.879,HEALTHY,FRESH,True,23.78,True,OK,data fresh: last reading 0.3 s ago
+22:23:12.133,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.0 s ago
+22:23:12.387,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.3 s ago
+22:23:12.642,HEALTHY,FRESH,True,24.01,True,OK,data fresh: last reading 0.0 s ago
+22:23:12.896,HEALTHY,FRESH,True,24.01,True,OK,data fresh: last reading 0.3 s ago
+22:23:13.151,HEALTHY,FRESH,True,23.98,True,OK,data fresh: last reading 0.0 s ago
+22:23:13.406,HEALTHY,FRESH,True,23.98,True,OK,data fresh: last reading 0.3 s ago
+22:23:13.660,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.0 s ago
+22:23:13.919,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.3 s ago
+22:23:14.173,HEALTHY,FRESH,True,24.55,True,OK,data fresh: last reading 0.1 s ago
+22:23:14.430,HEALTHY,FRESH,True,24.55,True,OK,data fresh: last reading 0.4 s ago
+22:23:14.684,HEALTHY,FRESH,True,23.92,True,OK,data fresh: last reading 0.1 s ago
+22:23:14.939,HEALTHY,FRESH,True,23.92,True,OK,data fresh: last reading 0.4 s ago
+22:23:15.193,HEALTHY,FRESH,True,23.96,True,OK,data fresh: last reading 0.1 s ago
+22:23:15.448,HEALTHY,FRESH,True,23.96,True,OK,data fresh: last reading 0.4 s ago
+22:23:15.702,HEALTHY,FRESH,True,24.29,True,OK,data fresh: last reading 0.1 s ago
+22:23:15.956,HEALTHY,FRESH,True,24.29,True,OK,data fresh: last reading 0.4 s ago
+22:23:16.212,HEALTHY,FRESH,True,24.22,True,OK,data fresh: last reading 0.1 s ago
+22:23:16.470,HEALTHY,FRESH,True,24.22,True,OK,data fresh: last reading 0.4 s ago
+22:23:16.726,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.1 s ago
+22:23:16.980,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.4 s ago
+22:23:17.234,HEALTHY,FRESH,True,24.03,True,OK,data fresh: last reading 0.1 s ago
+22:23:17.489,HEALTHY,FRESH,True,24.03,True,OK,data fresh: last reading 0.4 s ago
+22:23:17.743,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.1 s ago
+22:23:17.998,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.4 s ago
+22:23:18.256,HEALTHY,FRESH,True,24.1,True,OK,data fresh: last reading 0.1 s ago
+22:23:18.516,HEALTHY,FRESH,True,24.1,True,OK,data fresh: last reading 0.4 s ago
+22:23:18.771,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.1 s ago
+22:23:19.027,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.4 s ago
+22:23:19.283,HEALTHY,FRESH,True,24.26,True,OK,data fresh: last reading 0.1 s ago
+22:23:19.537,HEALTHY,FRESH,True,24.26,True,OK,data fresh: last reading 0.4 s ago
+22:23:19.791,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.1 s ago
+22:23:20.046,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.4 s ago
+22:23:20.303,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.1 s ago
+22:23:20.558,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.4 s ago
+22:23:20.812,HEALTHY,FRESH,True,23.68,True,OK,data fresh: last reading 0.1 s ago
+22:23:21.067,HEALTHY,FRESH,True,23.68,True,OK,data fresh: last reading 0.4 s ago
+22:23:21.322,HEALTHY,FRESH,True,24.16,True,OK,data fresh: last reading 0.1 s ago
+22:23:21.578,HEALTHY,FRESH,True,24.16,True,OK,data fresh: last reading 0.4 s ago
+22:23:21.834,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.1 s ago
+22:23:22.090,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.4 s ago
+22:23:22.346,HEALTHY,FRESH,True,23.81,True,OK,data fresh: last reading 0.1 s ago
+22:23:22.601,HEALTHY,FRESH,True,23.81,True,OK,data fresh: last reading 0.4 s ago
+22:23:22.856,HEALTHY,FRESH,True,24.14,True,OK,data fresh: last reading 0.1 s ago
+22:23:23.112,HEALTHY,FRESH,True,24.07,True,OK,data fresh: last reading 0.0 s ago
+22:23:23.367,HEALTHY,FRESH,True,24.07,True,OK,data fresh: last reading 0.3 s ago
+22:23:23.623,HEALTHY,FRESH,True,24.16,True,OK,data fresh: last reading 0.0 s ago
+22:23:23.880,HEALTHY,FRESH,True,24.16,True,OK,data fresh: last reading 0.3 s ago
+22:23:24.136,HEALTHY,FRESH,True,23.87,True,OK,data fresh: last reading 0.0 s ago
+22:23:24.392,HEALTHY,FRESH,True,23.87,True,OK,data fresh: last reading 0.3 s ago
+22:23:24.650,HEALTHY,FRESH,True,24.36,True,OK,data fresh: last reading 0.0 s ago
+22:23:24.905,HEALTHY,FRESH,True,24.36,True,OK,data fresh: last reading 0.3 s ago
+22:23:25.160,HEALTHY,FRESH,True,23.99,True,OK,data fresh: last reading 0.0 s ago
+22:23:25.414,HEALTHY,FRESH,True,23.99,True,OK,data fresh: last reading 0.3 s ago
+22:23:25.669,HEALTHY,FRESH,True,24.15,True,OK,data fresh: last reading 0.0 s ago
+22:23:25.924,HEALTHY,FRESH,True,24.15,True,OK,data fresh: last reading 0.4 s ago
+22:23:26.179,HEALTHY,FRESH,True,24.49,True,OK,data fresh: last reading 0.1 s ago
+22:23:26.433,HEALTHY,FRESH,True,24.49,True,OK,data fresh: last reading 0.4 s ago
+22:23:26.688,HEALTHY,FRESH,True,24.6,True,OK,data fresh: last reading 0.1 s ago
+22:23:26.942,HEALTHY,FRESH,True,24.6,True,OK,data fresh: last reading 0.4 s ago
+22:23:27.196,HEALTHY,FRESH,True,24.46,True,OK,data fresh: last reading 0.1 s ago
+22:23:27.452,HEALTHY,FRESH,True,24.46,True,OK,data fresh: last reading 0.4 s ago
+22:23:27.707,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.1 s ago
+22:23:27.961,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.4 s ago
+22:23:28.217,HEALTHY,FRESH,True,23.99,True,OK,data fresh: last reading 0.1 s ago
+22:23:28.476,HEALTHY,FRESH,True,23.99,True,OK,data fresh: last reading 0.4 s ago
+22:23:28.732,HEALTHY,FRESH,True,24.09,True,OK,data fresh: last reading 0.1 s ago
+22:23:28.990,HEALTHY,FRESH,True,24.09,True,OK,data fresh: last reading 0.4 s ago
+22:23:29.244,HEALTHY,FRESH,True,23.94,True,OK,data fresh: last reading 0.1 s ago
+22:23:29.501,HEALTHY,FRESH,True,23.94,True,OK,data fresh: last reading 0.4 s ago
+22:23:29.756,HEALTHY,FRESH,True,23.94,True,OK,data fresh: last reading 0.6 s ago
+22:23:30.010,HEALTHY,FRESH,True,23.94,True,OK,data fresh: last reading 0.9 s ago
+22:23:30.265,HEALTHY,FRESH,True,23.94,True,OK,data fresh: last reading 1.1 s ago
+22:23:30.520,HEALTHY,FRESH,True,23.94,True,OK,data fresh: last reading 1.4 s ago
+22:23:30.775,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 1.7 s ago (stale after 1.5 s)
+22:23:31.030,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 1.9 s ago (stale after 1.5 s)
+22:23:31.287,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 2.2 s ago (stale after 1.5 s)
+22:23:31.518,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 2.4 s ago (stale after 1.5 s)
+22:23:31.542,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 2.4 s ago (stale after 1.5 s)
+22:23:31.799,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 2.7 s ago (stale after 1.5 s)
+22:23:32.055,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 2.9 s ago (stale after 1.5 s)
+22:23:32.310,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 3.2 s ago (stale after 1.5 s)
+22:23:32.565,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 3.4 s ago (stale after 1.5 s)
+22:23:32.821,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 3.7 s ago (stale after 1.5 s)
+22:23:33.075,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 3.9 s ago (stale after 1.5 s)
+22:23:33.331,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 4.2 s ago (stale after 1.5 s)
+22:23:33.587,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 4.4 s ago (stale after 1.5 s)
+22:23:33.844,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 4.7 s ago (stale after 1.5 s)
+22:23:34.101,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 4.9 s ago (stale after 1.5 s)
+22:23:34.359,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 5.2 s ago (stale after 1.5 s)
+22:23:34.617,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 5.4 s ago (stale after 1.5 s)
+22:23:34.877,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 5.7 s ago (stale after 1.5 s)
+22:23:35.134,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 5.9 s ago (stale after 1.5 s)
+22:23:35.391,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 6.2 s ago (stale after 1.5 s)
+22:23:35.659,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 6.5 s ago (stale after 1.5 s)
+22:23:35.916,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 6.7 s ago (stale after 1.5 s)
+22:23:36.172,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 7.0 s ago (stale after 1.5 s)
+22:23:36.427,DEGRADED,STALE,True,23.94,False,OK,data stale: last reading 7.2 s ago (stale after 1.5 s)
+22:23:36.684,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 7.6 s (expected every 0.5 s)
+22:23:36.940,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 7.7 s (expected every 0.5 s)
+22:23:37.195,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 8.1 s (expected every 0.5 s)
+22:23:37.452,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 8.4 s (expected every 0.5 s)
+22:23:37.515,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 8.4 s (expected every 0.5 s)
+22:23:37.709,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 8.6 s (expected every 0.5 s)
+22:23:37.964,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 8.9 s (expected every 0.5 s)
+22:23:38.219,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 9.1 s (expected every 0.5 s)
+22:23:38.478,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 9.4 s (expected every 0.5 s)
+22:23:38.734,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 9.6 s (expected every 0.5 s)
+22:23:38.990,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 9.9 s (expected every 0.5 s)
+22:23:39.245,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 10.1 s (expected every 0.5 s)
+22:23:39.499,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 10.4 s (expected every 0.5 s)
+22:23:39.755,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 10.6 s (expected every 0.5 s)
+22:23:40.010,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 10.9 s (expected every 0.5 s)
+22:23:40.265,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 11.1 s (expected every 0.5 s)
+22:23:40.520,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 11.4 s (expected every 0.5 s)
+22:23:40.777,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 11.6 s (expected every 0.5 s)
+22:23:41.032,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 11.9 s (expected every 0.5 s)
+22:23:41.287,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 12.1 s (expected every 0.5 s)
+22:23:41.543,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 12.4 s (expected every 0.5 s)
+22:23:41.798,FAILED,LOST,True,23.94,False,OK,expected data stopped arriving: no reading for 12.7 s (expected every 0.5 s)
+22:23:42.055,RECOVERING,FRESH,True,24.53,True,OK,1 of 5 fresh accepted readings since restart
+22:23:42.309,RECOVERING,FRESH,True,24.53,True,OK,1 of 5 fresh accepted readings since restart
+22:23:42.567,RECOVERING,FRESH,True,24.33,True,OK,2 of 5 fresh accepted readings since restart
+22:23:42.821,RECOVERING,FRESH,True,24.33,True,OK,2 of 5 fresh accepted readings since restart
+22:23:43.078,RECOVERING,FRESH,True,23.97,True,OK,3 of 5 fresh accepted readings since restart
+22:23:43.335,RECOVERING,FRESH,True,23.97,True,OK,3 of 5 fresh accepted readings since restart
+22:23:43.591,RECOVERING,FRESH,True,24.18,True,OK,4 of 5 fresh accepted readings since restart
+22:23:43.848,RECOVERING,FRESH,True,24.18,True,OK,4 of 5 fresh accepted readings since restart
+22:23:44.104,HEALTHY,FRESH,True,24.36,True,OK,data fresh: last reading 0.0 s ago
+22:23:44.362,HEALTHY,FRESH,True,24.36,True,OK,data fresh: last reading 0.3 s ago
+22:23:44.618,HEALTHY,FRESH,True,24.27,True,OK,data fresh: last reading 0.0 s ago
+22:23:44.876,HEALTHY,FRESH,True,24.27,True,OK,data fresh: last reading 0.3 s ago
+22:23:45.131,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.0 s ago
+22:23:45.387,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.3 s ago
+22:23:45.643,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.0 s ago
+22:23:45.900,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.3 s ago
+22:23:46.155,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.0 s ago
+22:23:46.413,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.3 s ago
+22:23:46.669,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.0 s ago
+22:23:46.924,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.3 s ago
+22:23:47.180,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.0 s ago
+22:23:47.435,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.3 s ago
+22:23:47.691,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.0 s ago
+22:23:47.946,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.3 s ago
+22:23:48.205,HEALTHY,FRESH,True,24.06,True,OK,data fresh: last reading 0.0 s ago
+22:23:48.463,HEALTHY,FRESH,True,24.06,True,OK,data fresh: last reading 0.3 s ago
+22:23:48.721,HEALTHY,FRESH,True,24.38,True,OK,data fresh: last reading 0.0 s ago
+22:23:48.976,HEALTHY,FRESH,True,24.38,True,OK,data fresh: last reading 0.3 s ago
+22:23:49.232,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.0 s ago
+22:23:49.491,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.3 s ago
+22:23:49.749,HEALTHY,FRESH,True,24.42,True,OK,data fresh: last reading 0.1 s ago
+22:23:50.005,HEALTHY,FRESH,True,24.42,True,OK,data fresh: last reading 0.4 s ago
+22:23:50.260,HEALTHY,FRESH,True,24.11,True,OK,data fresh: last reading 0.1 s ago
+22:23:50.517,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.0 s ago
+22:23:50.775,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.3 s ago
+22:23:51.033,HEALTHY,FRESH,True,24.1,True,OK,data fresh: last reading 0.0 s ago
+22:23:51.289,HEALTHY,FRESH,True,24.1,True,OK,data fresh: last reading 0.3 s ago
+22:23:51.544,HEALTHY,FRESH,True,24.29,True,OK,data fresh: last reading 0.0 s ago
+22:23:51.799,HEALTHY,FRESH,True,24.29,True,OK,data fresh: last reading 0.3 s ago
+22:23:52.054,HEALTHY,FRESH,True,23.96,True,OK,data fresh: last reading 0.0 s ago
+22:23:52.309,HEALTHY,FRESH,True,23.96,True,OK,data fresh: last reading 0.3 s ago
+22:23:52.563,HEALTHY,FRESH,True,24.14,True,OK,data fresh: last reading 0.0 s ago
+22:23:52.818,HEALTHY,FRESH,True,24.14,True,OK,data fresh: last reading 0.3 s ago
+22:23:53.073,HEALTHY,FRESH,True,24.4,True,OK,data fresh: last reading 0.0 s ago
+22:23:53.329,HEALTHY,FRESH,True,24.4,True,OK,data fresh: last reading 0.3 s ago
+22:23:53.586,HEALTHY,FRESH,True,23.96,True,OK,data fresh: last reading 0.0 s ago
+22:23:53.843,HEALTHY,FRESH,True,23.96,True,OK,data fresh: last reading 0.3 s ago
+22:23:54.105,HEALTHY,FRESH,True,24.5,True,OK,data fresh: last reading 0.0 s ago
+22:23:54.361,HEALTHY,FRESH,True,24.5,True,OK,data fresh: last reading 0.3 s ago
+22:23:54.618,HEALTHY,FRESH,True,24.2,True,OK,data fresh: last reading 0.0 s ago
+22:23:54.874,HEALTHY,FRESH,True,24.2,True,OK,data fresh: last reading 0.3 s ago
+22:23:55.129,HEALTHY,FRESH,True,24.35,True,OK,data fresh: last reading 0.0 s ago
+22:23:55.384,HEALTHY,FRESH,True,24.35,True,OK,data fresh: last reading 0.3 s ago
+22:23:55.639,HEALTHY,FRESH,True,24.35,True,OK,data fresh: last reading 0.0 s ago
+22:23:55.895,HEALTHY,FRESH,True,24.35,True,OK,data fresh: last reading 0.3 s ago
+22:23:56.150,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.0 s ago
+22:23:56.406,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.3 s ago
+22:23:56.664,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.0 s ago
+22:23:56.921,HEALTHY,FRESH,True,24.28,True,OK,data fresh: last reading 0.3 s ago
+22:23:57.178,HEALTHY,FRESH,True,24.46,True,OK,data fresh: last reading 0.0 s ago
+22:23:57.434,HEALTHY,FRESH,True,24.46,True,OK,data fresh: last reading 0.3 s ago
+22:23:57.689,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.0 s ago
+22:23:57.944,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.3 s ago
+22:23:58.200,HEALTHY,FRESH,True,24.22,True,OK,data fresh: last reading 0.0 s ago
+22:23:58.456,HEALTHY,FRESH,True,24.22,True,OK,data fresh: last reading 0.3 s ago
+22:23:58.713,HEALTHY,FRESH,True,24.27,True,OK,data fresh: last reading 0.0 s ago
+22:23:58.969,HEALTHY,FRESH,True,24.27,True,OK,data fresh: last reading 0.3 s ago
+22:23:59.228,HEALTHY,FRESH,True,24.48,True,OK,data fresh: last reading 0.0 s ago
+22:23:59.494,HEALTHY,FRESH,True,24.48,True,OK,data fresh: last reading 0.3 s ago
+22:23:59.751,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.0 s ago
+22:24:00.006,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.3 s ago
+22:24:00.261,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.1 s ago
+22:24:00.518,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.4 s ago
+22:24:00.773,HEALTHY,FRESH,True,23.77,True,OK,data fresh: last reading 0.1 s ago
+22:24:01.029,HEALTHY,FRESH,True,23.85,True,OK,data fresh: last reading 0.4 s ago
+22:24:01.286,HEALTHY,FRESH,True,23.85,True,OK,data fresh: last reading 0.3 s ago
+22:24:01.544,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.0 s ago
+22:24:01.800,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.3 s ago
+22:24:02.057,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.4 s ago
+22:24:02.313,HEALTHY,FRESH,True,24.35,True,OK,data fresh: last reading 0.2 s ago
+22:24:02.570,HEALTHY,FRESH,True,24.35,True,OK,data fresh: last reading 0.4 s ago
+22:24:02.825,HEALTHY,FRESH,True,24.35,True,OK,data fresh: last reading 0.3 s ago
+22:24:03.083,HEALTHY,FRESH,True,24.02,True,OK,data fresh: last reading 0.0 s ago
+22:24:03.339,HEALTHY,FRESH,True,24.02,True,OK,data fresh: last reading 0.3 s ago
+22:24:03.596,HEALTHY,FRESH,True,24.51,True,OK,data fresh: last reading 0.0 s ago
+22:24:03.855,HEALTHY,FRESH,True,24.51,True,OK,data fresh: last reading 0.3 s ago
+22:24:04.113,HEALTHY,FRESH,True,24.5,True,OK,data fresh: last reading 0.0 s ago
+22:24:04.372,HEALTHY,FRESH,True,24.5,True,OK,data fresh: last reading 0.3 s ago
+22:24:04.630,HEALTHY,FRESH,True,24.07,True,OK,data fresh: last reading 0.0 s ago
+22:24:04.885,HEALTHY,FRESH,True,24.07,True,OK,data fresh: last reading 0.3 s ago
+22:24:05.141,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.0 s ago
+22:24:05.396,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.3 s ago
+22:24:05.656,HEALTHY,FRESH,True,24.16,True,OK,data fresh: last reading 0.0 s ago
+22:24:05.914,HEALTHY,FRESH,True,24.16,True,OK,data fresh: last reading 0.3 s ago
+22:24:06.171,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.0 s ago
+22:24:06.426,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.3 s ago
+22:24:06.683,HEALTHY,FRESH,True,24.02,True,OK,data fresh: last reading 0.1 s ago
+22:24:06.940,HEALTHY,FRESH,True,24.02,True,OK,data fresh: last reading 0.4 s ago
+22:24:07.199,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.1 s ago
+22:24:07.457,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.4 s ago
+22:24:07.712,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.1 s ago
+22:24:07.968,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.4 s ago
+22:24:08.225,HEALTHY,FRESH,True,24.15,True,OK,data fresh: last reading 0.1 s ago
+22:24:08.490,HEALTHY,FRESH,True,24.15,True,OK,data fresh: last reading 0.4 s ago
+22:24:08.746,HEALTHY,FRESH,True,23.95,True,OK,data fresh: last reading 0.1 s ago
+22:24:09.004,HEALTHY,FRESH,True,23.95,True,OK,data fresh: last reading 0.4 s ago
+22:24:09.260,HEALTHY,FRESH,True,24.22,True,OK,data fresh: last reading 0.1 s ago
+22:24:09.516,HEALTHY,FRESH,True,24.22,True,OK,data fresh: last reading 0.4 s ago
+22:24:09.773,HEALTHY,FRESH,True,24.31,True,OK,data fresh: last reading 0.1 s ago
+22:24:10.029,HEALTHY,FRESH,True,24.31,True,OK,data fresh: last reading 0.4 s ago
+22:24:10.286,HEALTHY,FRESH,True,24.39,True,OK,data fresh: last reading 0.1 s ago
+22:24:10.544,HEALTHY,FRESH,True,24.39,True,OK,data fresh: last reading 0.4 s ago
+22:24:10.801,HEALTHY,FRESH,True,24.05,True,OK,data fresh: last reading 0.1 s ago
+22:24:11.057,HEALTHY,FRESH,True,24.05,True,OK,data fresh: last reading 0.4 s ago
+22:24:11.314,HEALTHY,FRESH,True,24.11,True,OK,data fresh: last reading 0.1 s ago
+22:24:11.571,HEALTHY,FRESH,True,24.11,True,OK,data fresh: last reading 0.4 s ago
+22:24:11.830,HEALTHY,FRESH,True,24.22,True,OK,data fresh: last reading 0.1 s ago
+22:24:12.088,HEALTHY,FRESH,True,24.22,True,OK,data fresh: last reading 0.4 s ago
+22:24:12.346,HEALTHY,FRESH,True,23.99,True,OK,data fresh: last reading 0.3 s ago
+22:24:12.603,HEALTHY,FRESH,True,24.41,True,OK,data fresh: last reading 0.0 s ago
+22:24:12.859,HEALTHY,FRESH,True,24.41,True,OK,data fresh: last reading 0.3 s ago
+22:24:13.115,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.0 s ago
+22:24:13.371,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.3 s ago
+22:24:13.638,HEALTHY,FRESH,True,23.83,True,OK,data fresh: last reading 0.0 s ago
+22:24:13.895,HEALTHY,FRESH,True,23.83,True,OK,data fresh: last reading 0.3 s ago
+22:24:14.153,HEALTHY,FRESH,True,23.92,True,OK,data fresh: last reading 0.0 s ago
+22:24:14.409,HEALTHY,FRESH,True,23.92,True,OK,data fresh: last reading 0.3 s ago
+22:24:14.665,HEALTHY,FRESH,True,23.98,True,OK,data fresh: last reading 0.0 s ago
+22:24:14.922,HEALTHY,FRESH,True,23.98,True,OK,data fresh: last reading 0.3 s ago
+22:24:15.178,HEALTHY,FRESH,True,24.07,True,OK,data fresh: last reading 0.1 s ago
+22:24:15.436,HEALTHY,FRESH,True,24.07,True,OK,data fresh: last reading 0.4 s ago
+22:24:15.692,HEALTHY,FRESH,True,24.42,True,OK,data fresh: last reading 0.1 s ago
+22:24:15.947,HEALTHY,FRESH,True,24.42,True,OK,data fresh: last reading 0.4 s ago
+22:24:16.204,HEALTHY,FRESH,True,23.93,True,OK,data fresh: last reading 0.1 s ago
+22:24:16.477,HEALTHY,FRESH,True,23.93,True,OK,data fresh: last reading 0.4 s ago
+22:24:16.733,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.1 s ago
+22:24:16.990,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.4 s ago
+22:24:17.247,HEALTHY,FRESH,True,24.11,True,OK,data fresh: last reading 0.1 s ago
+22:24:17.508,HEALTHY,FRESH,True,24.11,True,OK,data fresh: last reading 0.4 s ago
+22:24:17.767,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.1 s ago
+22:24:18.027,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.4 s ago
+22:24:18.283,HEALTHY,FRESH,True,24.0,True,OK,data fresh: last reading 0.1 s ago
+22:24:18.539,HEALTHY,FRESH,True,24.0,True,OK,data fresh: last reading 0.4 s ago
+22:24:18.796,HEALTHY,FRESH,True,23.73,True,OK,data fresh: last reading 0.1 s ago
+22:24:19.052,HEALTHY,FRESH,True,23.73,True,OK,data fresh: last reading 0.4 s ago
+22:24:19.307,HEALTHY,FRESH,True,24.37,True,OK,data fresh: last reading 0.1 s ago
+22:24:19.565,HEALTHY,FRESH,True,24.25,True,OK,data fresh: last reading 0.4 s ago
+22:24:19.821,HEALTHY,FRESH,True,24.25,True,OK,data fresh: last reading 0.3 s ago
+22:24:20.078,HEALTHY,FRESH,True,24.4,True,OK,data fresh: last reading 0.0 s ago
+22:24:20.334,HEALTHY,FRESH,True,24.4,True,OK,data fresh: last reading 0.3 s ago
+22:24:20.593,HEALTHY,FRESH,True,24.33,True,OK,data fresh: last reading 0.0 s ago
+22:24:20.850,HEALTHY,FRESH,True,24.33,True,OK,data fresh: last reading 0.3 s ago
+22:24:21.105,HEALTHY,FRESH,True,24.35,True,OK,data fresh: last reading 0.0 s ago
+22:24:21.362,HEALTHY,FRESH,True,24.35,True,OK,data fresh: last reading 0.3 s ago
+22:24:21.622,HEALTHY,FRESH,True,23.63,True,OK,data fresh: last reading 0.0 s ago
+22:24:21.878,HEALTHY,FRESH,True,23.63,True,OK,data fresh: last reading 0.3 s ago
+22:24:22.135,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.0 s ago
+22:24:22.391,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.3 s ago
+22:24:22.650,HEALTHY,FRESH,True,24.41,True,OK,data fresh: last reading 0.0 s ago
+22:24:22.906,HEALTHY,FRESH,True,24.41,True,OK,data fresh: last reading 0.3 s ago
+22:24:23.162,HEALTHY,FRESH,True,23.81,True,OK,data fresh: last reading 0.0 s ago
+22:24:23.419,HEALTHY,FRESH,True,23.81,True,OK,data fresh: last reading 0.3 s ago
+22:24:23.677,HEALTHY,FRESH,True,23.89,True,OK,data fresh: last reading 0.0 s ago
+22:24:23.934,HEALTHY,FRESH,True,23.89,True,OK,data fresh: last reading 0.3 s ago
+22:24:24.190,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.1 s ago
+22:24:24.446,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.4 s ago
+22:24:24.715,HEALTHY,FRESH,True,23.94,True,OK,data fresh: last reading 0.1 s ago
+22:24:24.971,HEALTHY,FRESH,True,23.94,True,OK,data fresh: last reading 0.4 s ago
+22:24:25.230,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.1 s ago
+22:24:25.486,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.4 s ago
+22:24:25.745,HEALTHY,FRESH,True,24.29,True,OK,data fresh: last reading 0.1 s ago
+22:24:26.001,HEALTHY,FRESH,True,24.29,True,OK,data fresh: last reading 0.4 s ago
+22:24:26.257,HEALTHY,FRESH,True,24.33,True,OK,data fresh: last reading 0.1 s ago
+22:24:26.513,HEALTHY,FRESH,True,24.33,True,OK,data fresh: last reading 0.4 s ago
+22:24:26.770,HEALTHY,FRESH,True,24.14,True,OK,data fresh: last reading 0.1 s ago
+22:24:27.029,HEALTHY,FRESH,True,24.14,True,OK,data fresh: last reading 0.4 s ago
+22:24:27.286,HEALTHY,FRESH,True,24.09,True,OK,data fresh: last reading 0.1 s ago
+22:24:27.546,HEALTHY,FRESH,True,24.09,True,OK,data fresh: last reading 0.4 s ago
+22:24:27.805,HEALTHY,FRESH,True,23.94,True,OK,data fresh: last reading 0.1 s ago
+22:24:28.061,HEALTHY,FRESH,True,23.94,True,OK,data fresh: last reading 0.4 s ago
+22:24:28.317,HEALTHY,FRESH,True,23.86,True,OK,data fresh: last reading 0.1 s ago
+22:24:28.577,HEALTHY,FRESH,True,23.86,True,OK,data fresh: last reading 0.4 s ago
+22:24:28.833,HEALTHY,FRESH,True,23.87,True,OK,data fresh: last reading 0.1 s ago
+22:24:29.089,HEALTHY,FRESH,True,23.87,True,OK,data fresh: last reading 0.4 s ago
+22:24:29.345,HEALTHY,FRESH,True,24.34,True,OK,data fresh: last reading 0.3 s ago
+22:24:29.603,HEALTHY,FRESH,True,24.18,True,OK,data fresh: last reading 0.4 s ago
+22:24:29.860,HEALTHY,FRESH,True,24.18,True,OK,data fresh: last reading 0.3 s ago
+22:24:30.119,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.0 s ago
+22:24:30.378,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.3 s ago
+22:24:30.634,HEALTHY,FRESH,True,23.82,True,OK,data fresh: last reading 0.0 s ago
+22:24:30.890,HEALTHY,FRESH,True,23.82,True,OK,data fresh: last reading 0.3 s ago
+22:24:31.146,HEALTHY,FRESH,True,24.19,True,OK,data fresh: last reading 0.0 s ago
+22:24:31.404,HEALTHY,FRESH,True,24.19,True,OK,data fresh: last reading 0.3 s ago
+22:24:31.660,HEALTHY,FRESH,True,24.21,True,OK,data fresh: last reading 0.0 s ago
+22:24:31.916,HEALTHY,FRESH,True,24.21,True,OK,data fresh: last reading 0.3 s ago
+22:24:32.176,HEALTHY,FRESH,True,24.16,True,OK,data fresh: last reading 0.1 s ago
+22:24:32.433,HEALTHY,FRESH,True,24.16,True,OK,data fresh: last reading 0.4 s ago
+22:24:32.695,HEALTHY,FRESH,True,24.32,True,OK,data fresh: last reading 0.1 s ago
+22:24:32.951,HEALTHY,FRESH,True,24.32,True,OK,data fresh: last reading 0.4 s ago
+22:24:33.209,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.1 s ago
+22:24:33.465,HEALTHY,FRESH,True,24.23,True,OK,data fresh: last reading 0.4 s ago
+22:24:33.724,HEALTHY,FRESH,True,24.27,True,OK,data fresh: last reading 0.1 s ago
+22:24:33.980,HEALTHY,FRESH,True,24.27,True,OK,data fresh: last reading 0.4 s ago
+22:24:34.239,HEALTHY,FRESH,True,24.14,True,OK,data fresh: last reading 0.1 s ago
+22:24:34.502,HEALTHY,FRESH,True,24.14,True,OK,data fresh: last reading 0.4 s ago
+22:24:34.762,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.1 s ago
+22:24:35.018,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.4 s ago
+22:24:35.284,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.1 s ago
+22:24:35.542,HEALTHY,FRESH,True,24.08,True,OK,data fresh: last reading 0.4 s ago
+22:24:35.801,HEALTHY,FRESH,True,24.26,True,OK,data fresh: last reading 0.1 s ago
+22:24:36.060,HEALTHY,FRESH,True,24.26,True,OK,data fresh: last reading 0.4 s ago
+22:24:36.317,HEALTHY,FRESH,True,24.34,True,OK,data fresh: last reading 0.3 s ago
+22:24:36.573,HEALTHY,FRESH,True,24.24,True,OK,data fresh: last reading 0.0 s ago
+22:24:36.833,HEALTHY,FRESH,True,24.24,True,OK,data fresh: last reading 0.3 s ago
+22:24:37.093,HEALTHY,FRESH,True,24.36,True,OK,data fresh: last reading 0.0 s ago
+22:24:37.352,HEALTHY,FRESH,True,24.36,True,OK,data fresh: last reading 0.3 s ago
+22:24:37.611,HEALTHY,FRESH,True,24.1,True,OK,data fresh: last reading 0.0 s ago
+22:24:37.868,HEALTHY,FRESH,True,24.1,True,OK,data fresh: last reading 0.3 s ago
+22:24:38.130,HEALTHY,FRESH,True,24.15,True,OK,data fresh: last reading 0.0 s ago
+22:24:38.387,HEALTHY,FRESH,True,24.15,True,OK,data fresh: last reading 0.3 s ago
+22:24:38.643,HEALTHY,FRESH,True,24.19,True,OK,data fresh: last reading 0.0 s ago
+22:24:38.900,HEALTHY,FRESH,True,24.19,True,OK,data fresh: last reading 0.3 s ago
+22:24:39.158,HEALTHY,FRESH,True,24.04,True,OK,data fresh: last reading 0.0 s ago
+22:24:39.415,HEALTHY,FRESH,True,24.04,True,OK,data fresh: last reading 0.3 s ago
+22:24:39.671,HEALTHY,FRESH,True,23.91,True,OK,data fresh: last reading 0.0 s ago
+22:24:39.928,HEALTHY,FRESH,True,23.91,True,OK,data fresh: last reading 0.3 s ago
+22:24:40.187,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.0 s ago
+22:24:40.444,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.3 s ago
+22:24:40.704,HEALTHY,FRESH,True,24.0,True,OK,data fresh: last reading 0.0 s ago
+22:24:40.963,HEALTHY,FRESH,True,24.0,True,OK,data fresh: last reading 0.3 s ago
+22:24:41.224,HEALTHY,FRESH,True,24.06,True,OK,data fresh: last reading 0.1 s ago
+22:24:41.506,HEALTHY,FRESH,True,24.06,True,OK,data fresh: last reading 0.4 s ago
+22:24:41.767,HEALTHY,FRESH,True,24.1,True,OK,data fresh: last reading 0.1 s ago
+22:24:42.025,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.4 s ago
+22:24:42.281,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.3 s ago
+22:24:42.538,HEALTHY,FRESH,True,24.3,True,OK,data fresh: last reading 0.0 s ago
+22:24:42.798,HEALTHY,FRESH,True,24.3,True,OK,data fresh: last reading 0.3 s ago
+22:24:43.054,HEALTHY,FRESH,True,24.09,True,OK,data fresh: last reading 0.0 s ago
+22:24:43.310,HEALTHY,FRESH,True,24.09,True,OK,data fresh: last reading 0.3 s ago
+22:24:43.566,HEALTHY,FRESH,True,23.83,True,OK,data fresh: last reading 0.0 s ago
+22:24:43.823,HEALTHY,FRESH,True,23.83,True,OK,data fresh: last reading 0.3 s ago
+22:24:44.084,HEALTHY,FRESH,True,23.9,True,OK,data fresh: last reading 0.0 s ago
+22:24:44.343,HEALTHY,FRESH,True,23.9,True,OK,data fresh: last reading 0.3 s ago
+22:24:44.601,HEALTHY,FRESH,True,24.24,True,OK,data fresh: last reading 0.0 s ago
+22:24:44.863,HEALTHY,FRESH,True,24.24,True,OK,data fresh: last reading 0.3 s ago
+22:24:45.123,HEALTHY,FRESH,True,24.18,True,OK,data fresh: last reading 0.0 s ago
+22:24:45.383,HEALTHY,FRESH,True,24.18,True,OK,data fresh: last reading 0.3 s ago
+22:24:45.643,HEALTHY,FRESH,True,24.04,True,OK,data fresh: last reading 0.0 s ago
+22:24:45.904,HEALTHY,FRESH,True,24.04,True,OK,data fresh: last reading 0.3 s ago
+22:24:46.160,HEALTHY,FRESH,True,23.92,True,OK,data fresh: last reading 0.0 s ago
+22:24:46.418,HEALTHY,FRESH,True,23.92,True,OK,data fresh: last reading 0.3 s ago
+22:24:46.678,HEALTHY,FRESH,True,23.99,True,OK,data fresh: last reading 0.0 s ago
+22:24:46.935,HEALTHY,FRESH,True,23.99,True,OK,data fresh: last reading 0.3 s ago
+22:24:47.195,HEALTHY,FRESH,True,23.86,True,OK,data fresh: last reading 0.0 s ago
+22:24:47.451,HEALTHY,FRESH,True,23.86,True,OK,data fresh: last reading 0.3 s ago
+22:24:47.711,HEALTHY,FRESH,True,24.15,True,OK,data fresh: last reading 0.0 s ago
+22:24:47.967,HEALTHY,FRESH,True,24.15,True,OK,data fresh: last reading 0.3 s ago
+22:24:48.226,HEALTHY,FRESH,True,23.74,True,OK,data fresh: last reading 0.0 s ago
+22:24:48.482,HEALTHY,FRESH,True,23.74,True,OK,data fresh: last reading 0.3 s ago
+22:24:48.739,HEALTHY,FRESH,True,23.99,True,OK,data fresh: last reading 0.0 s ago
+22:24:48.996,HEALTHY,FRESH,True,23.99,True,OK,data fresh: last reading 0.3 s ago
+22:24:49.253,HEALTHY,FRESH,True,23.58,True,OK,data fresh: last reading 0.1 s ago
+22:24:49.513,HEALTHY,FRESH,True,23.58,True,OK,data fresh: last reading 0.4 s ago
+22:24:49.770,HEALTHY,FRESH,True,23.9,True,OK,data fresh: last reading 0.1 s ago
+22:24:50.028,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.0 s ago
+22:24:50.284,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.3 s ago
+22:24:50.544,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.0 s ago
+22:24:50.803,HEALTHY,FRESH,True,24.12,True,OK,data fresh: last reading 0.3 s ago
+22:24:51.059,HEALTHY,FRESH,True,23.96,True,OK,data fresh: last reading 0.0 s ago
+22:24:51.319,HEALTHY,FRESH,True,23.96,True,OK,data fresh: last reading 0.3 s ago
+22:24:51.585,HEALTHY,FRESH,True,23.74,True,OK,data fresh: last reading 0.0 s ago
+22:24:51.846,HEALTHY,FRESH,True,23.74,True,OK,data fresh: last reading 0.3 s ago
+22:24:52.109,HEALTHY,FRESH,True,23.98,True,OK,data fresh: last reading 0.0 s ago
+22:24:52.366,HEALTHY,FRESH,True,23.98,True,OK,data fresh: last reading 0.3 s ago
+22:24:52.627,HEALTHY,FRESH,True,23.9,True,OK,data fresh: last reading 0.0 s ago
+22:24:52.884,HEALTHY,FRESH,True,23.9,True,OK,data fresh: last reading 0.3 s ago
+22:24:53.142,HEALTHY,FRESH,True,24.0,True,OK,data fresh: last reading 0.0 s ago
+22:24:53.403,HEALTHY,FRESH,True,24.0,True,OK,data fresh: last reading 0.3 s ago
+22:24:53.660,HEALTHY,FRESH,True,24.34,True,OK,data fresh: last reading 0.0 s ago
+22:24:53.917,HEALTHY,FRESH,True,24.34,True,OK,data fresh: last reading 0.3 s ago
+22:24:54.176,HEALTHY,FRESH,True,23.75,True,OK,data fresh: last reading 0.0 s ago
+22:24:54.437,HEALTHY,FRESH,True,23.75,True,OK,data fresh: last reading 0.3 s ago
+22:24:54.698,HEALTHY,FRESH,True,23.9,True,OK,data fresh: last reading 0.0 s ago
+22:24:54.955,HEALTHY,FRESH,True,23.9,True,OK,data fresh: last reading 0.3 s ago
+22:24:55.215,HEALTHY,FRESH,True,23.92,True,OK,data fresh: last reading 0.0 s ago
+22:24:55.486,HEALTHY,FRESH,True,23.92,True,OK,data fresh: last reading 0.4 s ago
+22:24:55.743,HEALTHY,FRESH,True,24.04,True,OK,data fresh: last reading 0.1 s ago
+22:24:56.003,HEALTHY,FRESH,True,24.04,True,OK,data fresh: last reading 0.4 s ago
+22:24:56.261,HEALTHY,FRESH,True,24.09,True,OK,data fresh: last reading 0.1 s ago
+22:24:56.521,HEALTHY,FRESH,True,24.09,True,OK,data fresh: last reading 0.4 s ago
+22:24:56.781,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.1 s ago
+22:24:57.039,HEALTHY,FRESH,True,24.13,True,OK,data fresh: last reading 0.4 s ago
+22:24:57.299,HEALTHY,FRESH,True,23.87,True,OK,data fresh: last reading 0.1 s ago
+22:24:57.560,HEALTHY,FRESH,True,23.87,True,OK,data fresh: last reading 0.4 s ago
+22:24:57.818,HEALTHY,FRESH,True,24.01,True,OK,data fresh: last reading 0.1 s ago
+22:24:58.076,HEALTHY,FRESH,True,23.47,True,OK,data fresh: last reading 0.0 s ago
+22:24:58.333,HEALTHY,FRESH,True,23.47,True,OK,data fresh: last reading 0.3 s ago
+22:24:58.593,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.0 s ago
+22:24:58.857,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.3 s ago
+22:24:59.114,HEALTHY,FRESH,True,24.0,True,OK,data fresh: last reading 0.0 s ago
+22:24:59.374,HEALTHY,FRESH,True,24.0,True,OK,data fresh: last reading 0.3 s ago
+22:24:59.630,HEALTHY,FRESH,True,23.79,True,OK,data fresh: last reading 0.0 s ago
+22:24:59.889,HEALTHY,FRESH,True,23.79,True,OK,data fresh: last reading 0.3 s ago
+22:25:00.145,HEALTHY,FRESH,True,23.71,True,OK,data fresh: last reading 0.0 s ago
+22:25:00.407,HEALTHY,FRESH,True,23.71,True,OK,data fresh: last reading 0.3 s ago
+22:25:00.667,HEALTHY,FRESH,True,23.91,True,OK,data fresh: last reading 0.0 s ago
+22:25:00.923,HEALTHY,FRESH,True,23.91,True,OK,data fresh: last reading 0.4 s ago
+22:25:01.182,HEALTHY,FRESH,True,23.92,True,OK,data fresh: last reading 0.1 s ago
+22:25:01.440,HEALTHY,FRESH,True,23.92,True,OK,data fresh: last reading 0.4 s ago
+22:25:01.699,HEALTHY,FRESH,True,23.81,True,OK,data fresh: last reading 0.1 s ago
+22:25:01.958,HEALTHY,FRESH,True,23.81,True,OK,data fresh: last reading 0.4 s ago
+22:25:02.218,HEALTHY,FRESH,True,23.93,True,OK,data fresh: last reading 0.1 s ago
+22:25:02.492,HEALTHY,FRESH,True,23.93,True,OK,data fresh: last reading 0.4 s ago
+22:25:02.755,HEALTHY,FRESH,True,23.78,True,OK,data fresh: last reading 0.1 s ago
+22:25:03.013,HEALTHY,FRESH,True,23.78,True,OK,data fresh: last reading 0.4 s ago
+22:25:03.270,HEALTHY,FRESH,True,23.8,True,OK,data fresh: last reading 0.1 s ago
+22:25:03.528,HEALTHY,FRESH,True,23.8,True,OK,data fresh: last reading 0.4 s ago
+22:25:03.786,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.1 s ago
+22:25:04.044,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.4 s ago
+22:25:04.304,HEALTHY,FRESH,True,23.7,True,OK,data fresh: last reading 0.1 s ago
+22:25:04.562,HEALTHY,FRESH,True,23.7,True,OK,data fresh: last reading 0.4 s ago
+22:25:04.824,HEALTHY,FRESH,True,24.0,True,OK,data fresh: last reading 0.1 s ago
+22:25:05.081,HEALTHY,FRESH,True,24.0,True,OK,data fresh: last reading 0.4 s ago
+22:25:05.340,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.1 s ago
+22:25:05.607,HEALTHY,FRESH,True,23.84,True,OK,data fresh: last reading 0.4 s ago
+22:25:05.864,HEALTHY,FRESH,True,23.29,True,OK,data fresh: last reading 0.1 s ago
+22:25:06.122,HEALTHY,FRESH,True,23.29,True,OK,data fresh: last reading 0.4 s ago
+22:25:06.379,HEALTHY,FRESH,True,24.17,True,OK,data fresh: last reading 0.1 s ago
+22:25:06.641,HEALTHY,FRESH,True,23.61,True,OK,data fresh: last reading 0.1 s ago
+22:25:06.898,HEALTHY,FRESH,True,23.61,True,OK,data fresh: last reading 0.4 s ago
+22:25:07.159,HEALTHY,FRESH,True,23.47,True,OK,data fresh: last reading 0.1 s ago
+22:25:07.420,HEALTHY,FRESH,True,23.47,True,OK,data fresh: last reading 0.4 s ago
+22:25:07.677,HEALTHY,FRESH,True,24.06,True,OK,data fresh: last reading 0.1 s ago
+22:25:07.934,HEALTHY,FRESH,True,24.06,True,OK,data fresh: last reading 0.4 s ago
+22:25:08.192,HEALTHY,FRESH,True,24.15,True,OK,data fresh: last reading 0.1 s ago
+22:25:08.448,HEALTHY,FRESH,True,24.15,True,OK,data fresh: last reading 0.4 s ago
+22:25:08.707,HEALTHY,FRESH,True,23.65,True,OK,data fresh: last reading 0.1 s ago
+22:25:08.964,HEALTHY,FRESH,True,23.65,True,OK,data fresh: last reading 0.4 s ago
+22:25:09.222,HEALTHY,FRESH,True,23.77,True,OK,data fresh: last reading 0.1 s ago
+22:25:09.488,HEALTHY,FRESH,True,23.77,True,OK,data fresh: last reading 0.4 s ago
+22:25:09.749,HEALTHY,FRESH,True,23.71,True,OK,data fresh: last reading 0.1 s ago
+22:25:10.008,HEALTHY,FRESH,True,23.71,True,OK,data fresh: last reading 0.4 s ago
+22:25:10.265,HEALTHY,FRESH,True,23.7,True,OK,data fresh: last reading 0.1 s ago
+22:25:10.526,HEALTHY,FRESH,True,23.7,True,OK,data fresh: last reading 0.4 s ago
+22:25:10.783,HEALTHY,FRESH,True,23.8,True,OK,data fresh: last reading 0.1 s ago
+22:25:11.043,HEALTHY,FRESH,True,23.8,True,OK,data fresh: last reading 0.4 s ago
+22:25:11.301,HEALTHY,FRESH,True,23.9,True,OK,data fresh: last reading 0.1 s ago
+22:25:11.558,HEALTHY,FRESH,True,23.9,True,OK,data fresh: last reading 0.4 s ago
+22:25:11.816,HEALTHY,FRESH,True,23.81,True,OK,data fresh: last reading 0.1 s ago
+22:25:12.074,HEALTHY,FRESH,True,23.81,True,OK,data fresh: last reading 0.4 s ago
+22:25:12.332,HEALTHY,FRESH,True,23.53,True,OK,data fresh: last reading 0.1 s ago
+22:25:12.589,HEALTHY,FRESH,True,23.53,True,OK,data fresh: last reading 0.4 s ago
+22:25:12.850,HEALTHY,FRESH,True,23.93,True,OK,data fresh: last reading 0.3 s ago
+22:25:13.108,HEALTHY,FRESH,True,23.77,True,OK,data fresh: last reading 0.0 s ago
+22:25:13.365,HEALTHY,FRESH,True,23.77,True,OK,data fresh: last reading 0.3 s ago
+22:25:13.622,HEALTHY,FRESH,True,23.66,True,OK,data fresh: last reading 0.0 s ago
+22:25:13.883,HEALTHY,FRESH,True,23.66,True,OK,data fresh: last reading 0.3 s ago
+22:25:14.145,HEALTHY,FRESH,True,23.96,True,OK,data fresh: last reading 0.0 s ago
+22:25:14.403,HEALTHY,FRESH,True,23.96,True,OK,data fresh: last reading 0.3 s ago
+22:25:14.660,HEALTHY,FRESH,True,23.68,True,OK,data fresh: last reading 0.0 s ago
+22:25:14.918,HEALTHY,FRESH,True,23.68,True,OK,data fresh: last reading 0.3 s ago
+22:25:15.176,HEALTHY,FRESH,True,23.73,True,OK,data fresh: last reading 0.0 s ago
+22:25:15.438,HEALTHY,FRESH,True,23.73,True,OK,data fresh: last reading 0.3 s ago
+22:25:15.695,HEALTHY,FRESH,True,23.7,True,OK,data fresh: last reading 0.1 s ago
+22:25:15.952,HEALTHY,FRESH,True,23.7,True,OK,data fresh: last reading 0.4 s ago
+22:25:16.212,HEALTHY,FRESH,True,23.56,True,OK,data fresh: last reading 0.1 s ago
+22:25:16.475,HEALTHY,FRESH,True,23.56,True,OK,data fresh: last reading 0.4 s ago
+22:25:16.735,HEALTHY,FRESH,True,23.67,True,OK,data fresh: last reading 0.1 s ago
+22:25:16.992,HEALTHY,FRESH,True,23.67,True,OK,data fresh: last reading 0.4 s ago
+22:25:17.255,HEALTHY,FRESH,True,23.87,True,OK,data fresh: last reading 0.1 s ago
+22:25:17.518,HEALTHY,FRESH,True,23.87,True,OK,data fresh: last reading 0.4 s ago
+22:25:17.776,HEALTHY,FRESH,True,23.58,True,OK,data fresh: last reading 0.1 s ago
+22:25:18.034,HEALTHY,FRESH,True,23.58,True,OK,data fresh: last reading 0.4 s ago
+22:25:18.292,HEALTHY,FRESH,True,23.49,True,OK,data fresh: last reading 0.1 s ago
+22:25:18.552,HEALTHY,FRESH,True,23.57,True,OK,data fresh: last reading 0.4 s ago
+22:25:18.814,HEALTHY,FRESH,True,23.57,True,OK,data fresh: last reading 0.3 s ago
+22:25:19.073,HEALTHY,FRESH,True,23.89,True,OK,data fresh: last reading 0.0 s ago
+22:25:19.333,HEALTHY,FRESH,True,23.89,True,OK,data fresh: last reading 0.3 s ago
+22:25:19.591,HEALTHY,FRESH,True,23.79,True,OK,data fresh: last reading 0.0 s ago
+22:25:19.854,HEALTHY,FRESH,True,23.79,True,OK,data fresh: last reading 0.3 s ago
+22:25:20.111,HEALTHY,FRESH,True,23.63,True,OK,data fresh: last reading 0.0 s ago
+22:25:20.368,HEALTHY,FRESH,True,23.63,True,OK,data fresh: last reading 0.3 s ago
+22:25:20.631,HEALTHY,FRESH,True,23.3,True,OK,data fresh: last reading 0.0 s ago
+22:25:20.889,HEALTHY,FRESH,True,23.3,True,OK,data fresh: last reading 0.3 s ago
+22:25:21.151,HEALTHY,FRESH,True,23.72,True,OK,data fresh: last reading 0.0 s ago
+22:25:21.408,HEALTHY,FRESH,True,23.72,True,OK,data fresh: last reading 0.3 s ago
+22:25:21.666,HEALTHY,FRESH,True,23.48,True,OK,data fresh: last reading 0.0 s ago
+22:25:21.928,HEALTHY,FRESH,True,23.48,True,OK,data fresh: last reading 0.3 s ago
+22:25:22.190,HEALTHY,FRESH,True,23.56,True,OK,data fresh: last reading 0.0 s ago
+22:25:22.447,HEALTHY,FRESH,True,23.56,True,OK,data fresh: last reading 0.3 s ago
+22:25:22.705,HEALTHY,FRESH,False,23.49,True,OK,data fresh: last reading 0.0 s ago
+22:25:22.966,HEALTHY,FRESH,False,23.49,True,OK,data fresh: last reading 0.3 s ago
+22:25:23.224,HEALTHY,FRESH,False,23.83,True,OK,data fresh: last reading 0.0 s ago
+22:25:23.492,HEALTHY,FRESH,False,23.83,True,OK,data fresh: last reading 0.3 s ago
+22:25:23.548,HEALTHY,FRESH,False,23.83,True,OK,data fresh: last reading 0.4 s ago
+22:25:23.755,HEALTHY,FRESH,False,23.23,True,OK,data fresh: last reading 0.0 s ago
+22:25:24.016,HEALTHY,FRESH,False,23.15,True,OK,data fresh: last reading 0.0 s ago
+22:25:24.278,HEALTHY,FRESH,False,23.15,True,OK,data fresh: last reading 0.3 s ago
+22:25:24.536,HEALTHY,FRESH,False,23.33,True,OK,data fresh: last reading 0.0 s ago
+22:25:24.786,UNREACHABLE,,,,,,dashboard not responding
+22:25:25.037,UNREACHABLE,,,,,,dashboard not responding
+22:25:25.288,UNREACHABLE,,,,,,dashboard not responding
+22:25:25.539,UNREACHABLE,,,,,,dashboard not responding
+22:25:25.789,UNREACHABLE,,,,,,dashboard not responding
+22:25:26.040,UNREACHABLE,,,,,,dashboard not responding
+22:25:26.299,RECOVERING,FRESH,False,23.08,True,OK,2 of 5 fresh accepted readings since restart
+22:25:26.323,RECOVERING,FRESH,False,23.08,True,OK,2 of 5 fresh accepted readings since restart
+22:25:26.563,RECOVERING,FRESH,False,23.08,True,OK,2 of 5 fresh accepted readings since restart
+22:25:26.738,RECOVERING,FRESH,False,23.57,True,OK,3 of 5 fresh accepted readings since restart
+22:25:26.825,RECOVERING,FRESH,False,23.57,True,OK,3 of 5 fresh accepted readings since restart
+22:25:26.946,RECOVERING,FRESH,False,23.57,True,OK,3 of 5 fresh accepted readings since restart
+22:25:27.085,RECOVERING,FRESH,False,23.57,True,OK,3 of 5 fresh accepted readings since restart
+22:25:27.155,RECOVERING,FRESH,False,23.77,True,OK,4 of 5 fresh accepted readings since restart
+22:25:27.343,RECOVERING,FRESH,False,23.77,True,OK,4 of 5 fresh accepted readings since restart
+22:25:27.366,RECOVERING,FRESH,False,23.77,True,OK,4 of 5 fresh accepted readings since restart
+22:25:27.574,RECOVERING,FRESH,False,23.77,True,OK,4 of 5 fresh accepted readings since restart
+22:25:27.602,HEALTHY,FRESH,False,23.68,True,OK,data fresh: last reading 0.0 s ago
+22:25:27.786,HEALTHY,FRESH,False,23.68,True,OK,data fresh: last reading 0.1 s ago
+22:25:27.869,HEALTHY,FRESH,False,23.68,True,OK,data fresh: last reading 0.3 s ago
+22:25:28.131,HEALTHY,FRESH,False,23.44,True,OK,data fresh: last reading 0.0 s ago
+22:25:28.382,UNREACHABLE,,,,,,dashboard not responding
+22:25:28.633,UNREACHABLE,,,,,,dashboard not responding
+22:25:28.883,UNREACHABLE,,,,,,dashboard not responding
+22:25:29.134,UNREACHABLE,,,,,,dashboard not responding
+22:25:29.385,UNREACHABLE,,,,,,dashboard not responding
+22:25:29.636,UNREACHABLE,,,,,,dashboard not responding
+22:25:29.886,UNREACHABLE,,,,,,dashboard not responding
+22:25:30.137,UNREACHABLE,,,,,,dashboard not responding
+22:25:30.388,UNREACHABLE,,,,,,dashboard not responding
+22:25:30.410,UNREACHABLE,,,,,,dashboard not responding
+22:25:30.611,UNREACHABLE,,,,,,dashboard not responding
+22:25:30.638,UNREACHABLE,,,,,,dashboard not responding
+22:25:30.823,RECOVERING,FRESH,False,23.38,True,OK,2 of 5 fresh accepted readings since restart
+22:25:30.896,RECOVERING,FRESH,False,23.38,True,OK,2 of 5 fresh accepted readings since restart
+22:25:31.030,RECOVERING,FRESH,False,23.38,True,OK,2 of 5 fresh accepted readings since restart
+22:25:31.154,RECOVERING,FRESH,False,23.66,True,OK,3 of 5 fresh accepted readings since restart
+22:25:31.237,RECOVERING,FRESH,False,23.66,True,OK,3 of 5 fresh accepted readings since restart
+22:25:31.416,RECOVERING,FRESH,False,23.66,True,OK,3 of 5 fresh accepted readings since restart
+22:25:31.448,RECOVERING,FRESH,False,23.66,True,OK,3 of 5 fresh accepted readings since restart
+22:25:31.660,RECOVERING,FRESH,False,23.3,True,OK,4 of 5 fresh accepted readings since restart
+22:25:31.677,RECOVERING,FRESH,False,23.3,True,OK,4 of 5 fresh accepted readings since restart
+22:25:31.867,RECOVERING,FRESH,False,23.3,True,OK,4 of 5 fresh accepted readings since restart
+22:25:31.938,RECOVERING,FRESH,False,23.3,True,OK,4 of 5 fresh accepted readings since restart
+22:25:32.080,RECOVERING,FRESH,False,23.3,True,OK,4 of 5 fresh accepted readings since restart
+22:25:32.196,HEALTHY,FRESH,False,23.49,True,OK,data fresh: last reading 0.0 s ago
+22:25:32.287,HEALTHY,FRESH,False,23.49,True,OK,data fresh: last reading 0.1 s ago
+22:25:32.454,HEALTHY,FRESH,False,23.49,True,OK,data fresh: last reading 0.3 s ago
+22:25:32.716,HEALTHY,FRESH,False,23.53,True,OK,data fresh: last reading 0.0 s ago
+22:25:32.973,HEALTHY,FRESH,False,23.53,True,OK,data fresh: last reading 0.3 s ago
+22:25:33.234,HEALTHY,FRESH,False,23.46,True,OK,data fresh: last reading 0.1 s ago
+22:25:33.495,HEALTHY,FRESH,False,23.46,True,OK,data fresh: last reading 0.4 s ago
+22:25:33.755,HEALTHY,FRESH,False,23.37,True,OK,data fresh: last reading 0.1 s ago
+22:25:34.015,HEALTHY,FRESH,False,23.37,True,OK,data fresh: last reading 0.4 s ago
+22:25:34.273,HEALTHY,FRESH,False,23.39,True,OK,data fresh: last reading 0.1 s ago
+22:25:34.537,HEALTHY,FRESH,False,23.39,True,OK,data fresh: last reading 0.4 s ago
+22:25:34.799,HEALTHY,FRESH,False,23.62,True,OK,data fresh: last reading 0.3 s ago
+22:25:35.061,HEALTHY,FRESH,False,23.44,True,OK,data fresh: last reading 0.0 s ago
+22:25:35.322,HEALTHY,FRESH,False,23.44,True,OK,data fresh: last reading 0.3 s ago
+22:25:35.580,HEALTHY,FRESH,False,23.35,True,OK,data fresh: last reading 0.0 s ago
+22:25:35.838,HEALTHY,FRESH,False,23.35,True,OK,data fresh: last reading 0.3 s ago
+22:25:36.096,HEALTHY,FRESH,False,23.14,True,OK,data fresh: last reading 0.0 s ago
+22:25:36.380,HEALTHY,FRESH,False,23.14,True,OK,data fresh: last reading 0.3 s ago
+22:25:36.638,HEALTHY,FRESH,False,23.54,True,OK,data fresh: last reading 0.0 s ago
+22:25:36.900,HEALTHY,FRESH,False,23.54,True,OK,data fresh: last reading 0.3 s ago
+22:25:37.161,HEALTHY,FRESH,False,23.13,True,OK,data fresh: last reading 0.0 s ago
+22:25:37.419,HEALTHY,FRESH,False,23.13,True,OK,data fresh: last reading 0.3 s ago
+22:25:37.681,HEALTHY,FRESH,False,23.2,True,OK,data fresh: last reading 0.0 s ago
+22:25:37.939,HEALTHY,FRESH,False,23.2,True,OK,data fresh: last reading 0.3 s ago
+22:25:38.200,HEALTHY,FRESH,False,23.34,True,OK,data fresh: last reading 0.0 s ago
+22:25:38.460,HEALTHY,FRESH,False,23.34,True,OK,data fresh: last reading 0.3 s ago
+22:25:38.722,HEALTHY,FRESH,False,23.25,True,OK,data fresh: last reading 0.0 s ago
+22:25:38.980,HEALTHY,FRESH,False,23.25,True,OK,data fresh: last reading 0.3 s ago
+22:25:39.237,HEALTHY,FRESH,False,23.08,True,OK,data fresh: last reading 0.0 s ago
+22:25:39.511,HEALTHY,FRESH,False,23.08,True,OK,data fresh: last reading 0.4 s ago
+22:25:39.768,HEALTHY,FRESH,False,23.26,True,OK,data fresh: last reading 0.1 s ago
+22:25:40.030,HEALTHY,FRESH,False,23.26,True,OK,data fresh: last reading 0.4 s ago
+22:25:40.287,HEALTHY,FRESH,False,23.36,True,OK,data fresh: last reading 0.1 s ago
+22:25:40.546,HEALTHY,FRESH,False,23.14,True,OK,data fresh: last reading 0.0 s ago
+22:25:40.810,HEALTHY,FRESH,False,23.14,True,OK,data fresh: last reading 0.3 s ago
+22:25:41.067,HEALTHY,FRESH,False,23.41,True,OK,data fresh: last reading 0.0 s ago
+22:25:41.325,HEALTHY,FRESH,False,23.41,True,OK,data fresh: last reading 0.3 s ago
+22:25:41.584,HEALTHY,FRESH,False,23.22,True,OK,data fresh: last reading 0.0 s ago
+22:25:41.842,HEALTHY,FRESH,False,23.22,True,OK,data fresh: last reading 0.3 s ago
+22:25:42.101,HEALTHY,FRESH,False,23.38,True,OK,data fresh: last reading 0.0 s ago
