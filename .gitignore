@@ -1,0 +1,7 @@
+__pycache__/
+.pytest_cache/
+.venv/
+logs/
+run/
+data/monitor.db
+data/monitor.db-*
