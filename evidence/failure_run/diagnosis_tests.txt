@@ -1,0 +1,31 @@
+==============================================================================
+CAUSE 1 - malformed input crashes the collector (original code, git 23b199e)
+==============================================================================
+
+validate(24.1) -> Decision(status='OK', accepted_value=24.1, reason=None)
+Worker.process(raw=24.1) -> OK, no exception
+
+validate('ERR') -> Decision(status='MISSING', accepted_value=None, reason='no sensor value received')
+Worker.process(raw='ERR') -> ValueError: Unknown format code 'f' for object of type 'str'
+   last frame: raw = "none" if row.raw_value is None else f"{row.raw_value:.2f}"
+
+validate('') -> Decision(status='MISSING', accepted_value=None, reason='no sensor value received')
+Worker.process(raw='') -> ValueError: Unknown format code 'f' for object of type 'str'
+   last frame: raw = "none" if row.raw_value is None else f"{row.raw_value:.2f}"
+
+validate('23.9C') -> Decision(status='MISSING', accepted_value=None, reason='no sensor value received')
+Worker.process(raw='23.9C') -> ValueError: Unknown format code 'f' for object of type 'str'
+   last frame: raw = "none" if row.raw_value is None else f"{row.raw_value:.2f}"
+
+rows stored with TEXT in the numeric raw_value column before the exception: 3
+RESULT: confirmed - every non-numeric value raises ValueError AFTER the row is inserted; numeric values never do.
+
+==============================================================================
+CAUSE 2 - the database (locked / corrupt / not writable) stopped the collector
+==============================================================================
+PRAGMA integrity_check -> ok
+PRAGMA quick_check     -> ok
+write test (insert + rollback) -> OK
+sqlite3 errors in worker.log: 0 | 'database is locked': 0
+original collector on the SAME database with the clean 'practice' feed: 30 s, no exception, 31 readings written, health HEALTHY
+RESULT: rejected - the database is intact and writable; the same code + database works with numeric input.
