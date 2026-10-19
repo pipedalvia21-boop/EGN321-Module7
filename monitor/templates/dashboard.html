@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+{% block head %}
+<style>
+  .band { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; padding: 14px 18px; border-radius: 8px;
+          color: #fff; margin-bottom: 16px; }
+  .band .state { font-size: 26px; font-weight: 750; letter-spacing: .5px; }
+  .band .reason { font-size: 15px; opacity: .95; }
+  .band .since { margin-left: auto; font-size: 13px; opacity: .9; }
+  .band.HEALTHY { background: var(--healthy); } .band.DEGRADED { background: var(--degraded); }
+  .band.FAILED { background: var(--failed); } .band.STARTING, .band.RECOVERING { background: var(--starting); }
+  .grid { display: grid; grid-template-columns: 1.25fr 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .grid2 { display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; margin-top: 16px; }
+  @media (max-width: 900px) { .grid, .grid2 { grid-template-columns: 1fr; } }
+  .big { font-size: 46px; font-weight: 700; line-height: 1.05; }
+  .big .unit { font-size: 22px; font-weight: 500; color: var(--muted); margin-left: 4px; }
+  .stale .big { color: #9aa4ae; text-decoration: line-through 2px; }
+  .flag { display: inline-block; margin-top: 6px; padding: 3px 8px; border-radius: 4px; font-size: 13px; font-weight: 600; }
+  .flag.current { background: var(--ok-soft); color: var(--healthy); }
+  .flag.notcurrent { background: var(--bad-soft); color: var(--failed); }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; margin: 8px 0 0; font-size: 13.5px; }
+  dt { color: var(--muted); } dd { margin: 0; }
+  .alert-state { font-size: 24px; font-weight: 700; }
+  .alert-state.on { color: var(--alert); } .alert-state.off { color: var(--healthy); }
+  .panel.alerting { border: 2px solid var(--alert); background: #fff7f6; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 12.5px; color: var(--muted); margin-top: 6px; }
+  .legend i { display: inline-block; width: 18px; height: 3px; vertical-align: middle; margin-right: 5px; }
+  #offline { display: none; background: var(--failed); color: #fff; padding: 10px 16px; border-radius: 8px;
+             margin-bottom: 14px; font-weight: 600; }
+  body.offline #offline { display: block; }
+  body.offline .live { opacity: .45; filter: grayscale(1); }
+  .ev { font-size: 13px; } .ev td:first-child { white-space: nowrap; }
+</style>
+{% endblock %}
+{% block clock %}{{ s.server_time[11:19] }}{% endblock %}
+{% block body %}
+<div id="offline">Dashboard server not responding since <span id="offline-since"></span>. Everything below is from the last
+  successful update and is NOT current. Retrying every second…</div>
+<div class="live">
+<section class="band {{ s.health.state }}" id="band">
+  <span class="state" id="h-state">{{ s.health.state }}</span>
+  <span class="reason" id="h-reason">{{ s.health.reason }}</span>
+  <span class="since num" id="h-since">{% if s.health.since %}since {{ s.health.since[11:19] }}{% endif %}</span>
+</section>
+
+<div class="grid">
+  <section class="panel {{ '' if s.current and s.current.is_current else 'stale' }}" id="cur-panel">
+    <h2>Current temperature</h2>
+    <div class="big num" id="cur-value">{% if s.current %}{{ '%.2f' % s.current.value }}{% else %}—{% endif %}<span class="unit">°C</span></div>
+    <div id="cur-flag" class="flag {{ 'current' if s.current and s.current.is_current else 'notcurrent' }}">
+      {% if s.current and s.current.is_current %}Current{% elif s.current %}Last known value — STALE, not current{% else %}No accepted reading yet{% endif %}</div>
+    <dl>
+      <dt>Reading time</dt><dd class="num" id="cur-ts">{{ s.current.timestamp if s.current else '—' }}</dd>
+      <dt>Age</dt><dd class="num" id="cur-age">{{ '%.1f s' % s.current.age_s if s.current else '—' }}</dd>
+    </dl>
+  </section>
+
+  <section class="panel">
+    <h2>Data</h2>
+    <div class="alert-state" id="d-state">{{ s.health.data_state }}</div>
+    <dl>
+      <dt>Latest reading</dt><dd class="num" id="d-ts">{{ s.latest_row.timestamp if s.latest_row else '—' }}</dd>
+      <dt>Status</dt><dd><span class="tag {{ s.latest_row.status if s.latest_row }}" id="d-status">{{ s.latest_row.status if s.latest_row else '—' }}</span>
+                         <span class="small muted" id="d-reason">{{ s.latest_row.status_reason or '' if s.latest_row else '' }}</span></dd>
+      <dt>Expected</dt><dd class="num">every {{ '%g' % s.settings.interval_s }} s · stale after {{ '%g' % s.settings.stale_after_s }} s · failed after {{ '%g' % s.settings.failed_after_s }} s</dd>
+      <dt>Last 5 min</dt><dd class="num" id="d-comp">{% if s.window_5min %}{{ s.window_5min.received }} of {{ s.window_5min.expected }} received ({{ s.window_5min.completeness_pct }} %), {{ s.window_5min.missing }} missing, largest gap {{ s.window_5min.largest_gap_s }} s{% else %}—{% endif %}</dd>
+      <dt>Collector</dt><dd class="num" id="d-hb">heartbeat {{ s.heartbeat_age_s if s.heartbeat_age_s is not none else '—' }} s ago</dd>
+    </dl>
+  </section>
+
+  <section class="panel {{ 'alerting' if s.alert.active }}" id="al-panel">
+    <h2>Warm-room alert ({{ s.alert.name }})</h2>
+    <div class="alert-state {{ 'on' if s.alert.active else 'off' }}" id="al-state">{{ 'ACTIVE' if s.alert.active else 'CLEAR' }}</div>
+    <dl>
+      <dt>Since</dt><dd class="num" id="al-since">{{ s.alert.since or '—' }}</dd>
+      <dt>Rolling median</dt><dd class="num" id="al-median">{{ '%.2f °C' % s.alert.median if s.alert.median is not none else '—' }}</dd>
+      <dt>Rule</dt><dd>median of last {{ s.settings.alert_window }} accepted readings ≥ {{ '%g' % s.alert.on_c }} °C activates; ≤ {{ '%g' % s.alert.off_c }} °C clears</dd>
+      <dt>Confidence</dt><dd id="al-conf">{{ 'based on fresh data' if s.alert.data_fresh else 'data stale — cannot confirm' }}</dd>
+    </dl>
+  </section>
+</div>
+
+<section class="panel chart">
+  <h2>Last 5 minutes — live history (missing intervals are shaded, never connected)</h2>
+  <img id="chart" src="/chart/live.svg?minutes=5" alt="Live temperature, last 5 minutes" style="width:100%">
+  <div class="legend">
+    <span><i style="background:#24527a"></i>accepted readings</span>
+    <span><i style="background:#c8372d;opacity:.35;height:10px"></i>no data (gap or stale)</span>
+    <span><i style="background:#b26a00"></i>× rejected reading (raw value)</span>
+    <span><i style="background:#b3261e"></i>alert thresholds</span>
+  </div>
+</section>
+
+<div class="grid2">
+  <section class="panel">
+    <h2>Recent readings (raw vs. accepted)</h2>
+    <table class="num"><thead><tr><th>Time</th><th class="num">Raw °C</th><th class="num">Accepted °C</th><th>Status</th><th>Replays Module 6 row</th></tr></thead>
+      <tbody id="recent">
+      {% for r in s.recent %}<tr><td>{{ r.timestamp[11:23] }}</td><td class="num">{{ '%.2f' % r.raw_value if r.raw_value is not none else '—' }}</td>
+        <td class="num">{{ '%.2f' % r.accepted_value if r.accepted_value is not none else '—' }}</td>
+        <td><span class="tag {{ r.status }}">{{ r.status }}</span></td><td class="small muted" title="{{ r.source_ref or '' }}">{% set parts = (r.source_ref or '').split(' @ ') %}{{ parts[0] }}{% if parts|length > 1 %} · {{ parts[1][5:16]|replace('T', ' ') }}{% endif %}</td></tr>{% endfor %}
+      </tbody></table>
+  </section>
+  <section class="panel">
+    <h2>Events</h2>
+    <table class="ev"><tbody id="events">
+      {% for e in s.events %}<tr><td class="num">{{ e.ts[11:19] }}</td><td><span class="tag {{ e.level }}">{{ e.event }}</span></td><td>{{ e.message }}</td></tr>{% endfor %}
+    </tbody></table>
+  </section>
+</div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (v) => String(v ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const srcLabel = (ref) => { if (!ref) return ""; const [id, when] = ref.split(" @ "); return id + " · " + (when || "").slice(5, 16).replace("T", " "); };
+const f2 = (v) => v === null || v === undefined ? "—" : Number(v).toFixed(2);
+let lastChart = 0, offlineSince = null;
+
+async function refresh() {
+  let s;
+  try {
+    const r = await fetch("/api/status", {cache: "no-store"});
+    if (!r.ok) throw new Error(r.status);
+    s = await r.json();
+  } catch (e) {
+    if (!offlineSince) { offlineSince = new Date(); $("offline-since").textContent = offlineSince.toLocaleTimeString(); }
+    document.body.classList.add("offline");
+    return;
+  }
+  offlineSince = null;
+  document.body.classList.remove("offline");
+  $("clock").textContent = s.server_time.slice(11, 19);
+  const h = s.health;
+  $("band").className = "band " + h.state;
+  $("h-state").textContent = h.state;
+  $("h-reason").textContent = h.reason;
+  $("h-since").textContent = h.since ? "since " + h.since.slice(11, 19) : "";
+
+  const cur = s.current, isCur = cur && cur.is_current;
+  $("cur-panel").className = "panel" + (isCur ? "" : " stale");
+  $("cur-value").innerHTML = (cur ? f2(cur.value) : "—") + '<span class="unit">°C</span>';
+  $("cur-flag").className = "flag " + (isCur ? "current" : "notcurrent");
+  $("cur-flag").textContent = isCur ? "Current" : (cur ? "Last known value — STALE, not current" : "No accepted reading yet");
+  $("cur-ts").textContent = cur ? cur.timestamp : "—";
+  $("cur-age").textContent = cur ? cur.age_s.toFixed(1) + " s" : "—";
+
+  const lr = s.latest_row;
+  $("d-state").textContent = h.data_state;
+  $("d-ts").textContent = lr ? lr.timestamp : "—";
+  $("d-status").className = "tag " + (lr ? lr.status : "");
+  $("d-status").textContent = lr ? lr.status : "—";
+  $("d-reason").textContent = lr && lr.status_reason ? lr.status_reason : "";
+  const w = s.window_5min;
+  $("d-comp").textContent = w ? `${w.received} of ${w.expected} received (${w.completeness_pct} %), ${w.missing} missing, largest gap ${w.largest_gap_s} s` + (w.ongoing_gap_s ? ` (ongoing)` : "") : "—";
+  $("d-hb").textContent = "heartbeat " + (s.heartbeat_age_s ?? "—") + " s ago";
+
+  const a = s.alert;
+  $("al-panel").className = "panel" + (a.active ? " alerting" : "");
+  $("al-state").className = "alert-state " + (a.active ? "on" : "off");
+  $("al-state").textContent = a.active ? "ACTIVE" : "CLEAR";
+  $("al-since").textContent = a.since || "—";
+  $("al-median").textContent = a.median === null ? "—" : f2(a.median) + " °C";
+  $("al-conf").textContent = a.data_fresh ? "based on fresh data" : "data stale — cannot confirm";
+
+  $("recent").innerHTML = s.recent.map(r => `<tr><td>${esc(r.timestamp.slice(11, 23))}</td><td class="num">${f2(r.raw_value)}</td>
+    <td class="num">${f2(r.accepted_value)}</td><td><span class="tag ${esc(r.status)}">${esc(r.status)}</span></td>
+    <td class="small muted" title="${esc(r.source_ref || "")}">${esc(srcLabel(r.source_ref))}</td></tr>`).join("");
+  $("events").innerHTML = s.events.map(e => `<tr><td class="num">${esc(e.ts.slice(11, 19))}</td>
+    <td><span class="tag ${esc(e.level)}">${esc(e.event)}</span></td><td>${esc(e.message)}</td></tr>`).join("");
+
+  if (Date.now() - lastChart > 2500) { $("chart").src = "/chart/live.svg?minutes=5&t=" + Date.now(); lastChart = Date.now(); }
+}
+setInterval(refresh, 1000);
+</script>
+{% endblock %}

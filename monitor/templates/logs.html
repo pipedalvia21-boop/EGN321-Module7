@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Logs — Lab temperature monitor{% endblock %}
+{% block head %}
+<meta http-equiv="refresh" content="5">
+<style>
+  pre { background: #f7f9fb; border: 1px solid var(--line); border-radius: 6px; padding: 10px; font-size: 12px;
+        line-height: 1.35; max-height: 360px; overflow: auto; white-space: pre-wrap; margin: 0; }
+  .logs { display: grid; gap: 16px; }
+  .ev td { font-size: 13px; }
+</style>
+{% endblock %}
+{% block body %}
+<div class="logs">
+  <section class="panel">
+    <h2>Events (SQLite <code>events</code> table, newest first)</h2>
+    <table class="ev"><thead><tr><th>Time</th><th>Level</th><th>Source</th><th>Event</th><th>Message</th></tr></thead><tbody>
+    {% for e in events %}<tr><td class="num" style="white-space:nowrap">{{ e.ts }}</td><td><span class="tag {{ e.level }}">{{ e.level }}</span></td>
+      <td>{{ e.source }}</td><td><b>{{ e.event }}</b></td><td>{{ e.message }}</td></tr>{% endfor %}
+    </tbody></table>
+  </section>
+  {% for name, lines in tails.items() %}
+  <section class="panel">
+    <h2>{{ log_dir }}/{{ name }}.log — last {{ lines|length }} lines</h2>
+    <pre>{% for l in lines %}{{ l }}{% endfor %}</pre>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}
