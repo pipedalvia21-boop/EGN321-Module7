@@ -78,20 +78,30 @@ class Supervisor:
     def on_exit(self, child, now):
         code = child.proc.returncode
         how = f"killed by signal {-code}" if code is not None and code < 0 else f"exit code {code}"
-        self.event("ERROR", "CHILD_EXIT", f"{child.name} (pid {child.proc.pid}) stopped unexpectedly: {how}")
-        child.proc = None
         child.restarts.append(now)
         while child.restarts and now - child.restarts[0] > CRASH_WINDOW_S:
             child.restarts.popleft()
-        if len(child.restarts) > CRASH_LIMIT:
+        n = len(child.restarts)
+        self.event("ERROR", "CHILD_EXIT", f"{child.name} (pid {child.proc.pid}) stopped unexpectedly: {how} "
+                   f"[exit {n} of {CRASH_LIMIT + 1} allowed in {CRASH_WINDOW_S} s; details in logs/{child.name}.log]")
+        child.proc = None
+        # 7.2 improvement: tell the dashboard about restarts, so it never shows HEALTHY while a child crash-loops
+        exits = db.kv_get_json(self.conn, "child_exits", {}) or {}
+        exits[child.name] = {"times": list(child.restarts), "last_exit": how, "limit": CRASH_LIMIT,
+                             "window_s": CRASH_WINDOW_S}
+        db.kv_set(self.conn, "child_exits", exits)
+        if n > CRASH_LIMIT:
             child.given_up = True
+            db.kv_set(self.conn, "crash_loop", {"child": child.name, "at": now, "exits": n, "last_exit": how})
             self.event("CRITICAL", "CRASH_LOOP",
-                       f"{child.name} stopped {len(child.restarts)} times in {CRASH_WINDOW_S} s; automatic "
-                       f"restart disabled - human intervention required (see logs/{child.name}.stderr.log)")
+                       f"{child.name} stopped {n} times in {CRASH_WINDOW_S} s (last: {how}); automatic restart "
+                       f"disabled - human intervention required: read logs/{child.name}.log, fix the cause, then "
+                       f"restart the service")
         else:
-            delay = min(BACKOFF_MAX_S, 2 ** (len(child.restarts) - 1))
+            delay = min(BACKOFF_MAX_S, 2 ** (n - 1))
             child.next_start = now + delay
-            self.event("INFO", "RESTART_SCHEDULED", f"{child.name} will restart in {delay} s")
+            self.event("INFO", "RESTART_SCHEDULED", f"{child.name} will restart in {delay} s (restart {n} of "
+                       f"{CRASH_LIMIT} before the crash-loop guard stops it)")
         self.write_pids()
 
     def run(self):
@@ -108,6 +118,8 @@ class Supervisor:
                 self.event("WARNING", "RECOVERY", "stopped leftover processes from the previous run: "
                            + ", ".join(leftovers))
         db.kv_set(self.conn, "supervisor_running", "1")
+        db.kv_set(self.conn, "crash_loop", None)        # a fresh supervisor starts with a clean slate
+        db.kv_set(self.conn, "child_exits", {})
         for child in self.children:
             self.start_child(child)
         while not self.stopping:

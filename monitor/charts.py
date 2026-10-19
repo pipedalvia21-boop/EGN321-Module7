@@ -45,7 +45,9 @@ def _time_label(t: datetime, span_s: float) -> str:
 def timeseries_svg(rows, interval_s, *, thresholds=(), start=None, end=None, stale_after_s=None,
                    width=960, height=290, unit="°C", gap_multiplier=1.5, title=""):
     rows = sorted(rows, key=lambda r: (r["timestamp"], r.get("id", 0)))
-    received = [(parse_ts(r["timestamp"]), r) for r in rows if r["raw_value"] is not None]
+    # only numeric raw values can be drawn; text from versions before the 7.2 fix is skipped
+    received = [(parse_ts(r["timestamp"]), r) for r in rows
+                if isinstance(r["raw_value"], (int, float)) and not isinstance(r["raw_value"], bool)]
     left, right, top, bottom = 56, 18, 26, 34
     pw, ph = width - left - right, height - top - bottom
     head = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" role="img" '

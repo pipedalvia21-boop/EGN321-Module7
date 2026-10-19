@@ -71,14 +71,30 @@ def evaluate(now, settings, *, last_row_epoch, last_accepted_epoch, recent_statu
 
 
 def dashboard_health(now, settings, worker_health: dict | None, heartbeat_epoch: float | None,
-                     last_row_epoch: float | None = None) -> Health:
+                     last_row_epoch: float | None = None, crash_loop: dict | None = None,
+                     worker_exits: dict | None = None) -> Health:
     """What the dashboard shows: the collector's own verdict, made worse (never better) by what the
-    dashboard sees itself - a dead collector, or data that has gone stale since the last verdict."""
+    dashboard sees itself - a crash loop, a dead or restarting collector, or data gone stale since."""
+    from datetime import datetime
+    if crash_loop and crash_loop.get("child") == "worker":
+        at = datetime.fromtimestamp(crash_loop["at"]).strftime("%H:%M:%S")
+        return Health(FAILED, f"collector stopped by the crash-loop guard at {at} after {crash_loop['exits']} exits "
+                              f"in 60 s ({crash_loop['last_exit']}); NOT restarting automatically - human "
+                              f"intervention required (see logs/worker.log)", LOST)
     if heartbeat_epoch is None:
         return Health(FAILED, "collector has never reported (not started)", NO_DATA)
     age = now - heartbeat_epoch
+    recent = [t for t in (worker_exits or {}).get("times", []) if now - t <= 60]
+    restarting = (f"; collector exited {len(recent)} time(s) in the last 60 s "
+                  f"(last: {worker_exits['last_exit']})") if recent else ""
     if age > settings.heartbeat_timeout_s:
-        return Health(FAILED, f"collector process not responding: last heartbeat {age:.0f} s ago", LOST)
+        return Health(FAILED, f"collector process not responding: last heartbeat {age:.0f} s ago{restarting}", LOST)
+    if recent:
+        ds = worker_health["data_state"] if worker_health else NO_DATA
+        if heartbeat_epoch < max(recent):           # has not completed a loop since it last exited
+            return Health(DEGRADED, f"collector restarting, not running yet{restarting}", ds)
+        if len(recent) >= 2:                        # repeated exits: unstable even if it is up right now
+            return Health(DEGRADED, f"collector unstable{restarting}", ds)
     if not worker_health:
         return Health(STARTING, "collector starting", NO_DATA)
     h = Health(worker_health["state"], worker_health["reason"], worker_health["data_state"])

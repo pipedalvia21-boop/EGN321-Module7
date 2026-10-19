@@ -44,6 +44,7 @@ class Worker:
         self.warmup = health.STARTING
         self.warm_count = 0
         self.health = None
+        self.current = None                   # reading being processed (for error context)
         self.last_heartbeat = 0.0
         self.readings_processed = 0
 
@@ -138,11 +139,25 @@ class Worker:
             self.event("WARNING", "DATA_LOST",
                        f"{skipped} readings fell due while the collector was not running; they were not "
                        f"recorded and the gap stays in the history (no backfill)")
-        for cycle, index, row in deliver:
-            self.process(row, cycle, now)
-        if deliver or skipped:
-            self.cursor = cursor
+            if not deliver:
+                self.cursor = cursor
+                self._save_cursor()
+        for n, (cycle, index, row) in enumerate(deliver):
+            # At-most-once delivery (7.2 improvement): move the cursor past this reading BEFORE processing it,
+            # so a reading that crashes the collector is never delivered again after the restart.
+            self.cursor = self.schedule.advance(cycle, index)
             self._save_cursor()
+            self.current = f"source {self.s.source_dataset}#{row.sample} ({row.source_ts}) raw={row.raw_value!r}"
+            try:
+                self.process(row, cycle, now)
+            except sqlite3.OperationalError:
+                raise                                   # database problems are handled by main()
+            except Exception as exc:                    # one bad reading must not stop the collector
+                self.event("ERROR", "READING_ERROR",
+                           f"component=collector {self.current}: {type(exc).__name__}: {exc} - reading skipped, "
+                           f"collector continues", now)
+                self.log.exception("READING_ERROR traceback")
+            self.current = None
         self.update_health(now)
         if now - self.last_heartbeat >= 1.0:
             db.kv_set(self.conn, "worker_heartbeat", f"{now:.3f}", self._ts(now))
@@ -157,21 +172,20 @@ class Worker:
         d = validate(row.raw_value, s, self.last_accepted_value, self.previous)
         ts = self._ts(now)
         sample = db.next_sample_number(self.conn, s.live_dataset, s.live_sensor)
+        source_ref = f"{s.source_dataset}#{row.sample} @ {row.source_ts}" + (f" (cycle {cycle})" if cycle else "")
         db.insert_reading(self.conn, {
             "dataset": s.live_dataset, "sample_number": sample, "timestamp": ts, "timestamp_source": "received",
-            "sensor_name": s.live_sensor, "unit": "C", "raw_value": row.raw_value,
+            "sensor_name": s.live_sensor, "unit": "C", "raw_value": d.raw_number, "raw_text": d.raw_text,
             "accepted_value": d.accepted_value, "status": d.status, "source_status": row.source_status,
-            "status_reason": d.reason,
-            "source_ref": f"{s.source_dataset}#{row.sample} @ {row.source_ts}" + (f" (cycle {cycle})" if cycle else ""),
+            "status_reason": d.reason, "source_ref": source_ref,
         })
         self.readings_processed += 1
         self.recent_status.append(d.status)
-        self.previous = (d.status, row.raw_value)
+        self.previous = (d.status, d.raw_number)
         self.last_row_epoch = now
-        raw = "none" if row.raw_value is None else f"{row.raw_value:.2f}"
         if d.status == "OK":
-            self.log.info("READING sample=%d raw=%s status=OK accepted=%.2f source=%s#%d",
-                          sample, raw, d.accepted_value, s.source_dataset, row.sample)
+            self.log.info("READING sample=%d raw=%r status=OK accepted=%.2f source=%s",
+                          sample, row.raw_value, d.accepted_value, source_ref)
             self.last_accepted_epoch, self.last_accepted_value = now, d.accepted_value
             if self.warmup:
                 self.warm_count += 1
@@ -183,7 +197,7 @@ class Worker:
             db.save_alert_state(self.conn, s.alert_name, self.alert.active, self.alert.since, self.alert.median, ts)
         else:
             self.event("WARNING", "READING_REJECTED",
-                       f"sample={sample} raw={raw} status={d.status}: {d.reason} (source {s.source_dataset}#{row.sample})",
+                       f"sample={sample} raw={row.raw_value!r} status={d.status}: {d.reason} (source {source_ref})",
                        now)
 
     def update_health(self, now):
@@ -259,10 +273,13 @@ def main():
                     raise
                 time.sleep(1.0)
             time.sleep(settings.tick_s)
-    except Exception:
-        log.exception("APPLICATION_ERROR collector crashed; the supervisor will restart it")
+    except Exception as exc:
+        where = f" while processing {worker.current}" if worker.current else ""
+        log.exception("APPLICATION_ERROR collector crashed%s; the supervisor will restart it", where)
         try:
-            db.record_event(conn, "ERROR", SOURCE, "APPLICATION_ERROR", "collector crashed (see worker.log)", logger=log)
+            db.record_event(conn, "ERROR", SOURCE, "APPLICATION_ERROR",
+                            f"component=collector crashed{where}: {type(exc).__name__}: {exc} "
+                            f"(database {settings.db_path}; traceback in logs/worker.log)", logger=log)
         finally:
             sys.exit(1)
     worker.stop()

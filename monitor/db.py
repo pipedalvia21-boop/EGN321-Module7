@@ -47,6 +47,7 @@ CREATE TABLE IF NOT EXISTS sensor_readings (
     source_status    TEXT,
     status_reason    TEXT,
     source_ref       TEXT,
+    raw_text         TEXT,
     UNIQUE (dataset, sensor_name, sample_number),
     CHECK (accepted_value IS NULL OR status = 'OK'),
     CHECK (accepted_value IS NULL OR accepted_value = raw_value)
@@ -76,8 +77,8 @@ CREATE TABLE IF NOT EXISTS alert_state (
 """
 
 READING_COLUMNS = ["dataset", "sample_number", "timestamp", "timestamp_source", "sensor_name", "unit",
-                   "raw_value", "accepted_value", "status", "source_status", "status_reason", "source_ref"]
-M6_COLUMNS = READING_COLUMNS[:-1]
+                   "raw_value", "accepted_value", "status", "source_status", "status_reason", "source_ref", "raw_text"]
+M6_COLUMNS = READING_COLUMNS[:-2]
 
 log = logging.getLogger("db")
 
@@ -111,6 +112,10 @@ def init_db(settings, reset=False) -> dict:
         for suffix in ("", "-wal", "-shm"):
             Path(str(db_path) + suffix).unlink(missing_ok=True)
     conn = connect(db_path)
+    if conn.execute("SELECT 1 FROM sqlite_master WHERE name = 'sensor_readings'").fetchone():
+        cols = [r[1] for r in conn.execute("PRAGMA table_info(sensor_readings)")]
+        if "raw_text" not in cols:          # databases created before the 7.2 improvement
+            conn.execute("ALTER TABLE sensor_readings ADD COLUMN raw_text TEXT")
     conn.executescript(SCHEMA)
     if conn.execute("SELECT COUNT(*) FROM schema_info").fetchone()[0] == 0:
         conn.execute("INSERT INTO schema_info VALUES (?)", (SCHEMA_VERSION,))
@@ -154,6 +159,9 @@ def register_live_dataset(conn, settings, update=False):
 
 # ---------------------------------------------------------------- readings
 def insert_reading(conn, rec: dict) -> int:
+    raw = rec.get("raw_value")
+    if raw is not None and (isinstance(raw, bool) or not isinstance(raw, (int, float))):
+        raise ValueError(f"raw_value must be a number or None, got {raw!r}; store text in raw_text")
     cols = ", ".join(READING_COLUMNS)
     cur = conn.execute(f"INSERT INTO sensor_readings ({cols}) VALUES ({', '.join('?' * len(READING_COLUMNS))})",
                        tuple(rec.get(c) for c in READING_COLUMNS))

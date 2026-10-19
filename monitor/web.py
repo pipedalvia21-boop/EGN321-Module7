@@ -13,6 +13,7 @@ JSON / images
 from __future__ import annotations
 
 import logging
+import threading
 import time
 from collections import Counter, deque
 from datetime import datetime, timedelta
@@ -24,6 +25,20 @@ from monitor.charts import timeseries_svg
 from monitor.config import load_settings
 from monitor.history_m6 import completeness, parse_ts, query_window, window_summary
 from monitor.logging_setup import configure
+
+def as_number(v):
+    """Numbers stay numbers; anything else (text stored by versions before the 7.2 fix) becomes None."""
+    return v if isinstance(v, (int, float)) and not isinstance(v, bool) else None
+
+
+def raw_display(row):
+    """What the sensor actually sent, for display: the number, or the text in quotes ('ERR')."""
+    v = row.get("raw_value")
+    if as_number(v) is not None:
+        return f"{v:.2f}"
+    text = row.get("raw_text") if row.get("raw_text") is not None else v
+    return "—" if text is None else repr(str(text))
+
 
 WINDOWS = {"hour": ("Last hour", 1), "day": ("Last day", 24), "full": ("Full history", None)}
 LOG_FILES = ("supervisor", "worker", "web")
@@ -46,18 +61,44 @@ def create_app(settings=None, clock=time.time):
         if c is not None:
             c.close()
 
+    seen_errors = {}            # (path, exception type, message) -> [last logged time, suppressed count]
+    last_health = {"state": None}
+    state_lock = threading.Lock()
+
     @app.errorhandler(Exception)
     def on_error(exc):
         code = getattr(exc, "code", 500)
         if code and code < 500:
             return exc
-        log.exception("APPLICATION_ERROR request %s failed", request.path)
+        # 7.2 improvement: the same failing request every second wrote 518 identical tracebacks.
+        # Log the full traceback once per minute per distinct error and count the repeats.
+        key = (request.path, type(exc).__name__, str(exc)[:120])
+        t = clock()
+        with state_lock:
+            entry = seen_errors.setdefault(key, [0.0, 0])
+            if t - entry[0] < 60:
+                entry[1] += 1
+                return Response("Internal error - see logs/web.log", status=500)
+            suppressed, entry[0], entry[1] = entry[1], t, 0
+        extra = f" ({suppressed} identical errors suppressed in the previous minute)" if suppressed else ""
+        log.exception("APPLICATION_ERROR component=dashboard request %s failed%s", request.path, extra)
         try:
             db.record_event(conn(), "ERROR", "dashboard", "APPLICATION_ERROR",
-                            f"{request.path}: {type(exc).__name__}: {exc}", logger=log)
+                            f"component=dashboard {request.path}: {type(exc).__name__}: {exc}{extra}", logger=log)
         except Exception:      # noqa: BLE001 - the log line above is what matters
             pass
         return Response("Internal error - see logs/web.log", status=500)
+
+    def note_health(h):
+        """7.2 improvement: health the dashboard decides itself (e.g. FAILED from a dead collector) was never
+        written to any log. Record every change the dashboard sees."""
+        with state_lock:
+            old = last_health["state"]
+            if h.state == old:
+                return
+            last_health["state"] = h.state
+        db.record_event(conn(), health.LEVEL[h.state], "dashboard", "DASHBOARD_HEALTH",
+                        f"{old or '(start)'} -> {h.state}: {h.reason}", logger=log)
 
     # ------------------------------------------------------------ status
     def thresholds():
@@ -74,8 +115,11 @@ def create_app(settings=None, clock=time.time):
         recent = db.recent_readings(c, ds, sensor, 30)
         latest = recent[-1] if recent else None
         worker_health = db.kv_get_json(c, "health")
+        exits = (db.kv_get_json(c, "child_exits", {}) or {}).get("worker")
         h = health.dashboard_health(now, settings, worker_health, hb,
-                                    db.epoch(latest["timestamp"]) if latest else None)
+                                    db.epoch(latest["timestamp"]) if latest else None,
+                                    crash_loop=db.kv_get_json(c, "crash_loop"), worker_exits=exits)
+        note_health(h)
         since = worker_health.get("since") if worker_health and h.state == worker_health.get("state") else None
         acc = db.last_accepted(c, ds, sensor)
         latest_age = now - db.epoch(latest["timestamp"]) if latest else None
@@ -113,7 +157,8 @@ def create_app(settings=None, clock=time.time):
             "health": {"state": h.state, "reason": h.reason, "data_state": h.data_state, "since": since},
             "heartbeat_age_s": None if hb is None else round(now - hb, 1),
             "latest_row": None if not latest else {
-                "timestamp": latest["timestamp"], "raw_value": latest["raw_value"], "status": latest["status"],
+                "timestamp": latest["timestamp"], "raw_value": as_number(latest["raw_value"]),
+                "raw_display": raw_display(latest), "status": latest["status"],
                 "status_reason": latest["status_reason"], "age_s": round(latest_age, 1),
                 "source_ref": latest["source_ref"]},
             "current": None if not acc else {
@@ -125,8 +170,11 @@ def create_app(settings=None, clock=time.time):
                       "on_c": settings.alert_on_c, "off_c": settings.alert_off_c, "data_fresh": fresh},
             "window_5min": comp,
             "status_counts_last_30": dict(Counter(r["status"] for r in recent)),
-            "recent": [{k: r[k] for k in ("sample_number", "timestamp", "raw_value", "accepted_value", "status",
-                                          "status_reason", "source_ref")} for r in recent[-12:][::-1]],
+            "recent": [{"sample_number": r["sample_number"], "timestamp": r["timestamp"],
+                        "raw_value": as_number(r["raw_value"]), "raw_display": raw_display(r),
+                        "accepted_value": r["accepted_value"], "status": r["status"],
+                        "status_reason": r["status_reason"], "source_ref": r["source_ref"]}
+                       for r in recent[-12:][::-1]],
             "events": db.recent_events(c, 15),
         }
 

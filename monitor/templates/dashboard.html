@@ -95,7 +95,7 @@
     <h2>Recent readings (raw vs. accepted)</h2>
     <table class="num"><thead><tr><th>Time</th><th class="num">Raw °C</th><th class="num">Accepted °C</th><th>Status</th><th>Replays Module 6 row</th></tr></thead>
       <tbody id="recent">
-      {% for r in s.recent %}<tr><td>{{ r.timestamp[11:23] }}</td><td class="num">{{ '%.2f' % r.raw_value if r.raw_value is not none else '—' }}</td>
+      {% for r in s.recent %}<tr><td>{{ r.timestamp[11:23] }}</td><td class="num">{{ r.raw_display }}</td>
         <td class="num">{{ '%.2f' % r.accepted_value if r.accepted_value is not none else '—' }}</td>
         <td><span class="tag {{ r.status }}">{{ r.status }}</span></td><td class="small muted" title="{{ r.source_ref or '' }}">{% set parts = (r.source_ref or '').split(' @ ') %}{{ parts[0] }}{% if parts|length > 1 %} · {{ parts[1][5:16]|replace('T', ' ') }}{% endif %}</td></tr>{% endfor %}
       </tbody></table>
@@ -162,7 +162,7 @@ async function refresh() {
   $("al-median").textContent = a.median === null ? "—" : f2(a.median) + " °C";
   $("al-conf").textContent = a.data_fresh ? "based on fresh data" : "data stale — cannot confirm";
 
-  $("recent").innerHTML = s.recent.map(r => `<tr><td>${esc(r.timestamp.slice(11, 23))}</td><td class="num">${f2(r.raw_value)}</td>
+  $("recent").innerHTML = s.recent.map(r => `<tr><td>${esc(r.timestamp.slice(11, 23))}</td><td class="num">${esc(r.raw_display)}</td>
     <td class="num">${f2(r.accepted_value)}</td><td><span class="tag ${esc(r.status)}">${esc(r.status)}</span></td>
     <td class="small muted" title="${esc(r.source_ref || "")}">${esc(srcLabel(r.source_ref))}</td></tr>`).join("");
   $("events").innerHTML = s.events.map(e => `<tr><td class="num">${esc(e.ts.slice(11, 19))}</td>
