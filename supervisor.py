@@ -1,6 +1,8 @@
 """Process manager: starts the collector and the dashboard and restarts them when they stop.
 
-    python supervisor.py          # the ONE command that runs the whole system
+    python supervisor.py              # the ONE command that runs the whole system
+    python supervisor.py --check      # only check that this computer can run it (PASS / FAIL list)
+    python supervisor.py --port 5050 --speed 120     # options work the same on Windows, macOS and Linux
 
 * Each child (worker = collector, web = dashboard) is restarted automatically if it exits or is
   killed, with backoff 1, 2, 4, 8, 16 s.
@@ -11,6 +13,7 @@
 * The supervisor itself is started at boot/logon and restarted by the operating system
   (systemd, Windows Task Scheduler or macOS launchd; see deploy/).
 """
+import argparse
 import json
 import os
 import signal
@@ -19,8 +22,8 @@ import sys
 import time
 from collections import deque
 
-from monitor import db, guard
-from monitor.config import PROJECT_ROOT, load_settings
+from monitor import db, guard, preflight
+from monitor.config import PROJECT_ROOT, ConfigError, load_settings
 from monitor.logging_setup import configure
 
 BACKOFF_MAX_S = 30
@@ -159,10 +162,64 @@ class Supervisor:
         (self.s.run_dir / "pids.json").unlink(missing_ok=True)
 
 
-def main():
-    sup = Supervisor(load_settings())
+OPTIONS = (  # command-line option -> environment variable, so the child processes see the same value
+    ("--port", "WEB_PORT", "dashboard port (default 5000)"),
+    ("--speed", "REPLAY_SPEED", "replay speed: 30 = one reading every 2 s (default), 120 = every 0.5 s"),
+    ("--start-sample", "REPLAY_START_SAMPLE", "Module 6 sample number to start the replay at (default 1)"),
+    ("--dataset", "SOURCE_DATASET", "replay source: practice (default) or practice_malformed"),
+    ("--alert-on", "ALERT_ON_C", "alert activates when the median of 5 readings is >= this, in deg C (default 24.0)"),
+    ("--alert-off", "ALERT_OFF_C", "alert clears when the median is <= this, in deg C (default 23.5)"),
+)
+
+
+def parse_args(argv):
+    ap = argparse.ArgumentParser(description="Start the unattended temperature monitor (collector + dashboard).")
+    ap.add_argument("--check", action="store_true", help="only run the pre-start checks and exit")
+    for flag, var, text in OPTIONS:
+        ap.add_argument(flag, metavar=var, help=f"{text}; same as setting {var}")
+    args = ap.parse_args(argv)
+    for flag, var, _ in OPTIONS:
+        value = getattr(args, flag[2:].replace("-", "_"))
+        if value is not None:
+            os.environ[var] = value
+    return args
+
+
+def refuse(title, lines, settings=None):
+    print(f"\nREFUSED TO START: {title}\n" + lines + "\nNothing was started. See README > Troubleshooting.\n",
+          file=sys.stderr)
+    if settings is not None:
+        try:
+            log = configure("supervisor", settings, console=False)
+            log.error("STARTUP_REFUSED %s | %s", title, " | ".join(x.strip() for x in lines.splitlines()))
+        except OSError:
+            pass
+    sys.exit(2)
+
+
+def main(argv=None):
+    args = parse_args(sys.argv[1:] if argv is None else argv)
+    try:
+        settings = load_settings()
+    except ConfigError as exc:
+        refuse("invalid setting", f"  {exc.name} = {exc.value!r}\n  expected: {exc.expected}")
+    if args.check:
+        checks = preflight.run_checks(settings)
+        print("Pre-start checks:\n" + preflight.report(checks))
+        failed = [c for c in checks if not c.ok]
+        print("\nRESULT: " + ("ready - start it with:  python supervisor.py" if not failed
+                               else f"{len(failed)} problem(s) - fix them, then run the check again"))
+        sys.exit(1 if failed else 0)
+    checks = preflight.run_checks(settings, port_wait_s=10)
+    failed = [c for c in checks if not c.ok]
+    if failed:
+        refuse(f"{len(failed)} pre-start check(s) failed", preflight.report(failed), settings)
+    sup = Supervisor(settings)
     signal.signal(signal.SIGINT, sup.request_stop)
     signal.signal(signal.SIGTERM, sup.request_stop)
+    if sys.stdout is not None:
+        print(f"\n  Sensor monitor running.  Open the dashboard:  http://{settings.web_host}:{settings.web_port}\n"
+              f"  Logs: {settings.log_dir}    Stop: press Ctrl+C in this window\n", flush=True)
     try:
         sup.run()
     except Exception:

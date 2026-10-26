@@ -10,6 +10,24 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 
+class ConfigError(ValueError):
+    """An environment variable / command-line option has a value the system refuses to run with."""
+
+    def __init__(self, name, value, expected):
+        self.name, self.value, self.expected = name, value, expected
+        super().__init__(f"invalid configuration: {name}={value!r} - expected {expected}")
+
+
+def _number(env, name, default, kind=float, expected="a number"):
+    raw = env.get(name)
+    if raw is None or str(raw).strip() == "":
+        return default
+    try:
+        return kind(str(raw).strip())
+    except ValueError:
+        raise ConfigError(name, raw, expected) from None
+
+
 @dataclass(frozen=True)
 class Settings:
     home: Path
@@ -52,10 +70,21 @@ class Settings:
     web_port: int = 5000
 
     def __post_init__(self):
-        if self.replay_speed <= 0:
-            raise ValueError("REPLAY_SPEED must be > 0")
+        if not 0 < self.replay_speed <= 1000:
+            raise ConfigError("REPLAY_SPEED", self.replay_speed, "a number above 0 and at most 1000 (default 30)")
+        if self.replay_start_sample < 1:
+            raise ConfigError("REPLAY_START_SAMPLE", self.replay_start_sample, "a whole number >= 1 (default 1)")
+        if self.recovery_readings < 1:
+            raise ConfigError("RECOVERY_READINGS", self.recovery_readings, "a whole number >= 1 (default 5)")
+        if not 1 <= self.web_port <= 65535:
+            raise ConfigError("WEB_PORT", self.web_port, "a port number from 1 to 65535 (default 5000)")
+        for name, value in (("ALERT_ON_C", self.alert_on_c), ("ALERT_OFF_C", self.alert_off_c)):
+            if not self.supported_min_c <= value <= self.supported_max_c:
+                raise ConfigError(name, value, f"a temperature in degrees C between {self.supported_min_c:g} "
+                                               f"and {self.supported_max_c:g}")
         if not self.alert_off_c < self.alert_on_c:
-            raise ValueError("ALERT_OFF_C must be below ALERT_ON_C (hysteresis band)")
+            raise ConfigError("ALERT_OFF_C", self.alert_off_c,
+                              f"a value below ALERT_ON_C ({self.alert_on_c:g}) - the hysteresis band needs OFF < ON")
 
     @property
     def interval_s(self) -> float:
@@ -94,11 +123,11 @@ def load_settings(env=None) -> Settings:
         log_dir=Path(env.get("MONITOR_LOG_DIR", home / "logs")),
         run_dir=Path(env.get("MONITOR_RUN_DIR", home / "run")),
         source_dataset=env.get("SOURCE_DATASET", "practice"),
-        replay_speed=float(env.get("REPLAY_SPEED", 30)),
-        replay_start_sample=int(env.get("REPLAY_START_SAMPLE", 1)),
-        recovery_readings=int(env.get("RECOVERY_READINGS", 5)),
-        alert_on_c=float(env.get("ALERT_ON_C", 24.0)),
-        alert_off_c=float(env.get("ALERT_OFF_C", 23.5)),
+        replay_speed=_number(env, "REPLAY_SPEED", 30.0, float, "a number above 0 and at most 1000 (default 30)"),
+        replay_start_sample=_number(env, "REPLAY_START_SAMPLE", 1, int, "a whole number >= 1 (default 1)"),
+        recovery_readings=_number(env, "RECOVERY_READINGS", 5, int, "a whole number >= 1 (default 5)"),
+        alert_on_c=_number(env, "ALERT_ON_C", 24.0, float, "a temperature in degrees C, e.g. 24.0"),
+        alert_off_c=_number(env, "ALERT_OFF_C", 23.5, float, "a temperature in degrees C, e.g. 23.5"),
         web_host=env.get("WEB_HOST", "127.0.0.1"),
-        web_port=int(env.get("WEB_PORT", 5000)),
+        web_port=_number(env, "WEB_PORT", 5000, int, "a port number from 1 to 65535 (default 5000)"),
     )
