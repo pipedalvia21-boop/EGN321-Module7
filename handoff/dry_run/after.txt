@@ -1,0 +1,71 @@
+# Dry run AFTER the handoff improvements, 2026-10-25 21:35 EDT
+
+## 0. New: verify the installation without starting anything
+$ python supervisor.py --check
+Pre-start checks:
+  [PASS] Python version: 3.13.16 (<venv>/bin/python)
+  [PASS] Required packages: flask, waitress, psutil installed
+  [PASS] Input data (Module 6 history): module6_sensor_history.db: 8900 rows
+  [PASS] Database folder writable: <work>
+  [PASS] Log folder writable: <work>/logs
+  [PASS] Monitor database: m.db will be created on first start
+  [PASS] Replay source dataset: practice/temperature: 1756 readings
+  [PASS] Dashboard port 5000 free: http://127.0.0.1:5000
+
+RESULT: ready - start it with:  python supervisor.py
+[exit code 0]
+
+## A. Invalid setting
+$ python supervisor.py --speed abc
+
+REFUSED TO START: invalid setting
+  REPLAY_SPEED = 'abc'
+  expected: a number above 0 and at most 1000 (default 30)
+Nothing was started. See README > Troubleshooting.
+
+[exit code 2]
+
+## B. Required input file missing
+$ env MODULE6_DB=/nonexistent/module6_sensor_history.db python supervisor.py
+
+REFUSED TO START: 2 pre-start check(s) failed
+  [FAIL] Input data (Module 6 history): not found: /nonexistent/module6_sensor_history.db
+         -> fix: this file ships with the repository: run  git checkout -- data/module6_sensor_history.db  or clone the repository again
+  [FAIL] Replay source dataset: cannot be checked while the input data file is missing
+         -> fix: fix the 'Input data' problem first
+Nothing was started. See README > Troubleshooting.
+
+[exit code 2]
+
+## C. Port 5000 already in use
+$ python supervisor.py
+
+REFUSED TO START: 1 pre-start check(s) failed
+  [FAIL] Dashboard port 5000 free: another program is already using port 5000
+         -> fix: is the monitor already running in another window? Stop it with Ctrl+C. Otherwise start on another port:  python supervisor.py --port 5050   (on macOS, port 5000 is often taken by AirPlay Receiver)
+Nothing was started. See README > Troubleshooting.
+
+[exit code 2]
+logs/supervisor.log:
+2026-10-25 21:36:03,983 ERROR    supervisor STARTUP_REFUSED 1 pre-start check(s) failed | [FAIL] Dashboard port 5000 free: another program is already using port 5000 | -> fix: is the monitor already running in another window? Stop it with Ctrl+C. Otherwise start on another port:  python supervisor.py --port 5050   (on macOS, port 5000 is often taken by AirPlay Receiver)
+
+## D. Replay dataset that does not exist
+$ python supervisor.py --dataset practice_malformed
+
+REFUSED TO START: 1 pre-start check(s) failed
+  [FAIL] Replay source dataset: dataset 'practice_malformed' has no temperature readings
+         -> fix: build it first:  python -m scripts.make_malformed_feed
+Nothing was started. See README > Troubleshooting.
+
+[exit code 2]
+
+## E. Normal start (stopped with Ctrl+C after 8 s)
+
+  Sensor monitor running.  Open the dashboard:  http://127.0.0.1:5000
+  Logs: <work>/logs    Stop: press Ctrl+C in this window
+
+2026-10-25 21:36:04,532 INFO     supervisor SUPERVISOR_START supervisor started (pid 3171), python 3.13.16, dashboard http://127.0.0.1:5000
+2026-10-25 21:36:04,535 INFO     supervisor CHILD_START started worker (pid 3172)
+2026-10-25 21:36:04,541 INFO     supervisor CHILD_START started web (pid 3173)
+2026-10-25 21:36:12,547 INFO     supervisor SUPERVISOR_STOPPING stop requested: asking collector to finish, then stopping dashboard
+2026-10-25 21:36:12,717 INFO     supervisor SUPERVISOR_STOP supervisor stopped cleanly

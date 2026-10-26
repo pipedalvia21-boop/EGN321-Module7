@@ -1,0 +1,93 @@
+# Dry run BEFORE the handoff improvements (code at git 94392ff), 2026-10-25 21:33 EDT
+
+## A. Invalid setting
+$ env REPLAY_SPEED=abc timeout 15 python supervisor.py
+Traceback (most recent call last):
+  File "<project>/supervisor.py", line 174, in <module>
+    main()
+    ~~~~^^
+  File "<project>/supervisor.py", line 163, in main
+    sup = Supervisor(load_settings())
+                     ~~~~~~~~~~~~~^^
+  File "<project>/monitor/config.py", line 97, in load_settings
+    replay_speed=float(env.get("REPLAY_SPEED", 30)),
+                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: could not convert string to float: 'abc'
+
+## B. Required input file missing
+$ env MODULE6_DB=/nonexistent/module6_sensor_history.db timeout 15 python supervisor.py
+2026-10-25 21:33:19,123 CRITICAL supervisor APPLICATION_ERROR uncaught exception
+Traceback (most recent call last):
+  File "<project>/supervisor.py", line 174, in <module>
+    main()
+    ~~~~^^
+  File "<project>/supervisor.py", line 163, in main
+    sup = Supervisor(load_settings())
+  File "<project>/supervisor.py", line 50, in __init__
+    db.init_db(settings)
+    ~~~~~~~~~~^^^^^^^^^^
+  File "<project>/monitor/db.py", line 127, in init_db
+    raise FileNotFoundError(f"Module 6 history database not found: {settings.module6_db}")
+FileNotFoundError: Module 6 history database not found: /nonexistent/module6_sensor_history.db
+
+## C. Port 5000 already in use (e.g. macOS AirPlay Receiver, or the monitor already running)
+console output during the first 65 s:
+$ timeout 65 python supervisor.py
+2026-10-25 21:33:20,273 INFO     supervisor SUPERVISOR_START supervisor started (pid 2907), python 3.13.16, dashboard http://127.0.0.1:5000
+2026-10-25 21:33:20,276 INFO     supervisor CHILD_START started worker (pid 2908)
+2026-10-25 21:33:20,278 INFO     supervisor CHILD_START started web (pid 2909)
+2026-10-25 21:33:20,782 ERROR    supervisor CHILD_EXIT web (pid 2909) stopped unexpectedly: exit code 1 [exit 1 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:20,784 INFO     supervisor RESTART_SCHEDULED web will restart in 1 s (restart 1 of 5 before the crash-loop guard stops it)
+2026-10-25 21:33:21,787 WARNING  supervisor CHILD_RESTART restarted web (pid 2917, restart #1)
+2026-10-25 21:33:22,289 ERROR    supervisor CHILD_EXIT web (pid 2917) stopped unexpectedly: exit code 1 [exit 2 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:22,290 INFO     supervisor RESTART_SCHEDULED web will restart in 2 s (restart 2 of 5 before the crash-loop guard stops it)
+2026-10-25 21:33:24,294 WARNING  supervisor CHILD_RESTART restarted web (pid 2926, restart #2)
+2026-10-25 21:33:24,796 ERROR    supervisor CHILD_EXIT web (pid 2926) stopped unexpectedly: exit code 1 [exit 3 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:24,797 INFO     supervisor RESTART_SCHEDULED web will restart in 4 s (restart 3 of 5 before the crash-loop guard stops it)
+2026-10-25 21:33:28,803 WARNING  supervisor CHILD_RESTART restarted web (pid 2934, restart #3)
+2026-10-25 21:33:29,306 ERROR    supervisor CHILD_EXIT web (pid 2934) stopped unexpectedly: exit code 1 [exit 4 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:29,308 INFO     supervisor RESTART_SCHEDULED web will restart in 8 s (restart 4 of 5 before the crash-loop guard stops it)
+2026-10-25 21:33:37,314 WARNING  supervisor CHILD_RESTART restarted web (pid 2944, restart #4)
+2026-10-25 21:33:37,816 ERROR    supervisor CHILD_EXIT web (pid 2944) stopped unexpectedly: exit code 1 [exit 5 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:37,818 INFO     supervisor RESTART_SCHEDULED web will restart in 16 s (restart 5 of 5 before the crash-loop guard stops it)
+2026-10-25 21:33:53,849 WARNING  supervisor CHILD_RESTART restarted web (pid 2952, restart #5)
+2026-10-25 21:33:54,352 ERROR    supervisor CHILD_EXIT web (pid 2952) stopped unexpectedly: exit code 1 [exit 6 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:54,357 CRITICAL supervisor CRASH_LOOP web stopped 6 times in 60 s (last: exit code 1); automatic restart disabled - human intervention required: read logs/web.log, fix the cause, then restart the service
+2026-10-25 21:34:25,374 INFO     supervisor SUPERVISOR_STOPPING stop requested: asking collector to finish, then stopping dashboard
+2026-10-25 21:34:25,376 INFO     supervisor SUPERVISOR_STOP supervisor stopped cleanly
+
+logs/supervisor.log (errors only):
+2026-10-25 21:33:20,782 ERROR    supervisor CHILD_EXIT web (pid 2909) stopped unexpectedly: exit code 1 [exit 1 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:22,289 ERROR    supervisor CHILD_EXIT web (pid 2917) stopped unexpectedly: exit code 1 [exit 2 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:24,796 ERROR    supervisor CHILD_EXIT web (pid 2926) stopped unexpectedly: exit code 1 [exit 3 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:29,306 ERROR    supervisor CHILD_EXIT web (pid 2934) stopped unexpectedly: exit code 1 [exit 4 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:37,816 ERROR    supervisor CHILD_EXIT web (pid 2944) stopped unexpectedly: exit code 1 [exit 5 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:54,352 ERROR    supervisor CHILD_EXIT web (pid 2952) stopped unexpectedly: exit code 1 [exit 6 of 6 allowed in 60 s; details in logs/web.log]
+2026-10-25 21:33:54,357 CRITICAL supervisor CRASH_LOOP web stopped 6 times in 60 s (last: exit code 1); automatic restart disabled - human intervention required: read logs/web.log, fix the cause, then restart the service
+logs/web.log last error:
+OSError: [Errno 98] Address already in use
+
+## D. Replay dataset that does not exist (practice_malformed not built yet)
+$ env SOURCE_DATASET=practice_malformed timeout 20 python supervisor.py
+2026-10-25 21:34:25,529 INFO     supervisor SUPERVISOR_START supervisor started (pid 2978), python 3.13.16, dashboard http://127.0.0.1:5000
+2026-10-25 21:34:25,533 INFO     supervisor CHILD_START started worker (pid 2979)
+2026-10-25 21:34:25,539 INFO     supervisor CHILD_START started web (pid 2980)
+2026-10-25 21:34:26,042 ERROR    supervisor CHILD_EXIT worker (pid 2979) stopped unexpectedly: exit code 1 [exit 1 of 6 allowed in 60 s; details in logs/worker.log]
+2026-10-25 21:34:26,044 INFO     supervisor RESTART_SCHEDULED worker will restart in 1 s (restart 1 of 5 before the crash-loop guard stops it)
+2026-10-25 21:34:27,046 WARNING  supervisor CHILD_RESTART restarted worker (pid 2988, restart #1)
+2026-10-25 21:34:27,550 ERROR    supervisor CHILD_EXIT worker (pid 2988) stopped unexpectedly: exit code 1 [exit 2 of 6 allowed in 60 s; details in logs/worker.log]
+2026-10-25 21:34:27,552 INFO     supervisor RESTART_SCHEDULED worker will restart in 2 s (restart 2 of 5 before the crash-loop guard stops it)
+2026-10-25 21:34:29,555 WARNING  supervisor CHILD_RESTART restarted worker (pid 2989, restart #2)
+2026-10-25 21:34:30,059 ERROR    supervisor CHILD_EXIT worker (pid 2989) stopped unexpectedly: exit code 1 [exit 3 of 6 allowed in 60 s; details in logs/worker.log]
+2026-10-25 21:34:30,060 INFO     supervisor RESTART_SCHEDULED worker will restart in 4 s (restart 3 of 5 before the crash-loop guard stops it)
+2026-10-25 21:34:34,064 WARNING  supervisor CHILD_RESTART restarted worker (pid 2991, restart #3)
+2026-10-25 21:34:34,565 ERROR    supervisor CHILD_EXIT worker (pid 2991) stopped unexpectedly: exit code 1 [exit 4 of 6 allowed in 60 s; details in logs/worker.log]
+2026-10-25 21:34:34,567 INFO     supervisor RESTART_SCHEDULED worker will restart in 8 s (restart 4 of 5 before the crash-loop guard stops it)
+2026-10-25 21:34:42,573 WARNING  supervisor CHILD_RESTART restarted worker (pid 2992, restart #4)
+2026-10-25 21:34:43,074 ERROR    supervisor CHILD_EXIT worker (pid 2992) stopped unexpectedly: exit code 1 [exit 5 of 6 allowed in 60 s; details in logs/worker.log]
+2026-10-25 21:34:43,076 INFO     supervisor RESTART_SCHEDULED worker will restart in 16 s (restart 5 of 5 before the crash-loop guard stops it)
+2026-10-25 21:34:45,578 INFO     supervisor SUPERVISOR_STOPPING stop requested: asking collector to finish, then stopping dashboard
+2026-10-25 21:34:45,580 INFO     supervisor SUPERVISOR_STOP supervisor stopped cleanly
+2026-10-25 21:34:26,042 ERROR    supervisor CHILD_EXIT worker (pid 2979) stopped unexpectedly: exit code 1 [exit 1 of 6 allowed in 60 s; details in logs/worker.log]
+2026-10-25 21:34:27,550 ERROR    supervisor CHILD_EXIT worker (pid 2988) stopped unexpectedly: exit code 1 [exit 2 of 6 allowed in 60 s; details in logs/worker.log]
+2026-10-25 21:34:30,059 ERROR    supervisor CHILD_EXIT worker (pid 2989) stopped unexpectedly: exit code 1 [exit 3 of 6 allowed in 60 s; details in logs/worker.log]
